@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AMCTechnician">
         <activity
-            android:name=".Login"
+            android:name=".presentation.ui.Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
