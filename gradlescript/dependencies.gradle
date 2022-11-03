@@ -1,0 +1,22 @@
+ext {
+
+//Version
+
+    glideVersion = '4.13.2'
+    gsonVersion = '2.8.9'
+    coroutinesVersion = '1.6.4'
+    constraintlayoutVersion = '2.1.4'
+    appcompatVersion = '1.5.1'
+    materialVersion = '1.7.0'
+
+// Libraries dependencies
+    allDependacies = [
+            glide: "com.github.bumptech.glide:glide:${glideVersion}",
+            gson: "com.google.code.gson:gson:${gsonVersion}",
+            coroutinesCore: "org.jetbrains.kotlinx:kotlinx-coroutines-core:${coroutinesVersion}",
+            coroutinesAndroid: "org.jetbrains.kotlinx:kotlinx-coroutines-android:${coroutinesVersion}",
+            constraintlayout: "androidx.constraintlayout:constraintlayout:${constraintlayoutVersion}",
+            appcompat: "androidx.appcompat:appcompat:${appcompatVersion}",
+            material: "com.google.android.material:material:${materialVersion}"
+    ]
+}
