@@ -1,4 +1,4 @@
-package com.amc.login.presentation.listener
+package com.amc.leaderboard.presentation.listener
 
 class Listener {
 }

@@ -1,12 +1,10 @@
-package com.amc.login.presentation.ui
+package com.amc.expenses.presentation.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.amc.login.R
+import androidx.appcompat.app.AppCompatActivity
 
 class Login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
     }
 }

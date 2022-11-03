@@ -1,4 +1,4 @@
-package com.amc.login.domain
+package com.amc.notification.domain
 
 class LoginModel {
 }

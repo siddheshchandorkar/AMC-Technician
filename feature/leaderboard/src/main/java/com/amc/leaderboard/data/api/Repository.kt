@@ -1,4 +1,4 @@
-package com.amc.login.data.api
+package com.amc.leaderboard.data.api
 
 class Repository {
 }
