@@ -8,7 +8,7 @@ ext {
     constraintlayoutVersion = '2.1.4'
     appcompatVersion = '1.5.1'
     materialVersion = '1.7.0'
-    coreKtxVersion = '1.9.0'
+    coreKtxVersion = '1.7.0'
 
 
 //    testImplementation 'junit:junit:4.13.2'
@@ -24,7 +24,8 @@ ext {
             constraintlayout: "androidx.constraintlayout:constraintlayout:${constraintlayoutVersion}",
             appcompat: "androidx.appcompat:appcompat:${appcompatVersion}",
             material: "com.google.android.material:material:${materialVersion}",
-            coreKtx : "androidx.core:core-ktx:${coreKtxVersion}"
+            coreKtx : "androidx.core:core-ktx:${coreKtxVersion}",
+            core : "androidx.core:core:${coreKtxVersion}"
 
     ]
 }

@@ -1,0 +1,352 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="fragment_horizontal_margin">20dp</dimen>
+    <dimen name="fragment_vertical_margin">20dp</dimen>
+
+    <dimen name="default_app_bar_elevation">8dp</dimen>
+
+    <dimen name="d_margin_rv_type">8dp</dimen>
+    <dimen name="d_icon_padding_4">4dp</dimen>
+    <dimen name="d_icon_padding_8">8dp</dimen>
+    <dimen name="d_icon_padding_12">12dp</dimen>
+    <dimen name="d_icon_padding_16">16dp</dimen>
+    <dimen name="d_icon_size_40dp">40dp</dimen>
+
+    <!-- dimens for NavDrawer -->
+    <dimen name="nav_row_padding">16dp</dimen>
+    <dimen name="nav_row_height">48dp</dimen>
+    <dimen name="nav_row_image_dimen">24dp</dimen>
+    <dimen name="action_bar_height">24dp</dimen>
+
+    <!-- dimens for styles -->
+    <dimen name="d_pad_button_tb">8dp</dimen>
+    <dimen name="d_pad_button_lr">16dp</dimen>
+    <dimen name="d_flat_button_radius">2dp</dimen>
+    <dimen name="d_edit_text_radius">2dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">140dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="dialog_padding">16dp</dimen>
+    <!--Load wallet-->
+    <dimen name="line_spacing">3dp</dimen>
+    <dimen name="lr_margin_top_section">35dp</dimen>
+
+    <dimen name="d_profile_image">48dp</dimen>
+    <dimen name="custom_tab_layout_height">72dp</dimen>
+
+
+    <!--Kyc-->
+    <dimen name="d_proof_image_hw">60dp</dimen>
+    <dimen name="d_proof_image_container_hw">84dp</dimen>
+
+    <!--add bank details card view-->
+    <dimen name="d_card_margin_top">12dp</dimen>
+    <dimen name="d_card_margin_left">12dp</dimen>
+    <dimen name="d_card_margin_bottom">12dp</dimen>
+    <dimen name="d_card_min_height">148dp</dimen>
+    <dimen name="d_margin_top">26dp</dimen>
+    <dimen name="d_padding">15dp</dimen>
+    <dimen name="send_money_img_hw">24dp</dimen>
+    <dimen name="send_money_img_padding">5dp</dimen>
+    <!--send money-->
+    <dimen name="send_money_recycler_height">200dp</dimen>
+    <dimen name="card_padding_bene_list">8dp</dimen>
+    <!--alert dialogs-->
+    <dimen name="d_alert_margin_top">10dp</dimen>
+    <dimen name="d_alert_margin">16dp</dimen>
+    <dimen name="d_alert_margin_left">16dp</dimen>
+    <dimen name="d_alert_margin_top_big">36dp</dimen>
+
+    <!--move to bank-->
+    <dimen name="d_try_again_btn_margin">25sp</dimen>
+    <dimen name="d_error_padding">4dp</dimen>
+    <dimen name="d_padding_both">20dp</dimen>
+
+    <!--merchant profile bank-->
+
+    <dimen name="d_padding_bank_card">22dp</dimen>
+    <dimen name="d_top_text_padding">4dp</dimen>
+    <dimen name="d_padding_3">3dp</dimen>
+    <dimen name="d_padding_5">5dp</dimen>
+    <dimen name="d_padding_10">10dp</dimen>
+    <dimen name="d_padding_15">15dp</dimen>
+    <dimen name="spacing_16">16dp</dimen>
+    <dimen name="spacing_10">10dp</dimen>
+    <dimen name="d_padding_18">18dp</dimen>
+    <dimen name="d_padding_30">30dp</dimen>
+    <dimen name="d_padding_32">32dp</dimen>
+    <dimen name="d_padding_25">25dp</dimen>
+
+    <dimen name="font_2">2sp</dimen>
+    <dimen name="font_10">10sp</dimen>
+    <dimen name="font_11">11sp</dimen>
+    <dimen name="font_12">12sp</dimen>
+    <dimen name="font_14">14sp</dimen>
+    <dimen name="font_16">16sp</dimen>
+    <dimen name="d_txt_size_18">18sp</dimen>
+    <dimen name="font_20">20sp</dimen>
+    <dimen name="font_21">21sp</dimen>
+    <dimen name="d_txt_size_28">28sp</dimen>
+    <dimen name="d_txt_size_24">24sp</dimen>
+    <dimen name="d_txt_size_30">30sp</dimen>
+    <dimen name="d_txt_size_36">36sp</dimen>
+    <dimen name="d_txt_size_40">40sp</dimen>
+
+    <dimen name="d_0dp">0dp</dimen>
+    <dimen name="d_1dp">1dp</dimen>
+    <dimen name="d_5dp">5dp</dimen>
+    <dimen name="d_10dp">10dp</dimen>
+    <dimen name="d_20dp">20dp</dimen>
+
+    <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! VIEWPAGER DIMENS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <dimen name="viewpager_page_margin">12dp</dimen>
+    <dimen name="viewpager_padding_left">26dp</dimen>
+    <dimen name="viewpager_padding_right">26dp</dimen>
+    <dimen name="viewpager_padding_top">0dp</dimen>
+    <dimen name="viewpager_padding_bottom">0dp</dimen>
+    <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+    <dimen name="dim_height_19">19dp</dimen>
+    <dimen name="input_field_margin_top">16dp</dimen>
+    <dimen name="d_48_dp">48dp</dimen>
+    <dimen name="d_42_dp">42dp</dimen>
+    <dimen name="d_40_dp">40dp</dimen>
+    <dimen name="d_36_dp">36dp</dimen>
+
+    /***********************************************
+    * SPECIFIC DIMENS
+    ***********************************************/
+    <dimen name="button.padding.top_bottom">8dp</dimen>
+    <dimen name="button.padding.left_right">16dp</dimen>
+    <dimen name="image_height_customer_profile">66dp</dimen>
+    <dimen name="image_width_customer_profile">66dp</dimen>
+    <dimen name="tab_layout_height_medium">56dp</dimen>
+    <dimen name="tab_indicator_height">4dp</dimen>
+    <dimen name="image_72">72dp</dimen>
+    <dimen name="image_56">56dp</dimen>
+    <dimen name="image_64">64dp</dimen>
+    <dimen name="image_36">36dp</dimen>
+    <dimen name="image_32">32dp</dimen>
+    <dimen name="image_28">28dp</dimen>
+
+    /***********************************************
+    * SPACING DIMENS
+    ***********************************************/
+    <dimen name="spacing_0">0dp</dimen>
+    <dimen name="spacing_05">0.5dp</dimen>
+    <dimen name="spacing_1">1dp</dimen>
+    <dimen name="spacing_2">2dp</dimen>
+    <dimen name="spacing_3">3dp</dimen>
+    <dimen name="spacing_4">4dp</dimen>
+    <dimen name="spacing_5">5dp</dimen>
+    <dimen name="spacing_6">6dp</dimen>
+    <dimen name="spacing_7">7dp</dimen>
+    <dimen name="spacing_8">8dp</dimen>
+    <dimen name="spacing_9">9dp</dimen>
+    <dimen name="spacing_12">12dp</dimen>
+    <dimen name="spacing_13">13dp</dimen>
+    <dimen name="spacing_11">11dp</dimen>
+    <dimen name="spacing_14">14dp</dimen>
+    <dimen name="spacing_18">18dp</dimen>
+    <dimen name="spacing_20">20dp</dimen>
+    <dimen name="spacing_24">24dp</dimen>
+    <dimen name="spacing_22">22dp</dimen>
+    <dimen name="spacing_26">26dp</dimen>
+    <dimen name="spacing_28">28dp</dimen>
+    <dimen name="spacing_30">30dp</dimen>
+    <dimen name="spacing_32">32dp</dimen>
+    <dimen name="spacing_34">34dp</dimen>
+    <dimen name="spacing_36">36dp</dimen>
+    <dimen name="spacing_38">38dp</dimen>
+    <dimen name="spacing_40">40dp</dimen>
+    <dimen name="spacing_42">42dp</dimen>
+    <dimen name="spacing_44">44dp</dimen>
+    <dimen name="spacing_46">46dp</dimen>
+    <dimen name="spacing_48">48dp</dimen>
+    <dimen name="spacing_50">50dp</dimen>
+    <dimen name="spacing_51">51dp</dimen>
+    <dimen name="spacing_52">52dp</dimen>
+    <dimen name="spacing_56">56dp</dimen>
+    <dimen name="spacing_58">58dp</dimen>
+    <dimen name="spacing_60">60dp</dimen>
+    <dimen name="spacing_62">62dp</dimen>
+    <dimen name="spacing_68">68dp</dimen>
+    <dimen name="spacing_70">70dp</dimen>
+    <dimen name="spacing_72">72dp</dimen>
+    <dimen name="spacing_79">79dp</dimen>
+    <dimen name="spacing_85">85dp</dimen>
+    <dimen name="spacing_80">80dp</dimen>
+    <dimen name="spacing_81">81dp</dimen>
+    <dimen name="spacing_82">82dp</dimen>
+    <dimen name="spacing_87">87dp</dimen>
+    <dimen name="spacing_90">90dp</dimen>
+    <dimen name="spacing_92">92dp</dimen>
+    <dimen name="spacing_94">94dp</dimen>
+    <dimen name="spacing_96">96dp</dimen>
+    <dimen name="spacing_100">100dp</dimen>
+    <dimen name="spacing_102">102dp</dimen>
+    <dimen name="spacing_104">104dp</dimen>
+    <dimen name="spacing_105">105dp</dimen>
+    <dimen name="spacing_108">108dp</dimen>
+    <dimen name="spacing_110">110dp</dimen>
+    <dimen name="spacing_120">120dp</dimen>
+    <dimen name="spacing_130">130dp</dimen>
+    <dimen name="spacing_135">135dp</dimen>
+    <dimen name="spacing_145">145dp</dimen>
+    <dimen name="spacing_170">170dp</dimen>
+    <dimen name="spacing_175">175dp</dimen>
+    <dimen name="spacing_124">124dp</dimen>
+    <dimen name="spacing_142">142dp</dimen>
+    <dimen name="spacing_150">150dp</dimen>
+    <dimen name="spacing_230">230dp</dimen>
+    <dimen name="spacing_270">270dp</dimen>
+    <dimen name="spacing_315">315dp</dimen>
+    <dimen name="spacing_64">64dp</dimen>
+    <dimen name="spacing_66">66dp</dimen>
+    <dimen name="spacing_116">116dp</dimen>
+    <dimen name="spacing_126">126dp</dimen>
+    <dimen name="spacing_140">140dp</dimen>
+    <dimen name="spacing_144">144dp</dimen>
+    <dimen name="spacing_156">156dp</dimen>
+    <dimen name="spacing_160">160dp</dimen>
+    <dimen name="spacing_174">174dp</dimen>
+    <dimen name="spacing_180">180dp</dimen>
+    <dimen name="spacing_188">188dp</dimen>
+    <dimen name="spacing_190">190dp</dimen>
+    <dimen name="spacing_200">200dp</dimen>
+    <dimen name="spacing_220">220dp</dimen>
+    <dimen name="spacing_222">222dp</dimen>
+    <dimen name="spacing_228">228dp</dimen>
+    <dimen name="spacing_232">232dp</dimen>
+    <dimen name="spacing_236">236dp</dimen>
+    <dimen name="spacing_240">240dp</dimen>
+    <dimen name="spacing_250">250dp</dimen>
+    <dimen name="spacing_266">266dp</dimen>
+    <dimen name="spacing_280">280dp</dimen>
+    <dimen name="spacing_290">290dp</dimen>
+    <dimen name="spacing_300">300dp</dimen>
+    <dimen name="spacing_350">350dp</dimen>
+    <dimen name="spacing_312">312dp</dimen>
+    <dimen name="spacing_320">320dp</dimen>
+    <dimen name="spacing_324">324dp</dimen>
+    <dimen name="spacing_328">328dp</dimen>
+    <dimen name="spacing_330">330dp</dimen>
+    <dimen name="spacing_354">354dp</dimen>
+    <dimen name="spacing_375">375dp</dimen>
+    <dimen name="spacing_404">404dp</dimen>
+    <dimen name="spacing_420">420dp</dimen>
+    <dimen name="spacing_430">430dp</dimen>
+    <dimen name="spacing_450">450dp</dimen>
+
+    <!-- NEGATIVE DIMENS -->
+    <dimen name="spacing_neg_140">-140dp</dimen>
+    <dimen name="spacing_neg_80">-80dp</dimen>
+
+
+    /***********************************************
+    * FONT DIMENS
+    ***********************************************/
+    <dimen name="font_4">4sp</dimen>
+    <dimen name="font_6">6sp</dimen>
+    <dimen name="font_7">7sp</dimen>
+    <dimen name="font_8">8sp</dimen>
+    <dimen name="font_9">9sp</dimen>
+
+    <dimen name="font_13">13sp</dimen>
+    <dimen name="font_18">18sp</dimen>
+    <dimen name="font_19">19sp</dimen>
+    <dimen name="font_22">22sp</dimen>
+    <dimen name="font_26">26sp</dimen>
+    <dimen name="font_28">28sp</dimen>
+    <dimen name="font_30">30sp</dimen>
+    <dimen name="font_32">32sp</dimen>
+    <dimen name="font_36">36sp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <dimen name="dots_height">30dp</dimen>
+    <dimen name="dots_margin_bottom">20dp</dimen>
+    <dimen name="img_width_height">120dp</dimen>
+    <dimen name="slide_title">30dp</dimen>
+    <dimen name="slide_desc">16dp</dimen>
+    <dimen name="desc_padding">40dp</dimen>
+    <dimen name="d_175">175dp</dimen>
+    <dimen name="d_190">190dp</dimen>
+    <dimen name="d_130">130dp</dimen>
+
+    <!-- margin -->
+    <dimen name="margin_top_10">10dp</dimen>
+    <dimen name="d_0">0dp</dimen>
+    <dimen name="d_32">32dp</dimen>
+    <dimen name="ticket_view_hole_radius">40dp</dimen>
+    <dimen name="font_24">24sp</dimen>
+    <dimen name="font_42">42sp</dimen>
+    <dimen name="font_48">48sp</dimen>
+
+
+    /****** Dimension for Showcase *****/
+    <dimen name="right_translate">200dp</dimen>
+    <dimen name="left_translate">-250dp</dimen>
+
+    <dimen name="pack_now_map_height">200dp</dimen>
+    <dimen name="spacing_84">84dp</dimen>
+    <dimen name="font_15">15sp</dimen>
+    <dimen name="spacing_74">74dp</dimen>
+    <dimen name="spacing_78">78dp</dimen>
+    <dimen name="spacing_54">54dp</dimen>
+
+    <dimen name="collateral_poster">@dimen/spacing_180</dimen>
+    <dimen name="overlap_transistion">-22dp</dimen>
+    <dimen name="overlap_by_4dp">-4dp</dimen>
+    <dimen name="overlap_by_40dp">-40dp</dimen>
+
+    <dimen name="d_12">12dp</dimen>
+    <dimen name="d_127">127dp</dimen>
+    <dimen name="d_51">51dp</dimen>
+    <dimen name="d_29">29dp</dimen>
+    <dimen name="d_27">27dp</dimen>
+    <dimen name="text_size_10">10sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+
+    <dimen name="text_size_13">13sp</dimen>
+    <dimen name="text_size_24">24sp</dimen>
+    <dimen name="text_size_28">28sp</dimen>
+    <dimen name="margin_14">14dp</dimen>
+    <dimen name="width_345">345dp</dimen>
+    <dimen name="height_210">210dp</dimen>
+    <dimen name="d_padding_35">35dp</dimen>
+    <dimen name="d_padding_70">70dp</dimen>
+    <dimen name="d_padding_57">57dp</dimen>
+    <dimen name="d_padding_1">1dp</dimen>
+    <dimen name="d_padding_65">65dp</dimen>
+    <dimen name="d_padding_55">55dp</dimen>
+    <dimen name="d_padding_17">17dp</dimen>
+    <dimen name="d_padding_19">19dp</dimen>
+    <dimen name="d_padding_118">118dp</dimen>
+    <dimen name="font_23">23sp</dimen>
+    <dimen name="spacing_29">29dp</dimen>
+    <dimen name="spacing_245">245dp</dimen>
+    <dimen name="spacing_69">69dp</dimen>
+    <dimen name="spacing_19">19dp</dimen>
+    <dimen name="spacing_45">45dp</dimen>
+    <dimen name="spacing_47">47dp</dimen>
+    <dimen name="spacing_33">33dp</dimen>
+    <dimen name="spacing_21">21dp</dimen>
+    <dimen name="spacing_57">57dp</dimen>
+    <dimen name="spacing_76">76dp</dimen>
+
+    <dimen name="flight_seat_size">@dimen/spacing_30</dimen>
+
+    <dimen name="business_card_width">300dp</dimen>
+    <dimen name="business_card_height">175.92dp</dimen>
+    <dimen name="business_card_width_list">200dp</dimen>
+    <dimen name="business_card_height_list">128dp</dimen>
+    <dimen name="list_item_spacing">16dp</dimen>
+    <dimen name="list_item_spacing_half">8dp</dimen>
+    <dimen name="banner_height">175dp</dimen>
+    <dimen name="payment_item_spacing">12dp</dimen>
+</resources>

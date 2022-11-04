@@ -7,4 +7,683 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    /***********************************************
+    * GENERAL COLORS
+    ***********************************************/
+    <color name="c_white_blue">#f0f3fe</color>
+    <color name="c_black">#000000</color>
+    <color name="c_gainsboro">#dcdcdc</color>
+    <color name="c_transparent">#00000000</color>
+
+
+    /***********************************************
+    * TEXT COLORS
+    ***********************************************/
+    ***********************************************/
+    <color name="c_black_33">#333333</color>
+    <color name="c_black_30">#333330</color>
+    <color name="c_black_21">#212121</color>
+    <color name="c_black_25">#252525</color>
+    <color name="c_grey_cc">#cccccc</color>
+    <color name="c_black_de">#de000000</color>
+    <color name="c_black_8b">#8b000000</color>
+    <color name="c_black_0C">#0c143a</color>
+    <color name="c_black_495275">#495275</color>
+
+
+    <color name="c_black_two">#333333</color>
+    <color name="c_divider">#cccccc</color>
+    <color name="c_faded_black">#33000000</color>
+    <color name="c_fragment_bg">#ffffff</color>
+    <color name="c_error_red">#ff0000</color>
+    <color name="c_bg_shop_status">#eeeeee</color>
+    <color name="c_bg_nav_drawer">#fafafa</color>
+    <color name="c_card_bg">#f9f9f9</color>
+    <color name="c_app_key_color">@color/c_cool_blue</color>
+    <color name="c_app_key_color_dark">#17697f</color>
+    <color name="c_app_key_text_color">#1e88a5</color>
+    <color name="c_app_key_navy_blue">#26b3f2</color>
+    <color name="c_transparent_black2">#AA000000</color>
+    <color name="c_yellow_error">#f5a623</color>
+    <!-- section divider -->
+    <color name="c_section_divider">#f6f6f6</color>
+    <color name="c_section_divider_e6">#e6e5ea</color>
+    <color name="black_medium">#515151</color>
+
+    <!-- colors for custom buttons -->
+    <color name="c_btn_blue_normal">@color/c_app_key_text_color</color>
+    <color name="c_btn_blue_pressed">#1e88e5</color>
+    <color name="c_btn_arapawa_normal">#255460</color>
+    <color name="c_btn_arapawa_pressed">#90A7AD</color>
+    <color name="c_widget_rounded_disabled">#D8D8D8</color>
+    <color name="c_btn_orange_normal">#FF5722</color>
+    <color name="c_progress_indicator">#ffb74d</color>
+    <color name="c_btn_ornage_pressed">#FF8A65</color>
+    <color name="c_btn_red_normal">#cf3d10</color>
+    <color name="c_btn_red_pressed">#ac320c</color>
+    <color name="c_toolbar_orange">#fc6e51</color>
+    <color name="sky_blue">#26b3f2</color>
+    <color name="banner_title_text_color">#26b3f2</color>
+    <color name="green">#2f8f82</color>
+    <color name="button_background_color">#ee7101</color>
+    <color name="inactive_step_color">#bdbdbd</color>
+    <color name="c_gray_d8">#d8d8d8</color>
+    <color name="c_black_">#333330</color>
+    <color name="c_black_22">#222853</color>
+
+
+    <!-- colors for custom buttons -->
+    <color name="c_customer_name">#464a4b</color>
+
+
+    <!-- colors for custom buttons -->
+    <color name="c_txt_white">#ffffff</color>
+    <color name="c_hint_txt_white">#80ffffff</color>
+    <color name="c_txt_black">#000000</color>
+    <color name="c_hint_txt_gray">#616465</color>
+    <color name="c_hint_txt_gray_63">#636363</color>
+    <color name="c_text_gray">#888888</color>
+    <color name="c_text_dark_gray">#606060</color>
+    <color name="c_days_green">#6db85e</color>
+    <color name="c_days_dark_green">#007f00</color>
+    <color name="c_days_gray">#979797</color>
+    <color name="c_days_disabled">#80979797</color>
+    <color name="ripple_gry">#523e3e3e</color>
+
+    <!--color for tab background-->
+    <color name="c_tab_normal">@color/c_app_key_navy_blue</color>
+    <color name="c_tab_seprator">#dddddd</color>
+
+    <color name="c_balance_text_grey">#48acc5</color>
+
+    <color name="c_btn_white_normal">#f0f0f0</color>
+    <color name="c_btn_white_seven">#f5f5f5</color>
+    <color name="c_btn_white_press">#c6c4c4</color>
+    <color name="c_sub_title_blue">@color/c_app_key_text_color</color>
+    <color name="c_txt_neavy">#125465</color>
+
+    <color name="c_card_bg_grey">#f3f2f1</color>
+    <color name="c_black_line">#dddddd</color>
+    <color name="c_txt_warm_grey">#757575</color>
+    <color name="c_warm_grey_two">#888888</color>
+    <color name="c_txt_resend_grey">#c4c4c4</color>
+    <!--add bank details-->
+    <color name="c_card_holder_name_brown_grey">#606060</color>
+    <color name="c_card_ifsc_code_blue_grey">#606060</color>
+    <color name="c_vertical_view">@color/c_app_key_text_color</color>
+    <color name="c_disable_widget">#656D78</color>
+
+    <!--alert dialog-->
+    <color name="c_alert_title">@color/c_app_key_text_color</color>
+    <color name="c_alert_description">#57000000</color>
+    <color name="c_alert_text_btn">#aaaaaa</color>
+
+    <!--move to bank-->
+    <color name="c_background">#f0f0f0</color>
+    <color name="c_error">#6f6f6f</color>
+    <color name="c_warm_grey">#999999</color>
+
+
+    <!--merchant tab text color-->
+    <color name="c_tab_text_selected">#ffffff</color>
+    <color name="c_tab_text_normal">#8effffff</color>
+    <color name="c_tab_text_normal_gray">@color/warm_grey_four</color>
+    <color name="c_tab_indicator">#6448acc5</color>
+    <color name="c_shop_fully_day">@color/c_dark_slate_blue</color>
+    <color name="c_shop_half_day">@color/c_cool_blue</color>
+
+    <!-- Landing page TAB -->
+    <color name="c_tab_landing_text_normal">#a0d4e0</color>
+
+    <!--custom progree bar-->
+    <color name="c_transaction_sucess">#74aa42</color>
+    <color name="c_transaction_failed">#e44f4f</color>
+    <color name="c_transaction_processing">#5997b3</color>
+    <color name="c_slate_grey">#616465</color>
+    <color name="c_grey_background">#e0e0e0</color>
+    <color name="c_slate_light_grey">#F2F2F2</color>
+    <color name="c_white_four">#d8d8d8</color>
+    <color name="c_white_five">#e9e9e9</color>
+    <color name="c_white_six">#e2e2e2</color>
+
+    <color name="c_cool_blue">#48acc5</color>
+    <color name="c_dark_slate_blue">#255460</color>
+    <color name="c_light_slate_blue">#387b8c</color>
+
+    <color name="c_pastel_red">#e85c4e</color>
+    <color name="c_coral">#ef5350</color>
+    <color name="c_boring_green">#66bb6a</color>
+    <color name="pastel_red_two">#e44f4f</color>
+    <color name="warm_grey_four">#9e9e9e</color>
+    <color name="warm_grey_three">#757575</color>
+    <color name="c_blue_color_link">#0B0080</color>
+    <color name="c_dark_sky_blue">#59c1db</color>
+    <color name="c_dirty_blue">#4497ab</color>
+    <color name="c_gray_88">#e0e0e0</color>
+    <color name="c_divider_gray">#d1d0cb</color>
+
+    <color name="brownish_gray">#606060</color>
+    <color name="c_warm_grey_six">#767676</color>
+    <color name="c_card_red_bg">#ec644b</color>
+
+    <color name="txt_green">#43A047</color>
+    <color name="txt_red">#ec644b</color>
+    <color name="slate_grey">#616465</color>
+    <color name="slate_grey_two">#606364</color>
+    <color name="c_card_green_bg">#43a047</color>
+    <color name="c_light_grey">#d1d1cb</color>
+    <color name="c_grayish">#acacac</color>
+    <color name="c_gray_80">#808597</color>
+    <color name="card_blue_bg">#e7ecfe</color>
+
+
+    <!--new Design -->
+    <color name="secondary_toolbar">#505bb9</color>
+    <color name="blue_dark">#2f4d8f</color>
+    <color name="money_trasfer">#28B194</color>
+    <color name="credit_card">#DD0E70</color>
+    <color name="mobile_recharge">#2196f3</color>
+    <color name="data_card">#00bcd4</color>
+    <color name="dtc_rechage">#3a539b</color>
+    <color name="bluish_bg">#e6eeff</color>
+    <color name="claim_refund">#63C963</color>
+    <color name="bill_payments">#F6BB42</color>
+    <color name="aeps">#d24d57</color>
+    <color name="white_dull">#eef5ff</color>
+    <color name="card_pay">#8bc34a</color>
+    <color name="c_white_eight">#f2f2f2</color>
+    <color name="c_cool_blue_two">#4cabc4</color>
+    <color name="c_black_87">#dd000000</color>
+    <color name="c_black_54">#89000000</color>
+    <color name="c_lipstick">#d52736</color>
+    <color name="c_mid_green_two">#4caf50</color>
+    <color name="c_black_38">#60000000</color>
+    <color name="c_white_nine">#e5e5e5</color>
+    <color name="pinkish_grey">#bbbbbb</color>
+    <color name="pinkish_transparent_darker_grey">#57bbbbbb</color>
+    <color name="c_red">#f63c36</color>
+    <color name="c_deep_sky_blue">#0e8afa</color>
+    <color name="c_dark_sky_blue_two">#4376ee</color>
+    <color name="c_white_ten">#ecebeb</color>
+    <color name="bottom_sheet_text_color">#212121</color>
+    <color name="green_button_color">#6fbe5a</color>
+    <color name="c_black_medium">#212121</color>
+    <color name="disable_gray">#c5c5c5</color>
+    <color name="dark_sky_blue_three">#5297e8</color>
+    <color name="c_rusty_orange">#e15a10</color>
+    <color name="dark_purple">#2b3e8d</color>
+    <color name="custom_showcase_bg">#CC000000</color>
+    <color name="pinkish_red">#ea2330</color>
+    <color name="grey_new">#737373</color>
+
+    <!-- Screens background color-->
+    <color name="bg_screen1">#f64c73</color>
+    <color name="bg_screen2">#20d2bb</color>
+    <color name="bg_screen3">#3395ff</color>
+    <color name="bg_screen4">#c873f4</color>
+
+    <!-- dots inactive colors -->
+    <color name="dot_dark_screen1">#d1395c</color>
+    <color name="dot_dark_screen2">#14a895</color>
+    <color name="dot_dark_screen3">#2278d4</color>
+    <color name="dot_dark_screen4">#a854d4</color>
+
+    <!-- dots active colors -->
+    <color name="dot_light_screen1">#f98da5</color>
+    <color name="dot_light_screen2">#8cf9eb</color>
+    <color name="dot_light_screen3">#93c6fd</color>
+    <color name="dot_light_screen4">#e4b5fc</color>
+    <color name="walkthorughtextcolor">#636463</color>
+    
+    <array name="array_dot_inactive">
+        <item>@color/white</item>
+        <item>@color/white</item>
+        <item>@color/white</item>
+        <item>@color/white</item>
+    </array>
+
+    <color name="c_topaz">#1bc0a7</color>
+    <color name="c_topaz_pressed">#139b86</color>
+    <color name="c_ticket_bg">#ebeffe</color>
+    <color name="c_very_light_blue">#eef1ff</color>
+    <color name="c_white_three">#e6e6e6</color>
+    <color name="c_text_blue">#2b3f8f</color>
+
+    <color name="default_white">#f7f7f7</color>
+    <color name="grey_divider">#cdcdcd</color>
+    <color name="green_blue">#3bb3a9</color>
+    <color name="c_auqa_spring">#E8F8F6</color>
+    <color name="c_insure_nearby">#eaedfa</color>
+
+
+    /***********************************************
+    * CUSTOM COLORS
+    ***********************************************/
+    <color name="c_warm_pink">#f75972</color>
+    <color name="c_warm_pink_dark">#DD3852</color>
+    <color name="c_warm_pink_light">#11f75972</color>
+    <color name="c_orangey_red">#f63f3a</color>
+    <color name="c_sea_foam_blue">#4ed4bc</color>
+    <color name="c_sea_foam_blue_dark">#02967B</color>
+    <color name="c_blue">#1e88e5</color>
+    <color name="c_pink">#FF4081</color>
+    <color name="c_green">#66bb6a</color>
+    <color name="c_grey_ac">#acacac</color>
+    <color name="c_warm_grey_four">#9e9e9e</color>
+    <color name="c_transparent_gry">#6e000000</color>
+    <color name="c_pinkish_orange">#fd684a</color>
+    <color name="c_mine_shaft">#333333</color>
+    <color name="c_sunflower_yellow">#f7da00</color>
+    <color name="c_sunflower_yellow_v1">#f2c655</color>
+    <color name="c_new_yellow_v1">#eca42e</color>
+    <color name="c_sunflower_yellow_light">#16f5d800</color>
+    <color name="c_pinkish_orange_two">#fd674a</color>
+    <color name="c_yellow_bg">#fff3df</color>
+    <color name="c_pinkish_grey">#bbbbbb</color>
+    <color name="c_dim_grey">#d2d2d2</color>
+    <color name="c_seafoam_blue">#4ed4bc</color>
+    <color name="c_shadow">#CABBBBBB</color>
+    <color name="c_alabaster">#f7f7f7</color>
+    <color name="c_dove_gray">#666666</color>
+    <color name="c_dove_gray_a20">#33666666</color>
+    <color name="pinkish_transparent_grey">#2bbbbbbb</color>
+    <color name="spun_pearl">#a9acbd</color>
+    <color name="spun_pearl_48">#48a9acbd</color>
+    <color name="gallery">#eaeaea</color>
+    <color name="orangey_red">#f63f3a</color>
+    <color name="cool_green">#32cd67</color>
+    <color name="cool_green_dark">#17a749</color>
+    <color name="white_wash">#80ffffff</color>
+    <color name="grayish">#acacac</color>
+    <color name="c_orangey_red_dark">#c4312d</color>
+    <color name="c_cool_green">#32cd67</color>
+    <color name="c_white_new">#e8e8e8</color>
+    <color name="white_two">#f5f5f5</color>
+    <color name="text_gry">#c4c4c4</color>
+    <color name="watermelon">#f2ff4b5a</color>
+    <color name="white_five">#f2f2f2</color>
+    <color name="grey_f9">#f9f9f9</color>
+    <color name="black_38">#60000000</color>
+    <color name="pale_grey">#eeeef2</color>
+    <color name="greyish_two">#afafaf</color>
+    <color name="c_very_dim_grey">#e6e5ea</color>
+    <color name="c_seafoam_blue_two">#4ed3bd</color>
+    <color name="c_deep_sky_blue_two">#0e87f5</color>
+    <color name="c_lightish_blue">#f6f9ff</color>
+    <color name="c_black_80">#cc333333</color>
+    <color name="c_charcoal_grey">#3a3a3c</color>
+    <color name="c_water_blue">#0e78db</color>
+    <color name="c_silver">#cbcbcb</color>
+    <color name="c_selected_overlay">#190e8afa</color>
+    <color name="c_background_grey">#f3f3f3</color>
+    <color name="brown_grey">#999999</color>
+    <color name="brown_grey_dark">#666666</color>
+    <color name="c_line_invoice">#e0dfdf</color>
+    <color name="c_white_lilac">#f6f7fc</color>
+    <color name="light_grey_3">#dde3ff</color>
+
+
+    <color name="c_gray_light">#f1efef</color>
+    <color name="c_gray_light_two">#efefef</color>
+    <color name="time_out_red">#e53935</color>
+    <color name="c_tomato">#e53a35</color>
+    <color name="c_gray_light_three">#f6f6f6</color>
+    <color name="c_orange">#fb8c00</color>
+    <color name="c_light_topaz">#281bc0a7</color>
+    <color name="c_dark_blue">#3f5efa</color>
+    <color name="c_warm_blue">#3d5bdd</color>
+    <color name="c_turquoise">#00c4a6</color>
+    <color name="c_light_green">#baf3ea</color>
+    <color name="c_greysih_brown">#4a4a4a</color>
+    <color name="txt_light_grey">#9b9b9b</color>
+    <color name="background">#ececec</color>
+    <color name="background_file_download">#f0f2f5</color>
+    <color name="c_bottom_bar_black">#333333</color>
+    <color name="c_light_yellow">#fffbda</color>
+    <color name="c_text_green_blue">#3bb3a9</color>
+    <color name="c_transparent_white">#7dffffff</color>
+    <color name="c_transparent_white_more">#e7ffffff</color>
+    <color name="thumb_grey">#cdcdcd</color>
+    <color name="row_grey">#eeeeee</color>
+    <color name="row__flight_selected">#e8f8f6</color>
+    <color name="brownish_grey_70">#707070</color>
+    <color name="black_two_2a">#2a2a2a</color>
+    <color name="text_light_gray">#7d7d7d</color>
+
+    <color name="very_light_pink">#fffbf5</color>
+    <color name="light_green">#a68ced90</color>
+    <color name="light_blue">#9092a4f5</color>
+    <color name="lavendar">#e4e8fa</color>
+    <color name="lavendar_light">#ececfa</color>
+    <color name="covid19_flight_special_fare_bg">#EAC28E</color>
+
+    <color name="very_light_black">#4a4a4a</color>
+    <color name="br_green">#00963f</color>
+    <color name="pastel_green">#11b144</color>
+    <color name="br_gray_light">#e7e7e7</color>
+    <color name="txt_red_rejected">#c95c5a</color>
+    <color name="c_dusk_blue">#2b3f8f</color>
+    <color name="c_brown_grey">#8b8b8b</color>
+    <color name="c_very_light_pink_three">#e9e9e9</color>
+    <color name="c_desert">#cdae63</color>
+    <color name="c_blueish">#2f4d8f</color>
+    <color name="c_grey">#565656</color>
+    <color name="c_blue_">#eceffd</color>
+    <color name="light_grey_bg">#ebebeb</color>
+    <color name="txt_blue">#334aad</color>
+    <color name="black_three">#383838</color>
+    <color name="rating_bar_color">#f0b701</color>
+    <color name="offers_green_color">#429600</color>
+    <color name="hotel_rating_bg_color">#ea9903</color>
+    <color name="gamboge">#d18d0d</color>
+    <color name="c_orange_dark">#f47100</color>
+    <color name="c_orange_lite">#fdf0e5</color>
+    <color name="hotel_overlay_color">#80000000</color>
+    <color name="purple_one">#2b3e8d</color>
+    <color name="brick_red">#9f2c32</color>
+    <color name="brick_red_1">#8c262c</color>
+    <color name="orange_indicator">#e0732a</color>
+    <color name="orange_background">#fedbc4</color>
+    <color name="color_red">#e85151</color>
+    <color name="dk_grey">#676767</color>
+    <color name="divider">#3d000000</color>
+    <color name="black_four">#676767</color>
+    <color name="c_gray_light_four">#9a9a9a</color>
+    <color name="c_gray_light_five">#878787</color>
+    <color name="c_gray_light_six">#4d4d4d</color>
+    <color name="c_indigo">#3c0084</color>
+    <color name="c_selected_dialog_text">#febb13</color>
+    <color name="c_divider_47">#474747</color>
+
+    <color name="dpc_purple">#FF480D91</color>
+    <color name="c_divider_indigo">#040008</color>
+    <color name="dpc_match_lost">#ed5757</color>
+    <color name="dpc_match_won">#fbd125</color>
+    <color name="dpc_scoreboard">#d75824</color>
+    <color name="dpc_how_to_play_list_bg">#1f113c</color>
+    <color name="dpc_result_color">#f7b500</color>
+    <color name="greyish_brown_two">#595959</color>
+    <color name="greyish_brown_three">#535353</color>
+
+    <color name="grey_bg">#ededed</color>
+    <color name="faded_azul">#164162f1</color>
+    <color name="yellow_snack">#f7d900</color>
+    <color name="black_five">#363636</color>
+    <color name="white_three">#f4f4f4</color>
+    <color name="white_four">#f4f4f4</color>
+    <color name="transparent_black_sixty">#62000000</color>
+    <color name="c_time_out">#f08d23</color>
+    <color name="orange_pending">#f08d23</color>
+    <color name="c_transaction_timeout">#F08D23</color>
+    <color name="c_light_grey1">#de666666</color>
+    <color name="c_black1">#99212121</color>
+    <color name="c_video_time_bg">#99000000</color>
+    <color name="video_item_selected_bg">#efeded</color>
+    <color name="npci_timer_background">#b3f2e8</color>
+    <color name="npci_timer_text">#4162f1</color>
+
+    <color name="insurance_renewal_cardview">#eaedfa</color>
+    <color name="insurance_renewal_new_text_bg">#f9ca15</color>
+    <color name="insurance_renewal_new_text">#9f2c32</color>
+    <color name="green_dash">#1bc0a7</color>
+    <color name="green_dash_background">#ebfbf9</color>
+
+    <color name="blue_dash">#2b3e8d</color>
+    <color name="blue_dash1">#0f447d</color>
+    <color name="blue_dash_background">#d4dcfe</color>
+
+    <color name="c_light_green_bnb">#e3f7f4</color>
+    <color name="push_small_icon_background">#4162f1</color>
+    <color name="background_magnolia">#eaedfa</color>
+    <color name="c_orange_text">#ef6c00</color>
+    <color name="c_induslnd_qr">#c97911</color>
+    <color name="c_induslnd_qr_press">#90c97911</color>
+    <color name="delete_color">#808495</color>
+
+    <color name="blue_3f5feb">#3f5feb</color>
+    <color name="blue_f3f4fb">#f3f4fb</color>
+    <color name="faded_light_green">#c7eeb9</color>
+    <color name="blue_005191">#005191</color>
+    <color name="c_text_color_dark">#515151</color>
+    <color name="deep_sea_blue">#005191</color>
+    <color name="device_insurance_label_blue">#8791be</color>
+    <color name="device_insurance_bg_blue">#f2f5ff</color>
+    <color name="insurer_list_bg">#f7f9ff</color>
+    <color name="insurer_list_divider_bg">#e2e9ff</color>
+
+
+    <color name="c_grey_8">#817d7d</color>
+    <color name="c_grey_10">#cacaca</color>
+    <color name="c_red_light">#fed8d8</color>
+    <color name="c_orange_dart_text">#ee6a00</color>
+    <color name="c_green_text">#0a9883</color>
+
+    <color name="c_vanta_black">#202020</color>
+    <color name="c_gl_warm_gray">#808080</color>
+    <color name="c_gl_orangish_red">#ff534f</color>
+    <color name="c_gl_gray">#d7d7d7</color>
+    <color name="c_gl_intro_bg">#f2f5ff</color>
+    <color name="c_light_blue">#e9edff</color>
+    <color name="c_micro_atm_scanner_color">#fff2cd</color>
+    <color name="bnb_service_toolbar_green">#11a85d</color>
+    <color name="faded_red">#fff8f8</color>
+    <color name="c_violet_light">#8791be</color>
+
+    <color name="c_blue_6e">#6e81da</color>
+    <color name="c_blue_89">#899bec</color>
+    <color name="c_orange_f3">#f39800</color>
+    <color name="c_green_da">#daf8f4</color>
+    <color name="c_light_orange_ff">#ffeed1</color>
+    <color name="c_dark_orange_f3">#f39904</color>
+    <color name="c_lite_grey_81">#818181</color>
+    <color name="c_lite_blue_db">#dbe2ff</color>
+    <color name="c_lite_red_ff">#fff3f3</color>
+    <color name="c_grey_a3">#a3a9b7</color>
+    <color name="c_blue_6d">#6d7b9e</color>
+    <color name="c_grey_ee">#eef2ff</color>
+    <color name="c_blue_1d">#1d274e</color>
+    <color name="c_blue_81">#8195ec</color>
+    <color name="c_line_bnb_db">#e3e4ed</color>
+    <color name="c_delivery_boy_bg">#E6F0FF</color>
+    <color name="c_orders_db">#19402d</color>
+    <color name="c_blue_divider">#385dda</color>
+    <color name="c_white_dark_divider">#f2f7f4</color>
+    <color name="c_green_light_shade">#f6f8f7</color>
+    <color name="c_grey_background_dark">#e1dede</color>
+    <color name="c_black_grey_txt">#262626</color>
+    <color name="light_grey_line">#f0efe9</color>
+    <color name="c_blueish_grey">#595b67</color>
+    <color name="c_light_blue_e3">#e3eefd</color>
+    <color name="c_transparent_light_blue_e3">#65eaedfa</color>
+    <color name="c_dark_sky_blue_grey">#5f82a7</color>
+    <color name="c_greyish_blue_25">#253546</color>
+    <color name="c_purple_66">#663399</color>
+    <color name="popup_yellow_bg">#FFFACD</color>
+    <color name="c_line_grey_light">#e1e1e1</color>
+    <color name="c_red_ff">#ff2e18</color>
+    <color name="light_cyan">#e9fffc</color>
+    <color name="faded_red_new">#ffecec</color>
+    <color name="faded_orange">#fff4de</color>
+
+    //sbm
+    <color name="light_yellow">#fbfdcb</color>
+    <color name="grey_90">#909090</color>
+    <color name="blue_berry">#4161f0</color>
+    <color name="c_emerald">#4bd37b</color>
+    <color name="c_light_emerald">#47ff88</color>
+    <color name="gray_ad">#adadad</color>
+    <color name="light_grey">#909090</color>
+    <color name="grey_text">#a5a5a5</color>
+    <color name="topaz_green">#1cc0a7</color>
+    <color name="d_green">#4BD37B</color>
+    <color name="c_light_warm_grey">#909090</color>
+    <color name="c_sunflower_yellow_v2">#fbfdcb</color>
+
+    /***********************************************
+    * Khata
+    ***********************************************/
+    <color name="khata_blue">#4162f1</color>
+    <color name="soft_green">#6aba4b</color>
+    <color name="lynch">#6d7b9e</color>
+    <color name="white_smoke">#f8f8f8</color>
+    <color name="c_ripple_light">#33ffffff</color>
+    <color name="c_ripple_dark">#1f000000</color>
+    <color name="c_grey_db">#dbe0f6</color>
+    <color name="c_lite_orange_ff">#fff5e5</color>
+    <color name="c_lite_green_eb">#ebfbf9</color>
+    <color name="c_e9f5e7">#e9f5e7</color>
+    <color name="c_corner_khata_til">#d0d0d0</color>
+    <color name="c_bluish_green_0a">#0a9883</color>
+    <color name="c_yellow_f3">#f39800</color>
+    <color name="c_grey_b9">#b9bfda</color>
+    <color name="c_grey_e0">#e0e4f4</color>
+    <color name="dark_black">#131415</color>
+    <color name="c_blue_26">#26284a</color>
+    <color name="c_blue_9b">#9ba9e7</color>
+    <color name="c_grey_a1">#a1a1a1</color>
+    <color name="c_grey_4e">#4e4a4a</color>
+    <color name="c_red_b0">#b00020</color>
+
+    <color name="honeydew">#effdf5</color>
+    <color name="grey_66">#666660</color>
+    <color name="grey_d6">#d6d6d6</color>
+    <color name="grey_da">#dadada</color>
+    <color name="text_bg">#E1E6FA</color>
+    <color name="blue_33">#3359a5</color>
+    <color name="dark_blue_text">#222853</color>
+    <color name="light_blue_grey">#777895</color>
+    <color name="c_mid_gray">#646570</color>
+    <color name="c_cloud_burst">#222853</color>
+    <color name="c_manatee">#8587a0</color>
+    <color name="c_port_gore">#202450</color>
+    <color name="c_waterloo">#777895</color>
+    <color name="c_zircon">#f0f4ff</color>
+    <color name="c_alizarin_crimson">#ec2224</color>
+    <color name="c_hawkes_blue">#d4d7fb</color>
+    <color name="c_persian_green">#00b693</color>
+    <color name="c_white_d9">#d9ffffff</color>
+    <color name="fldg_error">#ec2224</color>
+    <color name="text_background_grey">#e1e5f7</color>
+    <color name="blue_tooltip">#e6eaf8</color>
+    <color name="orange_status">#f5a622</color>
+
+    //smartgold
+    <color name="gold_light_blue">#a8b3dc</color>
+    <color name="gold_bottom_green">#54b38a</color>
+    <color name="gold_light_green">#c0f0db</color>
+    <color name="gold_red">#d94040</color>
+    <color name="gold_light_red">#ffcccb</color>
+    <color name="big_basket_green">#a4cc38</color>
+    <color name="train_list_divider">#eff1fb</color>
+    <color name="itc_unnati_blue">#e6eeff</color>
+    <color name="itc_unnati_blue_label">#4489ff</color>
+    <color name="text_blue">#184e9e</color>
+    <color name="text_grey">#424242</color>
+    <color name="orange">#EFA35E</color>
+    <color name="c_light_blue_transparent">#194162f1</color>
+    <color name="c_amber_11">#ef9c11</color>
+
+    <color name="r_light_blue">#EDF0FB</color>
+    <color name="c_grey_c8">#c8c8c8</color>
+    <color name="c_blue_41">#4162f1</color>
+    <color name="c_blue_5a">#5a6282</color>
+    <color name="c_grey_92">#929292</color>
+    <color name="c_red_ee">#ee1c26</color>
+    <color name="c_green_26">#26a053</color>
+    <color name="c_blue_f2">#f2f5ff</color>
+    <color name="c_blue_e1">#e1e6ff</color>
+    <color name="c_grey_e1">#e1dcdc</color>
+    <color name="c_grey_fa">#fafafa</color>
+    <color name="r_grey">#5a6282</color>
+
+    <color name="c_black_222637">#222637</color>
+    <color name="c_blue_f0f5ff">#f0f5ff</color>
+    <color name="c_green_64">#64bc4c</color>
+    <color name="c_blue_shade_a5">#0080a5</color>
+
+    //softpos
+    <color name="sub_title_grey">#8587a0</color>
+    <color name="title_black">#222637</color>
+    <color name="dialog_green">#6fbe5a</color>
+
+    <color name="bg_e6eeff">#e6eeff</color>
+    <color name="bg_1bc0a7">#1bc0a7</color>
+    <color name="bg_dffffa">#dffffa</color>
+
+    <color name="c_greay_62">#626a89</color>
+    <color name="c_blue_f4">#f4f6ff</color>
+    <color name="c_orange_ff">#ff8800</color>
+    <color name="c_green_00">#00a449</color>
+    <color name="c_blue_text_tax">#184E9E</color>
+
+    <color name="c_e4f3fc">#e4f3fc</color>
+    <color name="button_green_bg">#FA640D</color>
+
+    <color name="c_blue_bg">#e6f1ff</color>
+    <color name="white_grey_smoke">#f8f8f8</color>
+    <color name="c_gray_c5">#c5c8cd</color>
+    <color name="c_blue_3e">#3e4858</color>
+    <color name="c_red_f8">#f84345</color>
+    <color name="c_dark_blue_04">#041834</color>
+    <color name="c_gray_78">#787f8a</color>
+    <color name="c_blue_18">#184e9e</color>
+    <color name="c_3e4858">#3e4858</color>
+    <color name="c_F4C95D">#F4C95D</color>
+    <color name="c_787f8a">#787f8a</color>
+    <color name="c_58b23b">#FA640D</color>
+    <color name="c_c5c8cd">#c5c8cd</color>
+    <color name="c_f84345">#f84345</color>
+    <color name="c_26a052">#26a052</color>
+    <color name="c_light_58b23b">#2858b23b</color>
+    <color name="c_ffb100">#ffb100</color>
+    <color name="c_bnb_share_background">#FFF7E0</color>
+    <color name="c_bnb_count_background">#e4f3fc</color>
+    <color name="c_bnb_share_txt">#3e4858</color>
+    <color name="c_bnb_popup_left_txt">#184E9E</color>
+
+
+    <color name="c_gray_3e">#3e4858</color>
+    <color name="c_gray_3e_opacity_75">#bf3e4858</color>
+    <color name="c_gray_3e_opacity_50">#803e4858</color>
+    <color name="c_gray_7c">#7c7c7c</color>
+    <color name="c_orange_f2">#f2a13a</color>
+    <color name="c_green_58">#58b23b</color>
+    <color name="c_white_f5">#f5f5f5</color>
+    <color name="c_white_ffb">#ffb100</color>
+    <color name="c_040303">#040303</color>
+    <color name="c_CC184e9e">#CC184e9e</color>
+
+    <color name="c_orange_fa">#fa640d</color>
+    <color name="c_gray_ef">#efefef</color>
+    <color name="c_grey_94">#949494</color>
+
+
+    <color name="c_black_020305">#020305</color>
+    <color name="c_black_565758">#565758</color>
+    <color name="c_black_33C5C8CD">#33C5C8CD</color>
+    <color name="c_grey_66">#666666</color>
+
+    <color name="transparent_layout_color">#80000000</color>
+    <color name="c_020305">#020305</color>
+    <color name="c_565758">#565758</color>
+    <color name="c_5f6e85">#5f6e85</color>
+    <color name="c_c5c5c7">#c5c5c7</color>
+    <color name="c_f4c95d">#f4c95d</color>
+    <color name="c_b6174b">#b6174b</color>
+    <color name="c_green_bg">#4ec24a</color>
+    <color name="c_08a045">#08a045</color>
+    <color name="c_f4f8ff">#f4f8ff</color>
+    <color name="c_lokalise_color">#66bb6a</color>
+    <color name="c_gray_light_seven">#787f8a</color>
+    <color name="txt_hint_grey">#c5c8cd</color>
+    <color name="c_fa640d">#fa640d</color>
+    <color name="c_f5f5f7">#f5f5f7</color>
+    <color name="c_120e0a">#120e0a</color>
+    <color name="udyam_card_grey">#f5f5f7</color>
+
+    <color name="c_blue_22">#226bbd</color>
+    <color name="divider_e0">#e0e0e0</color>
+    <color name="c_orange_fb">#FB8C00</color>
+    <color name="c_8282">#828282</color>
 </resources>
