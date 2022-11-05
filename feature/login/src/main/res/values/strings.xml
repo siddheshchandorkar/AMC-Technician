@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">login</string>
     <string name="txt_login">Login</string>
+    <string name="txt_email_id">Email Id</string>
+    <string name="txt_password">Password</string>
+    <string name="txt_forgot_password">Forgot Password</string>
+    <string name="txt_login_in">Login In</string>
 </resources>

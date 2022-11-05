@@ -13,15 +13,79 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/purple_500">
+        android:background="@color/white">
 
         <TextView
+            android:id="@+id/tv_login_title"
             style="@style/bold_large_text"
-            android:layout_marginTop="@dimen/spacing_100"
+            android:layout_margin="@dimen/spacing_20"
             android:text="@string/txt_login"
+            android:textColor="@color/purple_500"
             android:textSize="@dimen/font_48"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_login_email_id"
+            android:layout_width="@dimen/spacing_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_20"
+            android:layout_marginEnd="@dimen/spacing_20"
+            android:hint="@string/txt_email_id"
+            android:theme="@style/Theme.TextInputLayoutGreyStyle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/TextInputEditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:textSize="@dimen/font_16" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_login_password"
+            android:layout_width="@dimen/spacing_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_20"
+            android:layout_marginTop="@dimen/spacing_30"
+            android:layout_marginEnd="@dimen/spacing_20"
+            android:hint="@string/txt_password"
+            android:theme="@style/Theme.TextInputLayoutGreyStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_login_email_id">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/TextInputEditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textSize="@dimen/font_16" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_10"
+            android:layout_marginEnd="@dimen/spacing_20"
+            android:text="@string/txt_forgot_password"
+            android:textColor="@color/purple_700"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_login_password" />
+
+        <Button
+            app:layout_constraintTop_toBottomOf="@id/tv_forgot_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_20"
+            android:textColor="@color/white"
+            android:text="@string/txt_login_in"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
