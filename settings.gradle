@@ -21,6 +21,7 @@ include ':core:domain'
 include ':core:common'
 
 include ':feature:login'
+include ':feature:dashboard'
 //include ':feature:notification'
 //include ':feature:enquiry'
 //include ':feature:servicecall'
