@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import com.amc.login.presentation.ui.LoginActivity
 import com.amc.technician.R
+import com.amc.technician.presentation.ui.MainActivity
 
 class AppNavigation {
 
@@ -13,6 +14,11 @@ class AppNavigation {
             activity.startActivity(intent)
         }
 
+        fun navigateToMainActivity(activity: Activity) {
+            val intent = Intent(activity, MainActivity::class.java)
+            activity.startActivity(intent)
+            activity.finish()
+        }
         fun navigateToDashboard(activity: Activity) {
 //            val transaction = activity.s.beginTransaction()
 //            transaction.replace(R.id.containter, fragment)

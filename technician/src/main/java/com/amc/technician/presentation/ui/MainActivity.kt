@@ -21,7 +21,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         viewModel = MainActivityViewModel(application)
         binding.vm = viewModel
@@ -38,7 +37,6 @@ class MainActivity : AppCompatActivity() {
                 if (lastIndex != newIndex) {
                     when (newIndex) {
                         DASHBOARD -> {
-//                            AppNavigation.navigateToDashboard(this@MainActivity)
                             replaceFragment(binding.container.id, DashBoardFragment())
                         }
                         LEADERBOARD -> {
