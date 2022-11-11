@@ -4,10 +4,7 @@
 
     <application
         android:allowBackup="true">
-        <activity
-            android:name=".DashBoardActivity"
-            android:exported="true">
-        </activity>
+
     </application>
 
 </manifest>

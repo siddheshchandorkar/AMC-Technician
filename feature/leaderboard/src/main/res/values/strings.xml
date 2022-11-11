@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">LeaderBoard</string>
+    <string name="points">Points</string>
+    <string name="technician_name">Technician Name</string>
+    <string name="rank">Rank</string>
+    <string name="leader_board">Leader Board</string>
 </resources>

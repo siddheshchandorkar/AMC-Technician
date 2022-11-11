@@ -50,6 +50,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:orientation="vertical">
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -79,7 +80,7 @@
                     android:layout_marginStart="@dimen/spacing_20"
                     android:layout_marginTop="@dimen/spacing_30"
                     android:layout_marginEnd="@dimen/spacing_20"
-                    android:hint="@string/txt_password"
+                    android:hint="@string/enter_otp"
                     android:theme="@style/Theme.TextInputLayoutGreyStyle"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -90,6 +91,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textPassword"
+                        android:maxLength="6"
                         android:textSize="@dimen/font_16" />
                 </com.google.android.material.textfield.TextInputLayout>
 
