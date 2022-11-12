@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         viewModel = MainActivityViewModel(application)
         binding.vm = viewModel
         binding.lifecycleOwner = this
-        addFragment(binding.container.id, DashBoardFragment())
+        addFragment(binding.container.id, DashBoardFragment.getInstance(Bundle()))
 
         binding.bottomBar.setOnTabSelectListener(object : AnimatedBottomBar.OnTabSelectListener {
             override fun onTabSelected(
@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
                 if (lastIndex != newIndex) {
                     when (newIndex) {
                         DASHBOARD -> {
-                            replaceFragment(binding.container.id, DashBoardFragment())
+                            replaceFragment(binding.container.id, DashBoardFragment.getInstance(Bundle()))
                         }
                         LEADERBOARD -> {
                             replaceFragment(binding.container.id, LeaderBoardFragment())
@@ -46,7 +46,9 @@ class MainActivity : AppCompatActivity() {
                             replaceFragment(binding.container.id, NotificationFragment())
                         }
                         TODAYS_CALL -> {
-                            replaceFragment(binding.container.id, DashBoardFragment())
+                            val bundle =Bundle()
+                            bundle.putBoolean(DashBoardFragment.TODAYS_LIST,true)
+                            replaceFragment(binding.container.id, DashBoardFragment.getInstance(bundle))
                         }
                     }
                 }
