@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../.gradle/caches/transforms-3/06b7198dcf951c3bc97c6fa507782578/transformed/jetified-library-1.1.0/res/drawable-anydpi-v21/alarm.xml" value="0.167" />
         <entry key="core/common/src/main/res/drawable/background_top_curve_gray.xml" value="0.167" />
         <entry key="core/common/src/main/res/drawable/bg_gradient.xml" value="0.1" />
         <entry key="feature/dashboard/src/main/res/layout/activity_dash_board.xml" value="0.2953125" />
@@ -12,6 +13,8 @@
         <entry key="feature/login/src/main/res/layout/activity_login.xml" value="0.2375" />
         <entry key="feature/notification/src/main/res/layout/fragment_leader_board.xml" value="0.14907407407407408" />
         <entry key="feature/notification/src/main/res/layout/fragment_notification.xml" value="0.26851851851851855" />
+        <entry key="technician/src/main/res/drawable-anydpi/ic_action_name.xml" value="0.167" />
+        <entry key="technician/src/main/res/drawable/ic_launcher_background.xml" value="0.167" />
         <entry key="technician/src/main/res/layout/activity_main.xml" value="0.26851851851851855" />
         <entry key="technician/src/main/res/layout/tabs.xml" value="0.1453125" />
         <entry key="technician/src/main/res/menu/tabs.xml" value="0.2953125" />
