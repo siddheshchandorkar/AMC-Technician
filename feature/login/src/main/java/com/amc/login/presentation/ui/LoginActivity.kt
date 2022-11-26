@@ -3,6 +3,8 @@ package com.amc.login.presentation.ui
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import com.amc.common.AppNavigationInterface
+import com.amc.common.CommonInterface
 import com.amc.login.R
 import com.amc.login.databinding.ActivityLoginBinding
 import com.amc.login.presentation.viewmodels.LoginViewModel
@@ -10,6 +12,7 @@ import com.amc.login.presentation.viewmodels.LoginViewModel
 class LoginActivity : AppCompatActivity() {
     private lateinit var viewModel: LoginViewModel
     private lateinit var binding: ActivityLoginBinding
+    private lateinit var appNavigationInterface : AppNavigationInterface
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,12 +29,14 @@ class LoginActivity : AppCompatActivity() {
         }
 
         binding.btnLogin.setOnClickListener {
-            finish()
+            CommonInterface.getInstance().getAppNavigation().value = AppNavigationInterface.NavigateToMainActivity
         }
-
     }
+
 
     companion object{
         const val LOGIN_OR_SIGNUP ="LOGIN_OR_SIGNUP"
+
+
     }
 }

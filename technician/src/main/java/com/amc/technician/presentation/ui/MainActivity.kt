@@ -1,11 +1,11 @@
 package com.amc.technician.presentation.ui
 
 import android.os.Bundle
-import android.system.Os.remove
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import com.amc.common.AppNavigationInterface
 import com.amc.dashboard.DashBoardFragment
 import com.amc.leaderboard.presentation.ui.LeaderBoardFragment
 import com.amc.notification.presentation.ui.NotificationFragment
@@ -37,7 +37,10 @@ class MainActivity : AppCompatActivity() {
                 if (lastIndex != newIndex) {
                     when (newIndex) {
                         DASHBOARD -> {
-                            replaceFragment(binding.container.id, DashBoardFragment.getInstance(Bundle()))
+                            replaceFragment(
+                                binding.container.id,
+                                DashBoardFragment.getInstance(Bundle())
+                            )
                         }
                         LEADERBOARD -> {
                             replaceFragment(binding.container.id, LeaderBoardFragment())
@@ -46,9 +49,12 @@ class MainActivity : AppCompatActivity() {
                             replaceFragment(binding.container.id, NotificationFragment())
                         }
                         TODAYS_CALL -> {
-                            val bundle =Bundle()
-                            bundle.putBoolean(DashBoardFragment.TODAYS_LIST,true)
-                            replaceFragment(binding.container.id, DashBoardFragment.getInstance(bundle))
+                            val bundle = Bundle()
+                            bundle.putBoolean(DashBoardFragment.TODAYS_LIST, true)
+                            replaceFragment(
+                                binding.container.id,
+                                DashBoardFragment.getInstance(bundle)
+                            )
                         }
                     }
                 }
@@ -61,9 +67,10 @@ class MainActivity : AppCompatActivity() {
                 Log.d("bottom_bar", "Reselected index: $index, title: ${tab.title}")
             }
         })
+
     }
 
-    fun AppCompatActivity.addFragment(frameId: Int,fragment: Fragment){
+    fun AppCompatActivity.addFragment(frameId: Int, fragment: Fragment) {
         val fr = supportFragmentManager.beginTransaction()
         fr.add(frameId, fragment)
         fr.commit()
@@ -73,7 +80,7 @@ class MainActivity : AppCompatActivity() {
     fun AppCompatActivity.replaceFragment(frameId: Int, fragment: Fragment) {
         val fr = supportFragmentManager.beginTransaction()
         fr.setCustomAnimations(
-             R.anim.slide_in,
+            R.anim.slide_in,
             R.anim.fade_out
         )
         fr.replace(frameId, fragment)
