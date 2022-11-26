@@ -1,25 +1,25 @@
 package com.amc.technician.presentation.ui
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.amc.login.presentation.ui.LoginActivity
-import com.amc.technician.databinding.ActivityMainBinding
+import androidx.databinding.DataBindingUtil
+import com.amc.technician.R
+import com.amc.technician.databinding.ActivitySplashBinding
 import com.amc.technician.presentation.AppNavigation
-import com.amc.technician.presentation.viewmodel.MainActivityViewModel
 
 class SplashScreen : AppCompatActivity() {
-    private lateinit var viewModel: MainActivityViewModel
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivitySplashBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_splash)
 
-        startActivityForResult(Intent(this,LoginActivity::class.java), 100)
+        binding.btnLogin.setOnClickListener {
+            AppNavigation.navigateToLogin(this,false)
+        }
+        binding.tvSignup.setOnClickListener {
+            AppNavigation.navigateToLogin(this,true)
+        }
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        AppNavigation.navigateToMainActivity(this)
-    }
 }

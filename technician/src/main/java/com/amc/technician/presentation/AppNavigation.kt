@@ -9,8 +9,9 @@ import com.amc.technician.presentation.ui.MainActivity
 class AppNavigation {
 
     companion object {
-        fun navigateToLogin(activity: Activity) {
+        fun navigateToLogin(activity: Activity,isSignUp:Boolean) {
             val intent = Intent(activity, LoginActivity::class.java)
+            intent.putExtra(LoginActivity.LOGIN_OR_SIGNUP,isSignUp)
             activity.startActivity(intent)
         }
 

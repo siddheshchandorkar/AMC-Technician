@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/spacing_250"
+        android:layout_height="@dimen/spacing_250"
+        android:src="@drawable/bg_splash"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/spacing_100"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/splash_message"
+        android:gravity="center"
+        android:textSize="@dimen/font_14"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/c_2C406E"
+        android:layout_marginEnd="@dimen/spacing_20"
+        android:layout_marginStart="@dimen/spacing_20"
+        android:layout_marginTop="@dimen/spacing_100"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="@string/login"
+        android:textSize="@dimen/font_16"
+        android:fontFamily="@font/roboto_bold"
+        android:background="@drawable/bg_round_purple"
+        android:layout_margin="@dimen/spacing_20"
+        app:layout_constraintTop_toBottomOf="@id/tv_message"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_up"
+        android:gravity="center"
+        android:textSize="@dimen/font_16"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/c_2C406E"
+        android:layout_margin="@dimen/spacing_20"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
