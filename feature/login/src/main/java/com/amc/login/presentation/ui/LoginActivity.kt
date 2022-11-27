@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.amc.common.AppNavigationInterface
 import com.amc.common.CommonInterface
+import com.amc.common.SingleLiveEvent
 import com.amc.login.R
 import com.amc.login.databinding.ActivityLoginBinding
 import com.amc.login.presentation.viewmodels.LoginViewModel
@@ -29,7 +30,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
         binding.btnLogin.setOnClickListener {
-            CommonInterface.getInstance().getAppNavigation().value = AppNavigationInterface.NavigateToMainActivity
+            CommonInterface.getInstance()?.getAppNavigation()?.value = AppNavigationInterface.NavigateToMainActivity(this)
         }
     }
 

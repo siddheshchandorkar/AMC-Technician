@@ -1,20 +1,21 @@
 package com.amc.common
 
 class CommonInterface {
-    lateinit var appNavigationInterface: SingleLiveEvent<AppNavigationInterface>
+    var appNavigationInterface: SingleLiveEvent<AppNavigationInterface>?=null
 
     fun setAppNavigation(appNavigation: SingleLiveEvent<AppNavigationInterface>) {
         appNavigationInterface = appNavigation
     }
 
-    fun getAppNavigation(): SingleLiveEvent<AppNavigationInterface> {
+    /*Before using this method always set its value first*/
+    fun getAppNavigation(): SingleLiveEvent<AppNavigationInterface>? {
         return appNavigationInterface
     }
 
     companion object {
-        lateinit var commonInterface: CommonInterface
+         var commonInterface: CommonInterface?=null
 
-        fun getInstance(): CommonInterface {
+        fun getInstance(): CommonInterface? {
             if (commonInterface == null) {
                 commonInterface = CommonInterface()
             }
