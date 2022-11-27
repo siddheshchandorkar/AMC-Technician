@@ -12,838 +12,485 @@
             type="com.amc.dashboard.DashBoardViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/white"
-        tools:context=".DashBoardActivity">
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/gl_vertical_left"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.05" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/gl_vertical_right"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.95" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/gl_vertical_centre"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.5" />
-
-        <TextView
-            android:id="@+id/tv_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_40"
-            android:fontFamily="@font/roboto_bold"
-            android:text="Hi, Rahul"
-            android:textColor="@color/c_12175E"
-            android:textSize="@dimen/font_16"
-            app:layout_constraintStart_toEndOf="@id/gl_vertical_left"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/tv_subtitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_5"
-            android:fontFamily="@font/roboto_regular"
-            android:text="Let’s make this day productive"
-            android:textColor="@color/c_12175E"
-            android:textSize="@dimen/font_14"
-            app:layout_constraintStart_toStartOf="@+id/tv_title"
-            app:layout_constraintTop_toBottomOf="@id/tv_title" />
-
-        <TextView
-            android:id="@+id/tv_my_task"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_40"
-            android:fontFamily="@font/roboto_bold"
-            android:text="@string/my_task"
-            android:textColor="@color/c_12175E"
-            android:textSize="@dimen/font_24"
-            app:layout_constraintStart_toEndOf="@id/gl_vertical_left"
-            app:layout_constraintTop_toBottomOf="@id/tv_subtitle" />
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cl_tomorrow"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/spacing_10"
-            app:cardCornerRadius="@dimen/spacing_16"
-            android:layout_marginTop="@dimen/spacing_16"
-            app:layout_constraintEnd_toStartOf="@id/gl_vertical_centre"
-            app:layout_constraintStart_toEndOf="@id/gl_vertical_left"
-            app:layout_constraintTop_toBottomOf="@id/tv_my_task">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_gradient_blue"
-                android:paddingBottom="@dimen/spacing_10">
-
-                <ImageView
-                    android:id="@+id/iv_bg_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/bg_blue_arrow"
-                    app:layout_constraintEnd_toStartOf="@id/iv_bg_2"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/iv_bg_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/spacing_20"
-                    android:src="@drawable/bg_blue_arrow"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/spacing_10"
-                    android:src="@drawable/ic_right_arrow_blue"
-                    app:layout_constraintBottom_toBottomOf="@+id/iv_bg_2"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-
-                    android:id="@+id/iv_bg_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/spacing_10"
-                    android:src="@drawable/bg_computer"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tv_tomorrow"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/spacing_10"
-                    android:fontFamily="@font/roboto_medium"
-                    android:text="@string/tomorrow_s_task"
-                    android:textColor="@color/c_12175E"
-                    android:textSize="@dimen/font_16"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/iv_bg_3" />
-
-                <TextView
-                    android:id="@+id/tv_today_count"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:layout_marginStart="@dimen/spacing_10"
-                    android:layout_marginTop="@dimen/spacing_5"                    android:fontFamily="@font/roboto_regular"
-                    android:text="8 Task"
-                    android:textColor="@color/c_12175E"
-                    android:textSize="@dimen/font_14"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_tomorrow" />
+        android:layout_height="match_parent">
 
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cl_this_week"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/spacing_10"
-            app:cardCornerRadius="@dimen/spacing_16"
-            android:layout_marginTop="@dimen/spacing_16"
-            app:layout_constraintEnd_toStartOf="@id/gl_vertical_centre"
-            app:layout_constraintStart_toEndOf="@id/gl_vertical_left"
-            app:layout_constraintTop_toBottomOf="@id/cl_tomorrow">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_gradient_red"
-                android:paddingBottom="@dimen/spacing_10">
-
-                <ImageView
-                    android:id="@+id/iv_bg_7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/bg_arrow_red"
-                    app:layout_constraintEnd_toStartOf="@id/iv_bg_8"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/iv_bg_8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/spacing_20"
-                    android:src="@drawable/bg_arrow_red"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/spacing_10"
-                    android:src="@drawable/ic_right_arrow_white"
-                    app:layout_constraintBottom_toBottomOf="@+id/iv_bg_8"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-
-                    android:id="@+id/iv_bg_9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/spacing_20"
-                    android:src="@drawable/bg_this_week_white"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tv_this_week"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/d_padding_15"
-                    android:layout_marginStart="@dimen/spacing_10"
-                    android:fontFamily="@font/roboto_medium"
-                    android:text="@string/this_week_s_task"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/font_16"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/iv_bg_9" />
-
-                <TextView
-                    android:id="@+id/tv_this_week_count"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/spacing_10"
-                    android:layout_marginTop="@dimen/spacing_5"                    android:fontFamily="@font/roboto_regular"
-                    android:text="40 Task"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/font_14"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_this_week" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cl_yesterday"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/spacing_10"
-            app:cardCornerRadius="@dimen/spacing_16"
-            android:layout_marginTop="@dimen/spacing_16"
-            app:layout_constraintEnd_toStartOf="@id/gl_vertical_right"
-            app:layout_constraintStart_toEndOf="@id/gl_vertical_centre"
-            app:layout_constraintTop_toBottomOf="@id/tv_my_task">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_gradient_purple"
-                android:paddingBottom="@dimen/spacing_10">
-
-                <ImageView
-                    android:id="@+id/iv_bg_4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/bg_arrow_purple"
-                    app:layout_constraintEnd_toStartOf="@id/iv_bg_5"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/iv_bg_5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/spacing_20"
-                    android:src="@drawable/bg_arrow_purple"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/spacing_10"
-                    android:src="@drawable/ic_right_arrow_white"
-                    app:layout_constraintBottom_toBottomOf="@+id/iv_bg_5"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-
-                    android:id="@+id/iv_bg_6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/spacing_20"
-                    android:src="@drawable/ic_clock_white"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tv_yesterday"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/spacing_10"
-                    android:layout_marginStart="@dimen/spacing_10"
-                    android:fontFamily="@font/roboto_medium"
-                    android:text="@string/yesterday_s_task"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/font_16"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/iv_bg_6" />
-
-                <TextView
-                    android:id="@+id/tv_yesterday_count"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/spacing_10"
-                    android:layout_marginTop="@dimen/spacing_5"
-                    android:fontFamily="@font/roboto_regular"
-                    android:text="5 Task"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/font_14"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_yesterday" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cl_pending"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/spacing_10"
-            app:cardCornerRadius="@dimen/spacing_16"
-            android:layout_marginTop="@dimen/spacing_16"
-            app:layout_constraintEnd_toStartOf="@id/gl_vertical_right"
-            app:layout_constraintStart_toEndOf="@id/gl_vertical_centre"
-            app:layout_constraintTop_toBottomOf="@id/cl_yesterday">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_gradient_green"
-                android:paddingBottom="@dimen/spacing_10">
-
-                <ImageView
-                    android:id="@+id/iv_bg_10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/bg_arrow_green"
-                    app:layout_constraintEnd_toStartOf="@id/iv_bg_11"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/iv_bg_11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/spacing_20"
-                    android:src="@drawable/bg_arrow_green"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/spacing_10"
-                    android:src="@drawable/ic_right_arrow_blue"
-                    app:layout_constraintBottom_toBottomOf="@+id/iv_bg_11"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-
-                    android:id="@+id/iv_bg_12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/spacing_10"
-                    android:src="@drawable/bg_pending_task"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tv_pending"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/spacing_10"
-                    android:layout_marginStart="@dimen/spacing_10"
-                    android:fontFamily="@font/roboto_medium"
-                    android:text="@string/pending_task"
-                    android:textColor="@color/c_12175E"
-                    android:textSize="@dimen/font_16"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/iv_bg_12" />
-
-                <TextView
-                    android:id="@+id/tv_pending_count"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:layout_marginStart="@dimen/spacing_10"
-                    android:layout_marginTop="@dimen/spacing_5"                    android:fontFamily="@font/roboto_regular"
-                    android:text="15 Task"
-                    android:textColor="@color/c_12175E"
-                    android:textSize="@dimen/font_14"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_pending" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
-
-        <TextView
-            android:id="@+id/tv_todays_task"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_40"
-            android:fontFamily="@font/roboto_bold"
-            android:text="@string/today_s_task"
-            android:textColor="@color/c_12175E"
-            android:textSize="@dimen/font_24"
-            app:layout_constraintStart_toEndOf="@id/gl_vertical_left"
-            app:layout_constraintTop_toBottomOf="@id/cl_pending" />
-
-        <TextView
-            android:id="@+id/tv_view_all"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_regular"
-            android:text="@string/view_all"
-            android:textColor="@color/c_393F93"
-            android:textSize="@dimen/font_14"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_todays_task"
-            app:layout_constraintEnd_toStartOf="@id/gl_vertical_right"
-            app:layout_constraintTop_toTopOf="@+id/tv_todays_task" />
-
-
-        <Spinner
-            android:id="@+id/sp_filter_type"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/spacing_16"
-            android:visibility="gone"
-            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+            android:background="@color/white"
+            tools:context=".DashBoardActivity">
 
-        <androidx.core.widget.NestedScrollView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/spacing_0"
-            android:layout_marginTop="@dimen/spacing_16"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_vertical_left"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05" />
 
-            app:layout_constraintTop_toBottomOf="@id/sp_filter_type">
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_vertical_right"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.95" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_vertical_centre"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_20"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Hi, Rahul"
+                android:textColor="@color/c_12175E"
+                android:textSize="@dimen/font_16"
+                app:layout_constraintStart_toEndOf="@id/gl_vertical_left"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_5"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Let’s make this day productive"
+                android:textColor="@color/c_12175E"
+                android:textSize="@dimen/font_14"
+                app:layout_constraintStart_toStartOf="@+id/tv_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="@dimen/spacing_50"
+                android:layout_height="@dimen/spacing_50"
+                android:layout_marginEnd="@dimen/spacing_20"
+                android:src="@drawable/netra_amc_logo"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_subtitle"
+                app:layout_constraintEnd_toStartOf="@+id/gl_vertical_right"
+                app:layout_constraintTop_toTopOf="@+id/tv_title" />
+
+            <TextView
+                android:id="@+id/tv_my_task"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_40"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/my_task"
+                android:textColor="@color/c_12175E"
+                android:textSize="@dimen/font_24"
+                app:layout_constraintStart_toEndOf="@id/gl_vertical_left"
+                app:layout_constraintTop_toBottomOf="@id/tv_subtitle" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cl_tomorrow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_16"
+                android:layout_marginEnd="@dimen/spacing_10"
+                app:cardCornerRadius="@dimen/spacing_16"
+                app:layout_constraintEnd_toStartOf="@id/gl_vertical_centre"
+                app:layout_constraintStart_toEndOf="@id/gl_vertical_left"
+                app:layout_constraintTop_toBottomOf="@id/tv_my_task">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_gradient_blue"
+                    android:paddingBottom="@dimen/spacing_10">
+
+                    <ImageView
+                        android:id="@+id/iv_bg_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bg_blue_arrow"
+                        app:layout_constraintEnd_toStartOf="@id/iv_bg_2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/iv_bg_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/spacing_20"
+                        android:src="@drawable/bg_blue_arrow"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/spacing_10"
+                        android:src="@drawable/ic_right_arrow_blue"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_bg_2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+
+                        android:id="@+id/iv_bg_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/spacing_10"
+                        android:src="@drawable/bg_computer"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_tomorrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/spacing_10"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/tomorrow_s_task"
+                        android:textColor="@color/c_12175E"
+                        android:textSize="@dimen/font_16"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/iv_bg_3" />
+
+                    <TextView
+                        android:id="@+id/tv_today_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="@dimen/spacing_10"
+                        android:layout_marginTop="@dimen/spacing_5"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="8 Task"
+                        android:textColor="@color/c_12175E"
+                        android:textSize="@dimen/font_14"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_tomorrow" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cl_this_week"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_16"
+                android:layout_marginEnd="@dimen/spacing_10"
+                app:cardCornerRadius="@dimen/spacing_16"
+                app:layout_constraintEnd_toStartOf="@id/gl_vertical_centre"
+                app:layout_constraintStart_toEndOf="@id/gl_vertical_left"
+                app:layout_constraintTop_toBottomOf="@id/cl_tomorrow">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_gradient_red"
+                    android:paddingBottom="@dimen/spacing_10">
+
+                    <ImageView
+                        android:id="@+id/iv_bg_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bg_arrow_red"
+                        app:layout_constraintEnd_toStartOf="@id/iv_bg_8"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/iv_bg_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/spacing_20"
+                        android:src="@drawable/bg_arrow_red"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/spacing_10"
+                        android:src="@drawable/ic_right_arrow_white"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_bg_8"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+
+                        android:id="@+id/iv_bg_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/spacing_20"
+                        android:src="@drawable/bg_this_week_white"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_this_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_10"
+                        android:layout_marginTop="@dimen/d_padding_15"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/this_week_s_task"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_16"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/iv_bg_9" />
+
+                    <TextView
+                        android:id="@+id/tv_this_week_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_10"
+                        android:layout_marginTop="@dimen/spacing_5"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="40 Task"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_14"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_this_week" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cl_yesterday"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_10"
+                android:layout_marginTop="@dimen/spacing_16"
+                app:cardCornerRadius="@dimen/spacing_16"
+                app:layout_constraintEnd_toStartOf="@id/gl_vertical_right"
+                app:layout_constraintStart_toEndOf="@id/gl_vertical_centre"
+                app:layout_constraintTop_toBottomOf="@id/tv_my_task">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_gradient_purple"
+                    android:paddingBottom="@dimen/spacing_10">
+
+                    <ImageView
+                        android:id="@+id/iv_bg_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bg_arrow_purple"
+                        app:layout_constraintEnd_toStartOf="@id/iv_bg_5"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/iv_bg_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/spacing_20"
+                        android:src="@drawable/bg_arrow_purple"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/spacing_10"
+                        android:src="@drawable/ic_right_arrow_white"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_bg_5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+
+                        android:id="@+id/iv_bg_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/spacing_20"
+                        android:src="@drawable/ic_clock_white"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_yesterday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_10"
+                        android:layout_marginTop="@dimen/spacing_10"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/yesterday_s_task"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_16"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/iv_bg_6" />
+
+                    <TextView
+                        android:id="@+id/tv_yesterday_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_10"
+                        android:layout_marginTop="@dimen/spacing_5"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="5 Task"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_14"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_yesterday" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cl_pending"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_10"
+                android:layout_marginTop="@dimen/spacing_16"
+                app:cardCornerRadius="@dimen/spacing_16"
+                app:layout_constraintEnd_toStartOf="@id/gl_vertical_right"
+                app:layout_constraintStart_toEndOf="@id/gl_vertical_centre"
+                app:layout_constraintTop_toBottomOf="@id/cl_yesterday">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_gradient_green"
+                    android:paddingBottom="@dimen/spacing_10">
+
+                    <ImageView
+                        android:id="@+id/iv_bg_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bg_arrow_green"
+                        app:layout_constraintEnd_toStartOf="@id/iv_bg_11"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/iv_bg_11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/spacing_20"
+                        android:src="@drawable/bg_arrow_green"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/spacing_10"
+                        android:src="@drawable/ic_right_arrow_blue"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_bg_11"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+
+                        android:id="@+id/iv_bg_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/spacing_10"
+                        android:src="@drawable/bg_pending_task"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_pending"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_10"
+                        android:layout_marginTop="@dimen/spacing_10"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/pending_task"
+                        android:textColor="@color/c_12175E"
+                        android:textSize="@dimen/font_16"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/iv_bg_12" />
+
+                    <TextView
+                        android:id="@+id/tv_pending_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="@dimen/spacing_10"
+                        android:layout_marginTop="@dimen/spacing_5"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="15 Task"
+                        android:textColor="@color/c_12175E"
+                        android:textSize="@dimen/font_14"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_pending" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tv_todays_task"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_40"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/today_s_task"
+                android:textColor="@color/c_12175E"
+                android:textSize="@dimen/font_24"
+                app:layout_constraintStart_toEndOf="@id/gl_vertical_left"
+                app:layout_constraintTop_toBottomOf="@id/cl_pending" />
+
+            <TextView
+                android:id="@+id/tv_view_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/view_all"
+                android:textColor="@color/c_393F93"
+                android:textSize="@dimen/font_14"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_todays_task"
+                app:layout_constraintEnd_toStartOf="@id/gl_vertical_right"
+                app:layout_constraintTop_toTopOf="@+id/tv_todays_task" />
+
 
             <GridLayout
                 android:id="@+id/gv_dashboard"
-                android:layout_width="match_parent"
+                android:layout_width="@dimen/spacing_0"
                 android:layout_height="match_parent"
-                android:columnCount="1">
+                android:columnCount="1"
+                android:padding="@dimen/spacing_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_todays_task">
 
 
-                <androidx.cardview.widget.CardView
+                <include
+                    layout="@layout/row_today_task"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/spacing_10"
-                    android:background="@color/black"
-                    app:cardCornerRadius="@dimen/spacing_5"
-                    app:cardElevation="@dimen/spacing_5">
+                    android:layout_height="wrap_content" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="@dimen/spacing_10">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Client Name : Amar Singh"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Client Address : 505-Unity Heights, Kalyan West"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Service Name : AC Repairing"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Date Time : 22-Nov-2022 at 11:00AM"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Service Status : Pending"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
+                <include
+                    layout="@layout/row_tomorrow_task"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/spacing_10"
-                    android:background="@color/black"
-                    app:cardCornerRadius="@dimen/spacing_5"
-                    app:cardElevation="@dimen/spacing_5">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="@dimen/spacing_10">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Client Name : Amar Singh"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Client Address : 505-Unity Heights, Kalyan West"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Service Name : AC Repairing"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Date Time : 22-Nov-2022 at 11:00AM"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Service Status : Pending"
-                            app:layout_constraintStart_toStartOf="parent" />
+                    android:layout_height="wrap_content" />
 
 
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
+                <include
+                    layout="@layout/row_yesterday_task"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/spacing_10"
-                    android:background="@color/black"
-                    app:cardCornerRadius="@dimen/spacing_5"
-                    app:cardElevation="@dimen/spacing_5">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="@dimen/spacing_10">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Client Name : Amar Singh"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Client Address : 505-Unity Heights, Kalyan West"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Service Name : AC Repairing"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Date Time : 22-Nov-2022 at 11:00AM"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Service Status : Pending"
-                            app:layout_constraintStart_toStartOf="parent" />
+                    android:layout_height="wrap_content" />
 
 
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
+                <include
+                    layout="@layout/row_this_week_task"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/spacing_10"
-                    android:background="@color/black"
-                    app:cardCornerRadius="@dimen/spacing_5"
-                    app:cardElevation="@dimen/spacing_5">
+                    android:layout_height="wrap_content" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="@dimen/spacing_10">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Client Name : Amar Singh"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Client Address : 505-Unity Heights, Kalyan West"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Service Name : AC Repairing"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Date Time : 22-Nov-2022 at 11:00AM"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Service Status : Pending"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
+                <include
+                    layout="@layout/row_pending_task"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/spacing_10"
-                    android:background="@color/black"
-                    app:cardCornerRadius="@dimen/spacing_5"
-                    app:cardElevation="@dimen/spacing_5">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="@dimen/spacing_10">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Client Name : Amar Singh"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Client Address : 505-Unity Heights, Kalyan West"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Service Name : AC Repairing"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Date Time : 22-Nov-2022 at 11:00AM"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Service Status : Pending"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/spacing_10"
-                    android:background="@color/black"
-                    app:cardCornerRadius="@dimen/spacing_5"
-                    app:cardElevation="@dimen/spacing_5">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="@dimen/spacing_10">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Client Name : Amar Singh"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Client Address : 505-Unity Heights, Kalyan West"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Service Name : AC Repairing"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Date Time : 22-Nov-2022 at 11:00AM"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Service Status : Pending"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/spacing_10"
-                    android:background="@color/black"
-                    app:cardCornerRadius="@dimen/spacing_5"
-                    app:cardElevation="@dimen/spacing_5">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="@dimen/spacing_10">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Client Name : Amar Singh"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Client Address : 505-Unity Heights, Kalyan West"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Service Name : AC Repairing"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Date Time : 22-Nov-2022 at 11:00AM"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/spacing_5"
-                            android:text="Service Status : Pending"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
+                    android:layout_height="wrap_content" />
 
 
             </GridLayout>
-        </androidx.core.widget.NestedScrollView>
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 
 </layout>

@@ -41,45 +41,45 @@ class DashBoardFragment : Fragment() {
         binding.vm = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
-        arguments?.let {
-            if(it.containsKey(TODAYS_LIST)){
-                viewModel.isTodayList.value=(it.getBoolean(TODAYS_LIST,false))
-                viewModel.listVisibility.value=(viewModel.isTodayList.value)
-             }else{
-                val adapter
-                        = ArrayAdapter(requireContext(),
-                    android.R.layout.simple_list_item_1, filterTypes)
-                adapter.setDropDownViewResource(
-                    android.R.layout.simple_spinner_dropdown_item
-                )
-
-                binding.spFilterType.adapter = adapter
-
-                binding.spFilterType.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
-                    override fun onItemSelected(
-                        parent: AdapterView<*>?,
-                        view: View?,
-                        position: Int,
-                        id: Long
-                    ) {
-                        if(position===0){
-                            viewModel.listVisibility.postValue(false)
-
-                        }else{
-                            viewModel.listVisibility.postValue(true)
-
-                        }
-
-
-                    }
-
-                    override fun onNothingSelected(parent: AdapterView<*>?) {
-
-                    }
-
-                }
-            }
-        }
+//        arguments?.let {
+//            if(it.containsKey(TODAYS_LIST)){
+//                viewModel.isTodayList.value=(it.getBoolean(TODAYS_LIST,false))
+//                viewModel.listVisibility.value=(viewModel.isTodayList.value)
+//             }else{
+//                val adapter
+//                        = ArrayAdapter(requireContext(),
+//                    android.R.layout.simple_list_item_1, filterTypes)
+//                adapter.setDropDownViewResource(
+//                    android.R.layout.simple_spinner_dropdown_item
+//                )
+//
+////                binding.spFilterType.adapter = adapter
+////
+////                binding.spFilterType.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+////                    override fun onItemSelected(
+////                        parent: AdapterView<*>?,
+////                        view: View?,
+////                        position: Int,
+////                        id: Long
+////                    ) {
+////                        if(position===0){
+////                            viewModel.listVisibility.postValue(false)
+////
+////                        }else{
+////                            viewModel.listVisibility.postValue(true)
+////
+////                        }
+////
+////
+////                    }
+////
+////                    override fun onNothingSelected(parent: AdapterView<*>?) {
+////
+////                    }
+////
+////                }
+//            }
+//        }
 
 
 
