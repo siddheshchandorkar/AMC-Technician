@@ -3,4 +3,10 @@
     <string name="dashboard">DashBoard</string>
     <string name="today_list">Today\'s Service Call</string>
     <string name="my_task">My Task</string>
+    <string name="today_s_task">Today\'s Task</string>
+    <string name="tomorrow_s_task">Tomorrow\'s Task</string>
+    <string name="yesterday_s_task">Yesterday\'s Task</string>
+    <string name="this_week_s_task">This Week\'s Task</string>
+    <string name="pending_task">Pending Task</string>
+    <string name="view_all">View All</string>
 </resources>
