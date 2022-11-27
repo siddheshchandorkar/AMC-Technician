@@ -21,7 +21,7 @@
                 android:id="@+id/view_status"
                 android:layout_width="@dimen/spacing_2"
                 android:layout_height="0dp"
-                android:background="#46C7FE"
+                android:background="#E88B8C"
                 app:layout_constraintBottom_toBottomOf="@+id/tv_time"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/tv_task_name" />
