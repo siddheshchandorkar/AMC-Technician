@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -29,34 +30,104 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:src="@drawable/ic_arrow_left" />
+
         </androidx.cardview.widget.CardView>
 
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="@dimen/spacing_48"
+            android:layout_height="@dimen/spacing_48"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/spacing_20"
+            android:src="@drawable/netra_amc_logo"
+            app:layout_constraintBottom_toBottomOf="@id/tv_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_title" />
 
         <TextView
+            android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_bold"
-            android:text="Pending Task"
+            android:text="@{vm.title}"
             android:textColor="@color/black"
             android:textSize="@dimen/font_18"
             app:layout_constraintBottom_toBottomOf="@id/cv_back"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/cv_back" />
+            app:layout_constraintTop_toTopOf="@id/cv_back"
+            tools:text="Pending Task" />
 
-        <EditText
-            android:id="@+id/et_search"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_search"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/spacing_50"
+            android:layout_marginStart="@dimen/spacing_20"
+            android:layout_marginEnd="@dimen/spacing_20"
+            android:background="@drawable/bg_search"
+            android:elevation="@dimen/spacing_5"
+            app:layout_constraintBottom_toBottomOf="@id/cl_filter"
+            app:layout_constraintEnd_toStartOf="@id/cl_filter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cl_filter">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/spacing_16"
+                android:src="@drawable/ic_close_square"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/et_search"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="@dimen/spacing_16"
+                android:background="@color/c_transparent"
+                android:drawableStart="@drawable/ic_search"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_filter"
+            android:layout_width="@dimen/spacing_50"
+            android:layout_height="@dimen/spacing_50"
+            app:layout_constraintEnd_toEndOf="parent"
             android:layout_margin="@dimen/spacing_20"
-            app:layout_constraintTop_toBottomOf="@id/cv_back" />
+            app:layout_constraintTop_toBottomOf="@id/iv_logo">
+
+            <ImageView
+                android:id="@+id/iv_filter_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bg_filter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_filter"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_filter_bg"
+                app:layout_constraintEnd_toEndOf="@+id/iv_filter_bg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:fillViewport="true"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/et_search">
+            app:layout_constraintTop_toBottomOf="@id/cl_search">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"

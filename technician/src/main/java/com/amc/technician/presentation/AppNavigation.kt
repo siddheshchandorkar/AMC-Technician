@@ -11,7 +11,7 @@ class AppNavigation {
         fun navigateToLogin(activity: Activity, isSignUp: Boolean) {
             val intent = Intent(activity, LoginActivity::class.java)
             intent.putExtra(LoginActivity.LOGIN_OR_SIGNUP, isSignUp)
-            activity.startActivity(intent)
+            activity.startActivityForResult(intent,LoginActivity.LOGIN_CODE)
         }
 
         fun navigateToMainActivity(activity: Activity) {

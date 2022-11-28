@@ -18,11 +18,12 @@
         <entry key="core/common/src/main/res/drawable/bg_round_medium_purple.xml" value="0.167" />
         <entry key="core/common/src/main/res/drawable/bg_round_purple.xml" value="0.167" />
         <entry key="core/common/src/main/res/drawable/bg_square.xml" value="0.167" />
+        <entry key="core/common/src/main/res/drawable/ic_bg_filter.xml" value="0.167" />
         <entry key="core/common/src/main/res/font/roboto.xml" value="0.30925925925925923" />
         <entry key="feature/dashboard/src/main/res/drawable/bg_arrow_purple.xml" value="0.167" />
         <entry key="feature/dashboard/src/main/res/drawable/bg_blue_arrow.xml" value="0.167" />
         <entry key="feature/dashboard/src/main/res/layout/activity_dash_board.xml" value="0.2953125" />
-        <entry key="feature/dashboard/src/main/res/layout/activity_service_list.xml" value="0.35516052246093754" />
+        <entry key="feature/dashboard/src/main/res/layout/activity_service_list.xml" value="0.2912948608398438" />
         <entry key="feature/dashboard/src/main/res/layout/fragment_dashboard.xml" value="0.3098958333333333" />
         <entry key="feature/dashboard/src/main/res/layout/row_pending_task.xml" value="0.3540903540903541" />
         <entry key="feature/dashboard/src/main/res/layout/row_this_week_task.xml" value="0.2953125" />

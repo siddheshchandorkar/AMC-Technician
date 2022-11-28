@@ -10,6 +10,7 @@ import com.amc.dashboard.presentation.*
 class ServiceListViewModel(application: Application, private val serviceFilterType:Int) : AndroidViewModel(application) {
 
     var serviceListLiveData: MutableLiveData<MutableList<BaseRowModel>> = MutableLiveData()
+    var title: MutableLiveData<String> = MutableLiveData()
 
     init {
         val listService = mutableListOf<BaseRowModel>()
@@ -19,30 +20,35 @@ class ServiceListViewModel(application: Application, private val serviceFilterTy
                 listService.add(RowTomorrowServiceDetailsViewModel(ServiceDetailsModel()))
                 listService.add(RowTomorrowServiceDetailsViewModel(ServiceDetailsModel()))
                 listService.add(RowTomorrowServiceDetailsViewModel(ServiceDetailsModel()))
+                title.value="Tomorrow's Task"
             }
             1->{
                 listService.add(RowYesterdayServiceDetailsViewModel(ServiceDetailsModel()))
                 listService.add(RowYesterdayServiceDetailsViewModel(ServiceDetailsModel()))
                 listService.add(RowYesterdayServiceDetailsViewModel(ServiceDetailsModel()))
                 listService.add(RowYesterdayServiceDetailsViewModel(ServiceDetailsModel()))
+                title.value="Yesterday's Task"
             }
             2->{
                 listService.add(RowThisWeekServiceDetailsViewModel(ServiceDetailsModel()))
                 listService.add(RowThisWeekServiceDetailsViewModel(ServiceDetailsModel()))
                 listService.add(RowThisWeekServiceDetailsViewModel(ServiceDetailsModel()))
                 listService.add(RowThisWeekServiceDetailsViewModel(ServiceDetailsModel()))
+                title.value="This Week's Task"
             }
             3->{
                 listService.add(RowPendingServiceDetailsViewModel(ServiceDetailsModel()))
                 listService.add(RowPendingServiceDetailsViewModel(ServiceDetailsModel()))
                 listService.add(RowPendingServiceDetailsViewModel(ServiceDetailsModel()))
                 listService.add(RowPendingServiceDetailsViewModel(ServiceDetailsModel()))
+                title.value="Pending Task"
             }
             4->{
                 listService.add(RowTodayServiceDetailsViewModel(ServiceDetailsModel()))
                 listService.add(RowTodayServiceDetailsViewModel(ServiceDetailsModel()))
                 listService.add(RowTodayServiceDetailsViewModel(ServiceDetailsModel()))
                 listService.add(RowTodayServiceDetailsViewModel(ServiceDetailsModel()))
+                title.value="Today's Task"
 
             }
         }

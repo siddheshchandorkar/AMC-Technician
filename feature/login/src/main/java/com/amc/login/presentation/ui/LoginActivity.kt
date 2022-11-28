@@ -30,13 +30,14 @@ class LoginActivity : AppCompatActivity() {
         }
 
         binding.btnLogin.setOnClickListener {
-            CommonInterface.getInstance()?.getAppNavigation()?.value = AppNavigationInterface.NavigateToMainActivity(this)
+            finish()
         }
     }
 
 
     companion object{
         const val LOGIN_OR_SIGNUP ="LOGIN_OR_SIGNUP"
+        const val LOGIN_CODE =101
 
 
     }

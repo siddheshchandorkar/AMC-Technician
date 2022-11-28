@@ -465,24 +465,17 @@
                     android:layout_height="wrap_content" />
 
                 <include
-                    layout="@layout/row_tomorrow_task"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-
-                <include
-                    layout="@layout/row_yesterday_task"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-
-                <include
-                    layout="@layout/row_this_week_task"
+                    layout="@layout/row_today_task"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
                 <include
-                    layout="@layout/row_pending_task"
+                    layout="@layout/row_today_task"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <include
+                    layout="@layout/row_today_task"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
