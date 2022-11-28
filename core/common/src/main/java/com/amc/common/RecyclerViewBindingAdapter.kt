@@ -7,7 +7,7 @@ import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
 
 
-class RecyclerViewBindingAdapter(val data: List<BaseRowModel>)
+class RecyclerViewBindingAdapter(val data: List<BaseRowModel> )
     : RecyclerView.Adapter<RecyclerViewBindingAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
@@ -35,7 +35,7 @@ class RecyclerViewBindingAdapter(val data: List<BaseRowModel>)
     class ViewHolder(val mDataViewBinding: ViewDataBinding) : RecyclerView.ViewHolder(mDataViewBinding.root) {
 
         fun bind(dataModel: Any) {
-//            mDataViewBinding.setVariable(BR.vm, dataModel) //TODO Fix me
+            mDataViewBinding.setVariable(BR._all, dataModel) //TODO Fix me
             mDataViewBinding.executePendingBindings()
         }
     }

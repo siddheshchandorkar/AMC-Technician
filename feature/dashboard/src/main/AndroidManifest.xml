@@ -5,6 +5,7 @@
     <application
         android:allowBackup="true">
 
+        <activity android:name=".ServiceListActivity" />
     </application>
 
 </manifest>

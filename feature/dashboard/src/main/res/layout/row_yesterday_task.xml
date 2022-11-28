@@ -2,6 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
+
+        <variable
+            name="vm"
+            type="com.amc.dashboard.presentation.RowYesterdayServiceDetailsViewModel" />
+    </data>
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -61,8 +68,8 @@
                 android:paddingTop="@dimen/spacing_5"
                 android:paddingEnd="@dimen/spacing_10"
                 android:paddingBottom="@dimen/spacing_5"
-                android:textColor="#5B67CA"
                 android:text="Urgent"
+                android:textColor="#5B67CA"
                 android:textSize="@dimen/font_12"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@id/tv_time"
@@ -72,15 +79,15 @@
                 android:id="@+id/tv_info_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_16"
                 android:layout_marginStart="@dimen/spacing_10"
+                android:layout_marginTop="@dimen/spacing_16"
                 android:background="@drawable/bg_round_medium_purple"
                 android:paddingStart="@dimen/spacing_10"
                 android:paddingTop="@dimen/spacing_5"
                 android:paddingEnd="@dimen/spacing_10"
                 android:paddingBottom="@dimen/spacing_5"
-                android:textColor="#5B67CA"
                 android:text="Home"
+                android:textColor="#5B67CA"
                 android:textSize="@dimen/font_12"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/tv_info_1"

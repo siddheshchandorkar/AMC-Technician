@@ -1,31 +1,25 @@
 package com.amc.dashboard
 
+import android.content.Intent
 import android.os.Bundle
-import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.amc.dashboard.databinding.FragmentDashboardBinding
-import com.google.android.material.navigation.NavigationBarView
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 
 class DashBoardFragment : Fragment() {
     private lateinit var viewModel: DashBoardViewModel
     private lateinit var binding: FragmentDashboardBinding
-    var filterTypes = arrayOf("Select Filter Type","Today", "Tomorrow", "Yesterday", "This Week", "Pending")
+    var filterTypes =
+        arrayOf("Select Filter Type", "Today", "Tomorrow", "Yesterday", "This Week", "Pending")
 
-    companion object{
-        const val TODAYS_LIST= "today_list"
-        fun getInstance(bundle: Bundle): DashBoardFragment{
+    companion object {
+        const val TODAYS_LIST = "today_list"
+        fun getInstance(bundle: Bundle): DashBoardFragment {
             val dashBoardFragment = DashBoardFragment()
-            dashBoardFragment.arguments=bundle
+            dashBoardFragment.arguments = bundle
             return dashBoardFragment
         }
     }
@@ -40,6 +34,32 @@ class DashBoardFragment : Fragment() {
         viewModel = DashBoardViewModel(requireActivity().application)
         binding.vm = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
+
+        binding.clTomorrow.setOnClickListener {
+            val intent = Intent(requireContext(), ServiceListActivity::class.java)
+            intent.putExtra(ServiceListActivity.SERVICE_TYPE, 0)
+            startActivity(intent)
+        }
+        binding.clYesterday.setOnClickListener {
+            val intent = Intent(requireContext(), ServiceListActivity::class.java)
+            intent.putExtra(ServiceListActivity.SERVICE_TYPE, 1)
+            startActivity(intent)
+        }
+        binding.clThisWeek.setOnClickListener {
+            val intent = Intent(requireContext(), ServiceListActivity::class.java)
+            intent.putExtra(ServiceListActivity.SERVICE_TYPE, 2)
+            startActivity(intent)
+        }
+        binding.clPending.setOnClickListener {
+            val intent = Intent(requireContext(), ServiceListActivity::class.java)
+            intent.putExtra(ServiceListActivity.SERVICE_TYPE, 3)
+            startActivity(intent)
+        }
+        binding.tvViewAll.setOnClickListener {
+            val intent = Intent(requireContext(), ServiceListActivity::class.java)
+            intent.putExtra(ServiceListActivity.SERVICE_TYPE, 4)
+            startActivity(intent)
+        }
 
 //        arguments?.let {
 //            if(it.containsKey(TODAYS_LIST)){
@@ -80,7 +100,6 @@ class DashBoardFragment : Fragment() {
 ////                }
 //            }
 //        }
-
 
 
         return binding.root
