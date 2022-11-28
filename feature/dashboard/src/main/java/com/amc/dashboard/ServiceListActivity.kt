@@ -22,6 +22,8 @@ class ServiceListActivity : AppCompatActivity() {
         viewModel = ServiceListViewModel(application,serviceType)
         binding.vm = viewModel
         binding.lifecycleOwner = this
+
+        binding.cvBack.setOnClickListener { finish() }
     }
 
     companion object{

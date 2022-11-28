@@ -6,6 +6,6 @@ import com.amc.dashboard.data.ServiceDetailsModel
 
 class RowThisWeekServiceDetailsViewModel(val serviceDetailsModel: ServiceDetailsModel):BaseRowModel() {
     override fun setLayoutID() {
-            R.layout.row_this_week_task
+          layoutID=  R.layout.row_this_week_task
     }
 }

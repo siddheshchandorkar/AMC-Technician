@@ -11,7 +11,6 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/black"
         app:cardCornerRadius="@dimen/spacing_5"
         app:cardElevation="@dimen/spacing_5"
         app:cardUseCompatPadding="true">

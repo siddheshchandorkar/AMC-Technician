@@ -13,6 +13,11 @@ class RecyclerViewBindingAdapter(val data: List<BaseRowModel> )
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
         val layoutInflater = LayoutInflater.from(viewGroup.context)
         val dataViewBinding = DataBindingUtil.inflate<ViewDataBinding>(layoutInflater, i, viewGroup, false)
+//        dataViewBinding.root.layoutParams = WindowManager.LayoutParams(
+//            (dataViewBinding.root.width * 0.8).toInt() ,
+//            ViewGroup.LayoutParams.MATCH_PARENT
+//        )
+
         return ViewHolder(dataViewBinding)
     }
 
