@@ -32,6 +32,9 @@ class LoginActivity : AppCompatActivity() {
         binding.btnLogin.setOnClickListener {
             finish()
         }
+        binding.tvSingUp.setOnClickListener {
+            viewModel.isSignUp.value=true
+        }
     }
 
 
