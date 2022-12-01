@@ -98,6 +98,7 @@
             android:layout_height="@dimen/spacing_50"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_margin="@dimen/spacing_20"
+            android:onClick="@{() -> vm.showFilterOption()}"
             app:layout_constraintTop_toBottomOf="@id/iv_logo">
 
             <ImageView

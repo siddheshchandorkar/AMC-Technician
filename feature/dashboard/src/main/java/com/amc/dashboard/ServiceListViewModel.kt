@@ -1,5 +1,6 @@
 package com.amc.dashboard
 
+import android.app.AlertDialog
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
@@ -11,6 +12,7 @@ class ServiceListViewModel(application: Application, private val serviceFilterTy
 
     var serviceListLiveData: MutableLiveData<MutableList<BaseRowModel>> = MutableLiveData()
     var title: MutableLiveData<String> = MutableLiveData()
+    var showFiler=MutableLiveData(false)
 
     init {
         val listService = mutableListOf<BaseRowModel>()
@@ -54,5 +56,9 @@ class ServiceListViewModel(application: Application, private val serviceFilterTy
         }
 
         serviceListLiveData.value= listService
+    }
+
+    fun showFilterOption(){
+        showFiler.value=true
     }
 }

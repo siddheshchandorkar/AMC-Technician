@@ -1,5 +1,6 @@
 package com.amc.dashboard
 
+import android.app.AlertDialog
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -24,6 +25,23 @@ class ServiceListActivity : AppCompatActivity() {
         binding.lifecycleOwner = this
 
         binding.cvBack.setOnClickListener { finish() }
+
+        viewModel.showFiler.observe(this) {
+
+            if(it){
+
+                val builder = AlertDialog.Builder(this)
+                    .create()
+                val view = layoutInflater.inflate(R.layout.dialog_task_filter, null)
+//            val  button = view.findViewById<Button>(R.id.dialogDismiss_button)
+                builder.setView(view)
+//            button.setOnClickListener {
+//                builder.dismiss()
+//            }
+//            builder.setCanceledOnTouchOutside(false)
+                builder.show()
+            }
+        }
     }
 
     companion object{

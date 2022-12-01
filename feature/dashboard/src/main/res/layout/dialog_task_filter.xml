@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/spacing_10"
+        app:cardElevation="@dimen/spacing_5"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/spacing_20">
+
+            <TextView
+                android:id="@+id/tv_sort_by"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sort_by"
+                android:fontFamily="@font/roboto_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_sort_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_16"
+                android:background="@drawable/bg_filter_round_light_green"
+                android:paddingStart="@dimen/spacing_10"
+                android:paddingTop="@dimen/spacing_5"
+                android:paddingEnd="@dimen/spacing_10"
+                android:paddingBottom="@dimen/spacing_5"
+                android:text="Urgent"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="#27bb5e"
+                android:textSize="@dimen/font_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_sort_by" />
+
+            <TextView
+                android:id="@+id/tv_sort_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_10"
+                android:layout_marginTop="@dimen/spacing_16"
+                android:background="@drawable/bg_filter_round_light_green_border"
+                android:paddingStart="@dimen/spacing_10"
+                android:paddingTop="@dimen/spacing_5"
+                android:paddingEnd="@dimen/spacing_10"
+                android:paddingBottom="@dimen/spacing_5"
+                android:text="Office"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="#27bb5e"
+                android:textSize="@dimen/font_12"
+                app:layout_constraintStart_toEndOf="@id/tv_sort_1"
+                app:layout_constraintTop_toBottomOf="@id/tv_sort_by" />
+
+
+            <TextView
+                android:id="@+id/tv_filter_by"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/filter_by"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginTop="@dimen/spacing_16"
+                app:layout_constraintTop_toBottomOf="@id/tv_sort_2" />
+
+
+            <TextView
+                android:id="@+id/tv_filter_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_16"
+                android:background="@drawable/bg_filter_round_light_green"
+                android:paddingStart="@dimen/spacing_10"
+                android:paddingTop="@dimen/spacing_5"
+                android:paddingEnd="@dimen/spacing_10"
+                android:paddingBottom="@dimen/spacing_5"
+                android:text="Urgent"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="#27bb5e"
+                android:textSize="@dimen/font_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_filter_by" />
+
+            <TextView
+                android:id="@+id/tv_filter_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_10"
+                android:layout_marginTop="@dimen/spacing_16"
+                android:background="@drawable/bg_filter_round_light_green_border"
+                android:paddingStart="@dimen/spacing_10"
+                android:paddingTop="@dimen/spacing_5"
+                android:paddingEnd="@dimen/spacing_10"
+                android:paddingBottom="@dimen/spacing_5"
+                android:text="Office"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="#27bb5e"
+                android:textSize="@dimen/font_12"
+                app:layout_constraintStart_toEndOf="@id/tv_sort_1"
+                app:layout_constraintTop_toBottomOf="@id/tv_filter_by" />
+
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_30"
+                android:layout_marginEnd="@dimen/spacing_100"
+                android:background="@drawable/bg_filter_round_light_purple_border"
+                android:fontFamily="@font/roboto_medium"
+                android:paddingStart="@dimen/spacing_20"
+                android:paddingTop="@dimen/spacing_5"
+                android:paddingEnd="@dimen/spacing_20"
+                android:paddingBottom="@dimen/spacing_5"
+                android:text="Cancel"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_filter_2" />
+
+
+            <TextView
+                android:id="@+id/tv_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_100"
+                android:layout_marginTop="@dimen/spacing_30"
+                android:background="@drawable/bg_filter_round_light_purple"
+                android:fontFamily="@font/roboto_medium"
+                android:paddingStart="@dimen/spacing_20"
+                android:paddingTop="@dimen/spacing_5"
+                android:paddingEnd="@dimen/spacing_20"
+                android:paddingBottom="@dimen/spacing_5"
+                android:text="Filter"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_filter_2" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

@@ -9,4 +9,6 @@
     <string name="this_week_s_task">This Week\'s Task</string>
     <string name="pending_task">Pending Task</string>
     <string name="view_all">View All</string>
+    <string name="sort_by">Sort By</string>
+    <string name="filter_by">Filter By</string>
 </resources>

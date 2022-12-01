@@ -5,6 +5,10 @@
       <map>
         <entry key="../../.gradle/caches/transforms-3/06b7198dcf951c3bc97c6fa507782578/transformed/jetified-library-1.1.0/res/drawable-anydpi-v21/alarm.xml" value="0.167" />
         <entry key="core/common/src/main/res/drawable/background_top_curve_gray.xml" value="0.167" />
+        <entry key="core/common/src/main/res/drawable/bg_filter_round_light_green.xml" value="0.167" />
+        <entry key="core/common/src/main/res/drawable/bg_filter_round_light_green_border.xml" value="0.167" />
+        <entry key="core/common/src/main/res/drawable/bg_filter_round_light_purple.xml" value="0.167" />
+        <entry key="core/common/src/main/res/drawable/bg_filter_round_light_purple_border.xml" value="0.167" />
         <entry key="core/common/src/main/res/drawable/bg_gradient.xml" value="0.1" />
         <entry key="core/common/src/main/res/drawable/bg_gradient_blue.xml" value="0.167" />
         <entry key="core/common/src/main/res/drawable/bg_gradient_green.xml" value="0.167" />
@@ -24,6 +28,7 @@
         <entry key="feature/dashboard/src/main/res/drawable/bg_blue_arrow.xml" value="0.167" />
         <entry key="feature/dashboard/src/main/res/layout/activity_dash_board.xml" value="0.2953125" />
         <entry key="feature/dashboard/src/main/res/layout/activity_service_list.xml" value="0.2912948608398438" />
+        <entry key="feature/dashboard/src/main/res/layout/dialog_task_filter.xml" value="0.3098958333333333" />
         <entry key="feature/dashboard/src/main/res/layout/fragment_dashboard.xml" value="0.3098958333333333" />
         <entry key="feature/dashboard/src/main/res/layout/row_pending_task.xml" value="0.3540903540903541" />
         <entry key="feature/dashboard/src/main/res/layout/row_this_week_task.xml" value="0.2953125" />
@@ -49,4 +54,11 @@
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.3098958333333333" />
+      </ProjectState>
+    </option>
+  </component>
 </project>
