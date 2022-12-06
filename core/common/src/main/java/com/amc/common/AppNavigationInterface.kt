@@ -6,4 +6,5 @@ sealed class AppNavigationInterface{
     class NavigateToMainActivity(var activity: Activity) : AppNavigationInterface()
     class NavigateToLoginActivity(var activity: Activity) : AppNavigationInterface()
     class NavigateToSignUpActivity(var activity: Activity) : AppNavigationInterface()
+    class NavigateToEnquiryActivity(var activity: Activity) : AppNavigationInterface()
 }

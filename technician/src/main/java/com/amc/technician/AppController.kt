@@ -23,6 +23,9 @@ class AppController : Application() {
                         is AppNavigationInterface.NavigateToMainActivity -> {
                             AppNavigation.navigateToMainActivity(eventValue.activity)
                         }
+                        is AppNavigationInterface.NavigateToEnquiryActivity -> {
+                            AppNavigation.navigateToEnquiryActivity(eventValue.activity)
+                        }
                     }
                 }
             }

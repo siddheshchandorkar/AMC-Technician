@@ -5,7 +5,6 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import com.amc.common.AppNavigationInterface
 import com.amc.dashboard.DashBoardFragment
 import com.amc.leaderboard.presentation.ui.LeaderBoardFragment
 import com.amc.notification.presentation.ui.NotificationFragment
@@ -48,13 +47,8 @@ class MainActivity : AppCompatActivity() {
                         NOTIFICATION -> {
                             replaceFragment(binding.container.id, NotificationFragment())
                         }
-                        TODAYS_CALL -> {
-                            val bundle = Bundle()
-                            bundle.putBoolean(DashBoardFragment.TODAYS_LIST, true)
-                            replaceFragment(
-                                binding.container.id,
-                                DashBoardFragment.getInstance(bundle)
-                            )
+                        ADD_ENQUIRY -> {
+                            AppNavigation.navigateToEnquiryActivity(this@MainActivity)
                         }
                     }
                 }
@@ -91,6 +85,6 @@ class MainActivity : AppCompatActivity() {
         const val DASHBOARD = 0
         const val LEADERBOARD = 1
         const val NOTIFICATION = 2
-        const val TODAYS_CALL = 3
+        const val ADD_ENQUIRY = 3
     }
 }

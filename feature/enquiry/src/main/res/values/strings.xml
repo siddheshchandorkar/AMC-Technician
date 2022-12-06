@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Enquiry</string>
+    <string name="customer_name">Customer Name</string>
+    <string name="customer_address">Customer Address</string>
+    <string name="customer_mobile_number">Customer Mobile Number</string>
+    <string name="specific_instructions_if_any">Specific Instructions if any</string>
+    <string name="amount">Amount</string>
+    <string name="customer_email_address">Customer Email Address</string>
+    <string name="payment_type">Payment Type :</string>
+    <string name="cheque">Cheque</string>
+    <string name="cash">Cash</string>
+    <string name="online">Online</string>
+    <string name="amc">AMC</string>
+    <string name="single">Single</string>
+    <string name="property_type">Property Type</string>
+    <string name="commercial">Commercial</string>
+    <string name="service_type">Service Type</string>
+    <string name="submit">Submit</string>
 </resources>

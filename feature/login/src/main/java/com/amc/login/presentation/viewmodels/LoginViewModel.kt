@@ -8,6 +8,10 @@ import androidx.lifecycle.ViewModel
 class LoginViewModel(val app: Application) : AndroidViewModel(app) {
 
     var isSignUp =MutableLiveData<Boolean>()
+    var isForwardPassword =MutableLiveData(false)
 
+    fun forgotPassword(){
+        isForwardPassword.value=true
+    }
 
 }

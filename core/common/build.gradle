@@ -30,7 +30,7 @@ android {
         jvmTarget = '1.8'
     }
 
-    viewBinding{
+    viewBinding {
         enabled true
     }
 
@@ -47,5 +47,7 @@ dependencies {
     api allDependacies.constraintlayout
     api allDependacies.cardview
     api allDependacies.recyclerview
+
+    api('com.github.gcacace:signature-pad:1.3.1')
 
 }

@@ -1,18 +1,349 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".AddEnquiryActivity">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_back"
+            android:layout_width="@dimen/spacing_48"
+            android:layout_height="@dimen/spacing_48"
+            android:layout_margin="@dimen/spacing_16"
+            app:cardCornerRadius="@dimen/spacing_5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_arrow_left" />
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="@dimen/spacing_48"
+            android:layout_height="@dimen/spacing_48"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/spacing_20"
+            android:src="@drawable/netra_amc_logo"
+            app:layout_constraintBottom_toBottomOf="@id/tv_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Add Enquiry"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_18"
+            app:layout_constraintBottom_toBottomOf="@id/cv_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/cv_back" />
+
+<!--        <com.amc.common.ui.PinEntryEditText-->
+<!--            android:id="@+id/pin"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="@dimen/spacing_20"-->
+<!--            android:cursorVisible="false"-->
+<!--            android:digits="1234567890"-->
+<!--            android:inputType="number"-->
+<!--            android:maxLength="4"-->
+<!--            app:pinBackgroundIsSquare="true"-->
+<!--            android:textIsSelectable="false"-->
+<!--            android:textSize="20sp"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/iv_logo"-->
+<!--            />-->
+
+<!--        <com.github.gcacace.signaturepad.views.SignaturePad-->
+
+<!--            android:id="@+id/signature_pad"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/spacing_200"-->
+<!--            app:penColor="@android:color/black"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/iv_logo"-->
+<!--            />-->
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spacing_0"
+            app:layout_constraintBottom_toTopOf="@id/btn_submit"
+            app:layout_constraintTop_toBottomOf="@id/iv_logo">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/spacing_30">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_customer_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_16"
+                    android:layout_marginTop="@dimen/spacing_32"
+                    android:layout_marginEnd="@dimen/spacing_16"
+                    android:theme="@style/Theme.TextInputLayoutGreyStyle"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_customer_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="@string/customer_name"
+                        android:maxLength="100"
+                        android:maxLines="1"
+                        android:textSize="@dimen/font_14" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_customer_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/spacing_16"
+                    android:theme="@style/Theme.TextInputLayoutGreyStyle"
+                    app:layout_constraintTop_toBottomOf="@id/til_customer_name">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_customer_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="@string/customer_address"
+                        android:maxLength="250"
+                        android:maxLines="3"
+                        android:textSize="@dimen/font_14" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_customer_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/spacing_16"
+                    android:theme="@style/Theme.TextInputLayoutGreyStyle"
+                    app:layout_constraintTop_toBottomOf="@id/til_customer_address">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_customer_mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="0123456789"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="@string/customer_mobile_number"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:maxLines="1"
+                        android:textSize="@dimen/font_14" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_customer_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/spacing_16"
+                    android:theme="@style/Theme.TextInputLayoutGreyStyle"
+                    app:layout_constraintTop_toBottomOf="@id/til_customer_mobile">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_customer_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="@string/customer_email_address"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:textSize="@dimen/font_14" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_instruction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/spacing_16"
+                    android:theme="@style/Theme.TextInputLayoutGreyStyle"
+                    app:layout_constraintTop_toBottomOf="@id/til_customer_email">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_instruction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="@string/specific_instructions_if_any"
+                        android:inputType="textMultiLine"
+                        android:maxLength="250"
+                        android:maxLines="3"
+                        android:textSize="@dimen/font_14" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_payment_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/font_16"
+                    app:layout_constraintTop_toBottomOf="@id/til_instruction">
+
+                    <TextView
+                        android:id="@+id/tv_payment_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="@string/payment_type"
+                        android:textSize="@dimen/font_16"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <CheckBox
+                        android:id="@+id/cb_cheque"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_16"
+                        android:layout_marginTop="@dimen/spacing_5"
+                        android:text="@string/cheque"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_payment_type" />
+
+                    <CheckBox
+                        android:id="@+id/cb_cash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_16"
+                        android:text="@string/cash"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/cb_cheque" />
+
+                    <CheckBox
+                        android:id="@+id/cb_online"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_16"
+                        android:text="@string/online"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/cb_cash" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_service_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/font_16"
+                    app:layout_constraintTop_toBottomOf="@id/cl_payment_type">
+
+                    <TextView
+                        android:id="@+id/tv_service_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/service_type"
+                        android:textSize="@dimen/font_16"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <CheckBox
+                        android:id="@+id/cb_single"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_16"
+                        android:layout_marginTop="@dimen/spacing_5"
+                        android:text="@string/single"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_service_type" />
+
+                    <CheckBox
+                        android:id="@+id/cb_amc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_16"
+                        android:text="@string/amc"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/cb_single" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/Theme.TextInputLayoutGreyStyle"
+                    android:layout_margin="@dimen/spacing_16"
+                    app:layout_constraintTop_toBottomOf="@id/cl_service_type">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="1234567890"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="@string/amount"
+                        android:maxLines="1"
+                        android:textSize="@dimen/font_14" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_property_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/font_16"
+                    app:layout_constraintTop_toBottomOf="@id/til_amount">
+
+                    <TextView
+                        android:id="@+id/tv_property_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/property_type"
+                        android:textSize="@dimen/font_16"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <CheckBox
+                        android:id="@+id/cb_residential"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_16"
+                        android:layout_marginTop="@dimen/spacing_5"
+                        android:text="@string/single"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_property_type" />
+
+                    <CheckBox
+                        android:id="@+id/cb_commercial"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_16"
+                        android:text="@string/commercial"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/cb_residential" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_30"
+            android:text="@string/submit"
+            android:background="@drawable/bg_round_purple"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="@color/white"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

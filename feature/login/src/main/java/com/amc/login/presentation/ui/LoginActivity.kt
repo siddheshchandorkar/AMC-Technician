@@ -23,6 +23,7 @@ class LoginActivity : AppCompatActivity() {
         binding.vm = viewModel
         binding.lifecycleOwner = this
 
+        viewModel.isForwardPassword.value=false
         intent.extras?.let {
             if(it.containsKey(LOGIN_OR_SIGNUP)){
                 viewModel.isSignUp.value=it.getBoolean(LOGIN_OR_SIGNUP,false)
