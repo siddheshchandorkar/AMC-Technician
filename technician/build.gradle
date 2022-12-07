@@ -51,9 +51,9 @@ dependencies {
     implementation project(':feature:dashboard')
     implementation project(':feature:notification')
     implementation project(':feature:enquiry')
-//    implementation project(':feature:servicecall')
+    implementation project(':feature:servicecall')
     implementation project(':feature:leaderboard')
-//    implementation project(':feature:expenses')
+    implementation project(':feature:expenses')
     implementation project(':feature:feedback')
     
     implementation allDependacies.core

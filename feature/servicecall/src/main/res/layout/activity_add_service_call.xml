@@ -1,18 +1,194 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".AddServiceCallActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".AddServiceCallActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_back"
+            android:layout_width="@dimen/spacing_48"
+            android:layout_height="@dimen/spacing_48"
+            android:layout_margin="@dimen/spacing_16"
+            app:cardCornerRadius="@dimen/spacing_5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_arrow_left" />
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="@dimen/spacing_48"
+            android:layout_height="@dimen/spacing_48"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/spacing_20"
+            android:src="@drawable/netra_amc_logo"
+            app:layout_constraintBottom_toBottomOf="@id/tv_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Service Details"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_18"
+            app:layout_constraintBottom_toBottomOf="@id/cv_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/cv_back" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="@dimen/spacing_1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.4" />
+
+        <TextView
+            android:id="@+id/tv_customer_name"
+            android:layout_width="@dimen/spacing_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_20"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Customer Name "
+            android:textSize="@dimen/font_14"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_customer_name_value" />
+
+        <TextView
+            android:id="@+id/tv_customer_name_value"
+            android:layout_width="@dimen/spacing_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_20"
+            android:layout_marginEnd="@dimen/spacing_20"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Prashant  Mhatre"
+            android:textSize="@dimen/font_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/iv_logo" />
+
+        <TextView
+            android:id="@+id/tv_customer_address"
+            android:layout_width="@dimen/spacing_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_20"
+            android:layout_marginTop="@dimen/spacing_10"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Customer Address "
+            android:textSize="@dimen/font_14"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_customer_name_value" />
+
+        <TextView
+            android:id="@+id/tv_customer_address_value"
+            android:layout_width="@dimen/spacing_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_10"
+            android:layout_marginEnd="@dimen/spacing_20"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Lower Parel, Mumbai -400013"
+            android:textSize="@dimen/font_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+
+            app:layout_constraintTop_toBottomOf="@id/tv_customer_name_value" />
+
+        <TextView
+            android:id="@+id/tv_customer_mobile"
+            android:layout_width="@dimen/spacing_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_20"
+            android:layout_marginTop="@dimen/spacing_10"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Customer Mobile "
+            android:textSize="@dimen/font_14"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_customer_address_value" />
+
+        <TextView
+            android:id="@+id/tv_customer_mobile_value"
+            android:layout_width="@dimen/spacing_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_10"
+            android:layout_marginEnd="@dimen/spacing_20"
+            android:fontFamily="@font/roboto_medium"
+            android:text="1234567890"
+            android:textSize="@dimen/font_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+
+            app:layout_constraintTop_toBottomOf="@id/tv_customer_address_value" />
+
+        <TextView
+            android:id="@+id/tv_instructions"
+            android:layout_width="@dimen/spacing_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_20"
+            android:layout_marginTop="@dimen/spacing_10"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Customer Instructions "
+            android:textSize="@dimen/font_14"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_customer_mobile_value" />
+
+        <TextView
+            android:id="@+id/tv_instructions_value"
+            android:layout_width="@dimen/spacing_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_10"
+            android:layout_marginEnd="@dimen/spacing_20"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Take Right on Kalachawki"
+            android:textSize="@dimen/font_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+
+            app:layout_constraintTop_toBottomOf="@id/tv_customer_mobile_value" />
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="@dimen/spacing_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_20"
+            android:layout_marginTop="@dimen/spacing_10"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Type "
+            android:textSize="@dimen/font_14"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_instructions_value" />
+
+        <TextView
+            android:id="@+id/tv_type_value"
+            android:layout_width="@dimen/spacing_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_10"
+            android:layout_marginEnd="@dimen/spacing_20"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Residential"
+            android:textSize="@dimen/font_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+
+            app:layout_constraintTop_toBottomOf="@id/tv_instructions_value" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

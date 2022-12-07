@@ -18,10 +18,12 @@
             <option value="$PROJECT_DIR$/feature" />
             <option value="$PROJECT_DIR$/feature/dashboard" />
             <option value="$PROJECT_DIR$/feature/enquiry" />
+            <option value="$PROJECT_DIR$/feature/expenses" />
             <option value="$PROJECT_DIR$/feature/feedback" />
             <option value="$PROJECT_DIR$/feature/leaderboard" />
             <option value="$PROJECT_DIR$/feature/login" />
             <option value="$PROJECT_DIR$/feature/notification" />
+            <option value="$PROJECT_DIR$/feature/servicecall" />
             <option value="$PROJECT_DIR$/technician" />
           </set>
         </option>

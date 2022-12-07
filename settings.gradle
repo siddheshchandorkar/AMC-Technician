@@ -26,6 +26,5 @@ include ':feature:leaderboard'
 include ':feature:notification'
 include ':feature:enquiry'
 include ':feature:feedback'
-
-//include ':feature:servicecall'
-//include ':feature:expenses'
+include ':feature:servicecall'
+include ':feature:expenses'
