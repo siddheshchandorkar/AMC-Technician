@@ -48,7 +48,8 @@ class MainActivity : AppCompatActivity() {
                             replaceFragment(binding.container.id, NotificationFragment())
                         }
                         ADD_ENQUIRY -> {
-                            AppNavigation.navigateToEnquiryActivity(this@MainActivity)
+//                            AppNavigation.navigateToEnquiryActivity(this@MainActivity)
+                            AppNavigation.navigateToFeedbackActivity(this@MainActivity)
                         }
                     }
                 }

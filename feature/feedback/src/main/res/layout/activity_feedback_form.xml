@@ -1,25 +1,455 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+
         <variable
             name="vm"
             type="com.amc.feedback.presentation.FeedBackFormViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_back"
+            android:layout_width="@dimen/spacing_48"
+            android:layout_height="@dimen/spacing_48"
+            android:layout_margin="@dimen/spacing_16"
+            app:cardCornerRadius="@dimen/spacing_5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_arrow_left" />
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="@dimen/spacing_48"
+            android:layout_height="@dimen/spacing_48"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/spacing_20"
+            android:src="@drawable/netra_amc_logo"
+            app:layout_constraintBottom_toBottomOf="@id/tv_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_title" />
+
         <TextView
+            android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/service_feedback"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_18"
+            app:layout_constraintBottom_toBottomOf="@id/cv_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/cv_back" />
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spacing_0"
+            app:layout_constraintBottom_toTopOf="@id/btn_submit"
+            app:layout_constraintTop_toBottomOf="@id/iv_logo">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/spacing_30">
+
+
+                <com.amc.common.ui.CircularImageView
+                    android:id="@+id/iv_profile_pic"
+                    android:layout_width="@dimen/spacing_100"
+                    android:layout_height="@dimen/spacing_100"
+                    android:layout_margin="@dimen/spacing_20"
+                    android:background="@drawable/bg_round_gray"
+                    app:civ_selectorStrokeColor="@color/black"
+                    app:civ_selectorStrokeWidth="@dimen/spacing_2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="@dimen/spacing_0"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/spacing_20"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Sandesh Jadhav"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_16"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_profile_pic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.4"
+                    app:layout_constraintStart_toEndOf="@id/iv_profile_pic"
+                    app:layout_constraintTop_toTopOf="@id/iv_profile_pic"
+                    app:layout_constraintVertical_bias="0.088" />
+
+                <TextView
+                    android:id="@+id/tv_experience"
+                    android:layout_width="@dimen/spacing_0"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/spacing_20"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="5 years"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_14"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_profile_pic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/iv_profile_pic"
+                    app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+
+                <TextView
+                    android:id="@+id/tv_total_service_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_40"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Total Services Completed"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_12"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.165"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_profile_pic" />
+
+                <TextView
+                    android:id="@+id/tv_total_services"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_10"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="45 Services"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_20"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_total_service_title"
+                    app:layout_constraintStart_toStartOf="@+id/tv_total_service_title"
+                    app:layout_constraintTop_toBottomOf="@id/tv_total_service_title" />
+
+                <TextView
+                    android:id="@+id/tv_total_point_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_40"
+                    android:layout_marginEnd="@dimen/spacing_20"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Total Points"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_12"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_total_service_title"
+                    app:layout_constraintTop_toBottomOf="@id/iv_profile_pic" />
+
+                <TextView
+                    android:id="@+id/tv_total_points"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_10"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="155 Points"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_20"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_total_point_title"
+                    app:layout_constraintStart_toStartOf="@id/tv_total_point_title"
+                    app:layout_constraintTop_toBottomOf="@id/tv_total_point_title" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_customer_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_16"
+                    android:layout_marginTop="@dimen/spacing_32"
+                    android:layout_marginEnd="@dimen/spacing_16"
+                    android:theme="@style/Theme.TextInputLayoutGreyStyle"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_customer_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:maxLength="100"
+                        android:maxLines="1"
+                        android:textSize="@dimen/font_14" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_quality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/spacing_20"
+                    android:background="@color/card_blue_bg"
+                    android:gravity="center"
+                    android:padding="@dimen/spacing_16"
+                    app:layout_constraintTop_toBottomOf="@id/tv_total_services">
+
+                    <TextView
+                        android:id="@+id/tv_quality"
+                        android:layout_width="@dimen/spacing_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Quality"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_18" />
+
+
+                    <androidx.appcompat.widget.AppCompatRatingBar
+                        style="@style/Widget.AppCompat.RatingBar.Indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:progressTint="@color/purple_200"
+                        android:rating="5"
+                        android:stepSize="1" />
+
+                    <TextView
+                        android:id="@+id/tv_quality_remark"
+                        android:layout_width="@dimen/spacing_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="end"
+                        android:text="Best"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_18" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_1"
+                    android:layout_marginStart="@dimen/spacing_20"
+                    android:layout_marginEnd="@dimen/spacing_20"
+                    android:background="@color/light_grey"
+                    app:layout_constraintTop_toBottomOf="@id/ll_quality"
+                    app:layout_goneMarginStart="@dimen/spacing_20" />
+
+                <LinearLayout
+                    android:id="@+id/ll_timeline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_20"
+                    android:layout_marginEnd="@dimen/spacing_20"
+                    android:background="@color/card_blue_bg"
+                    android:gravity="center"
+                    android:padding="@dimen/spacing_16"
+                    app:layout_constraintTop_toBottomOf="@id/view_1">
+
+                    <TextView
+                        android:id="@+id/tv_timeline"
+                        android:layout_width="@dimen/spacing_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Timeline"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_18" />
+
+
+                    <androidx.appcompat.widget.AppCompatRatingBar
+                        style="@style/Widget.AppCompat.RatingBar.Indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:progressTint="@color/purple_200"
+                        android:rating="4"
+                        android:stepSize="1" />
+
+                    <TextView
+                        android:id="@+id/tv_timeline_remark"
+                        android:layout_width="@dimen/spacing_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="end"
+                        android:text="Good"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_18" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_1"
+                    android:layout_marginStart="@dimen/spacing_20"
+                    android:layout_marginEnd="@dimen/spacing_20"
+                    android:background="@color/light_grey"
+                    app:layout_constraintTop_toBottomOf="@id/ll_timeline"
+                    app:layout_goneMarginStart="@dimen/spacing_20" />
+
+                <LinearLayout
+                    android:id="@+id/ll_efficiency"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_20"
+                    android:layout_marginEnd="@dimen/spacing_20"
+                    android:background="@color/card_blue_bg"
+                    android:gravity="center"
+                    android:padding="@dimen/spacing_16"
+                    app:layout_constraintTop_toBottomOf="@id/view_2">
+
+                    <TextView
+                        android:id="@+id/tv_efficiency"
+                        android:layout_width="@dimen/spacing_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Efficiency"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_18" />
+
+
+                    <androidx.appcompat.widget.AppCompatRatingBar
+                        style="@style/Widget.AppCompat.RatingBar.Indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:progressTint="@color/purple_200"
+                        android:rating="3"
+                        android:stepSize="1" />
+
+                    <TextView
+                        android:id="@+id/tv_efficiency_remark"
+                        android:layout_width="@dimen/spacing_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="end"
+                        android:text="Average"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_18" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_1"
+                    android:layout_marginStart="@dimen/spacing_20"
+                    android:layout_marginEnd="@dimen/spacing_20"
+                    android:background="@color/light_grey"
+                    app:layout_constraintTop_toBottomOf="@id/ll_efficiency"
+                    app:layout_goneMarginStart="@dimen/spacing_20" />
+
+                <LinearLayout
+                    android:id="@+id/ll_communication"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_20"
+                    android:layout_marginEnd="@dimen/spacing_20"
+                    android:background="@color/card_blue_bg"
+                    android:gravity="center"
+                    android:padding="@dimen/spacing_16"
+                    app:layout_constraintTop_toBottomOf="@id/view_3">
+
+                    <TextView
+                        android:id="@+id/tv_communication"
+                        android:layout_width="@dimen/spacing_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Communication"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_18" />
+
+
+                    <androidx.appcompat.widget.AppCompatRatingBar
+                        style="@style/Widget.AppCompat.RatingBar.Indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:progressTint="@color/purple_200"
+                        android:rating="2"
+                        android:stepSize="1" />
+
+                    <TextView
+                        android:id="@+id/tv_communication_remark"
+                        android:layout_width="@dimen/spacing_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="end"
+                        android:text="Poor"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_18" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_sign"
+                    android:layout_width="@dimen/spacing_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_20"
+                    android:layout_marginTop="@dimen/spacing_40"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="end"
+                    android:text="Customer Signature"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ll_communication" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_sign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/spacing_20"
+                    android:padding="@dimen/spacing_10"
+                    app:cardCornerRadius="@dimen/spacing_5"
+                    app:cardElevation="@dimen/spacing_5"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintTop_toBottomOf="@id/tv_sign">
+
+                    <com.github.gcacace.signaturepad.views.SignaturePad
+
+                        android:id="@+id/signature_pad"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/spacing_200"
+                        app:penColor="@android:color/black" />
+
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:id="@+id/btn_clear_sign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/spacing_20"
+                    android:padding="@dimen/spacing_10"
+                    android:text="Clear Signature"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cv_sign" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_30"
+            android:background="@drawable/bg_round_purple"
+            android:text="Submit"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </layout>
