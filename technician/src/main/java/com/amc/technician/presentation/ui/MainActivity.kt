@@ -49,7 +49,8 @@ class MainActivity : AppCompatActivity() {
                         }
                         ADD_ENQUIRY -> {
 //                            AppNavigation.navigateToEnquiryActivity(this@MainActivity)
-                            AppNavigation.navigateToFeedbackActivity(this@MainActivity)
+//                            AppNavigation.navigateToFeedbackActivity(this@MainActivity)
+                            AppNavigation.navigateToServiceCallDetailsActivity(this@MainActivity)
                         }
                     }
                 }
