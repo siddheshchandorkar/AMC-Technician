@@ -7,17 +7,13 @@ import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
 
 
-class RecyclerViewBindingAdapter(val data: List<BaseRowModel> )
-    : RecyclerView.Adapter<RecyclerViewBindingAdapter.ViewHolder>() {
+class RecyclerViewBindingAdapter(val data: List<BaseRowModel>) :
+    RecyclerView.Adapter<RecyclerViewBindingAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
         val layoutInflater = LayoutInflater.from(viewGroup.context)
-        val dataViewBinding = DataBindingUtil.inflate<ViewDataBinding>(layoutInflater, i, viewGroup, false)
-//        dataViewBinding.root.layoutParams = WindowManager.LayoutParams(
-//            (dataViewBinding.root.width * 0.8).toInt() ,
-//            ViewGroup.LayoutParams.MATCH_PARENT
-//        )
-
+        val dataViewBinding =
+            DataBindingUtil.inflate<ViewDataBinding>(layoutInflater, i, viewGroup, false)
         return ViewHolder(dataViewBinding)
     }
 
@@ -37,10 +33,11 @@ class RecyclerViewBindingAdapter(val data: List<BaseRowModel> )
         return position.toLong()
     }
 
-    class ViewHolder(val mDataViewBinding: ViewDataBinding) : RecyclerView.ViewHolder(mDataViewBinding.root) {
+    class ViewHolder(val mDataViewBinding: ViewDataBinding) :
+        RecyclerView.ViewHolder(mDataViewBinding.root) {
 
         fun bind(dataModel: Any) {
-            mDataViewBinding.setVariable(BR._all, dataModel) //TODO Fix me
+            mDataViewBinding.setVariable(BR.vm, dataModel)
             mDataViewBinding.executePendingBindings()
         }
     }

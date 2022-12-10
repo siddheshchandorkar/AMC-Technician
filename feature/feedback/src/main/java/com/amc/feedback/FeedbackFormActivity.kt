@@ -19,6 +19,9 @@ class FeedbackFormActivity : AppCompatActivity() {
         binding.vm = viewModel
         binding.lifecycleOwner = this
 
+        binding.cvBack.setOnClickListener { finish() }
     }
+
+
 
 }

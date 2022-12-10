@@ -1,12 +1,15 @@
 package com.amc.common
 
+import android.view.View
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 
 class BindingUtils {
 
-    companion object{
-        const val ROW_DATA = "setRowData"
+    companion object {
+        private const val ROW_DATA = "setRowData"
+        private const val VISIBILITY = "android:visibility"
+
         @JvmStatic
         @BindingAdapter(ROW_DATA)
         fun setRowLayoutData(recyclerView: RecyclerView, listData: List<BaseRowModel>) {
@@ -19,6 +22,17 @@ class BindingUtils {
             } else {
                 adapter.notifyDataSetChanged()
             }
+        }
+
+        @JvmStatic
+        @BindingAdapter(VISIBILITY)
+        fun setVisibility(view: View, visibility: Boolean) {
+            if (visibility) {
+                view.visibility = View.VISIBLE
+            } else {
+                view.visibility = View.GONE
+            }
+
         }
     }
 }

@@ -10,10 +10,9 @@ class ServiceCallDetailsViewModel : ViewModel() {
 
     init {
         val listService = mutableListOf<BaseRowModel>()
-        listService.add(RowServiceCallViewModel(ServiceCallModel(1,true)))
-        listService.add(RowServiceCallViewModel(ServiceCallModel(2,true)))
-        listService.add(RowServiceCallViewModel(ServiceCallModel(3,false)))
+        listService.add(RowServiceCallViewModel(ServiceCallModel(1,true,"10:10","11:11")))
+        listService.add(RowServiceCallViewModel(ServiceCallModel(2,false,"","")))
+//        listService.add(RowServiceCallViewModel(ServiceCallModel(3,false,"","")))
         serviceListLiveData.value=listService
-
     }
 }

@@ -12,6 +12,8 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_10"
+        android:layout_marginEnd="@dimen/spacing_10"
         android:background="@color/black"
         app:cardCornerRadius="@dimen/spacing_5"
         app:cardElevation="@dimen/spacing_5"
@@ -24,74 +26,127 @@
             android:orientation="vertical"
             android:padding="@dimen/spacing_10">
 
-            <View
-                android:id="@+id/view_status"
-                android:layout_width="@dimen/spacing_2"
-                android:layout_height="0dp"
-                android:background="@color/purple_500"
-                app:layout_constraintBottom_toBottomOf="@+id/tv_time"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/tv_task_name" />
-
             <TextView
-                android:id="@+id/tv_task_name"
-                android:layout_width="wrap_content"
+                android:id="@+id/tv_sr_no"
+                android:layout_width="@dimen/spacing_30"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/spacing_10"
-                android:fontFamily="@font/roboto_medium"
-                android:text="Cleaning Clothes - Today"
-                android:textColor="@color/c_2C406E"
-                android:textSize="@dimen/font_16"
+                android:background="@drawable/bg_filter_round_light_purple_border"
+                android:gravity="center"
+                android:padding="@dimen/spacing_5"
+                android:text="@{vm.srNo}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tv_time"
-                android:layout_width="wrap_content"
+                android:id="@+id/tv_technician_name"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/spacing_10"
-                android:layout_marginTop="@dimen/spacing_5"
+                android:layout_marginEnd="@dimen/spacing_10"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Test User"
+                android:textColor="@color/c_2C406E"
+                android:textSize="@dimen/font_16"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_sr_no"
+                app:layout_constraintEnd_toStartOf="@id/tv_date"
+                app:layout_constraintStart_toEndOf="@id/tv_sr_no"
+                app:layout_constraintTop_toTopOf="@+id/tv_sr_no" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_regular"
-                android:text="07:00 - 07:15"
+                android:text="31st December, 2022"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_technician_name" />
+
+            <EditText
+                android:id="@+id/et_in_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_10"
+                android:clickable="true"
+                android:focusable="false"
+                android:fontFamily="@font/roboto_regular"
+                android:hint="In Time"
+                android:onClick="@{vm.openInTimer}"
+                android:text="@{vm.inTime}"
                 android:textColor="@color/c_2C406E"
                 android:textSize="@dimen/font_14"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_task_name" />
+                app:layout_constraintTop_toBottomOf="@id/tv_technician_name" />
+
+            <EditText
+                android:id="@+id/et_out_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_10"
+                android:layout_marginTop="@dimen/spacing_10"
+                android:clickable="true"
+                android:focusable="false"
+                android:fontFamily="@font/roboto_regular"
+                android:hint="Out Time"
+                android:onClick="@{vm.openOutTimer}"
+                android:text="@{vm.outTime}"
+                android:textColor="@color/c_2C406E"
+                android:textSize="@dimen/font_14"
+                app:layout_constraintStart_toEndOf="@+id/et_in_time"
+                app:layout_constraintTop_toBottomOf="@id/tv_technician_name" />
 
             <TextView
                 android:id="@+id/tv_info_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_16"
-                android:background="@drawable/bg_round_light_purple"
+                android:background="@drawable/bg_filter_round_light_green_border"
                 android:paddingStart="@dimen/spacing_10"
                 android:paddingTop="@dimen/spacing_5"
                 android:paddingEnd="@dimen/spacing_10"
                 android:paddingBottom="@dimen/spacing_5"
-                android:text="Urgent"
-                android:textColor="#5B67CA"
+                android:text="Verified by Customer"
+                android:textColor="@color/black"
                 android:textSize="@dimen/font_12"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@id/tv_time"
-                app:layout_constraintTop_toBottomOf="@id/tv_time" />
+                android:visibility="@{vm.isVerified &amp;&amp; vm.feedGiven}"
+                app:layout_constraintBottom_toBottomOf="@+id/et_out_time"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/et_out_time"
+                app:layout_constraintTop_toTopOf="@+id/et_out_time" />
 
-            <TextView
-                android:id="@+id/tv_info_2"
+            <Button
+                android:id="@+id/tv_verify_service"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_16"
-                android:layout_marginStart="@dimen/spacing_10"
-                android:background="@drawable/bg_round_light_purple"
-                android:paddingStart="@dimen/spacing_10"
+                android:layout_marginTop="@dimen/spacing_10"
+                android:onClick="@{vm.verifyServiceCompleted}"
                 android:paddingTop="@dimen/spacing_5"
                 android:paddingEnd="@dimen/spacing_10"
                 android:paddingBottom="@dimen/spacing_5"
-                android:textColor="#5B67CA"
-                android:text="Home"
+                android:text="Verify Service Completed"
+                android:textColor="@color/white"
                 android:textSize="@dimen/font_12"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@id/tv_info_1"
-                app:layout_constraintTop_toBottomOf="@id/tv_time" />
+                android:visibility="@{!vm.isVerified &amp;&amp;vm.feedGiven}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/et_out_time"
+                app:layout_constraintTop_toBottomOf="@+id/tv_technician_name" />
+
+            <Button
+                android:id="@+id/tv_service_feedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_10"
+                android:onClick="@{vm.serviceFeedBack}"
+                android:paddingTop="@dimen/spacing_5"
+                android:paddingEnd="@dimen/spacing_10"
+                android:paddingBottom="@dimen/spacing_5"
+                android:text="Service Feedback"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_12"
+                android:visibility="@{!vm.feedGiven}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/et_out_time"
+                app:layout_constraintTop_toBottomOf="@+id/tv_technician_name" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
