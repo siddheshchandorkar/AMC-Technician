@@ -83,7 +83,7 @@
                     android:id="@+id/tv_name"
                     android:layout_width="@dimen/spacing_0"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/spacing_20"
+                    android:layout_marginStart="@dimen/spacing_20"
                     android:fontFamily="@font/roboto_medium"
                     android:text="Sandesh Jadhav"
                     android:textColor="@color/black"
@@ -99,12 +99,12 @@
                     android:id="@+id/tv_experience"
                     android:layout_width="@dimen/spacing_0"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/spacing_20"
+                    android:layout_marginTop="@dimen/spacing_5"
+                    android:layout_marginStart="@dimen/spacing_20"
                     android:fontFamily="@font/roboto_regular"
                     android:text="5 years"
                     android:textColor="@color/black"
                     android:textSize="@dimen/font_14"
-                    app:layout_constraintBottom_toBottomOf="@id/iv_profile_pic"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/iv_profile_pic"
                     app:layout_constraintTop_toBottomOf="@id/tv_name" />
@@ -187,6 +187,22 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
+                <TextView
+                    android:id="@+id/tv_use_material"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Is Extra Material Used?"
+                    android:layout_margin="@dimen/spacing_20"
+                    app:layout_constraintTop_toBottomOf="@id/tv_total_services"/>
+
+                <Switch
+                    android:id="@+id/switch_expenses"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/tv_use_material"
+                    app:layout_constraintTop_toBottomOf="@id/tv_use_material" />
+
                 <LinearLayout
                     android:id="@+id/ll_quality"
                     android:layout_width="match_parent"
@@ -194,8 +210,11 @@
                     android:layout_margin="@dimen/spacing_20"
                     android:background="@color/card_blue_bg"
                     android:gravity="center"
-                    android:padding="@dimen/spacing_16"
-                    app:layout_constraintTop_toBottomOf="@id/tv_total_services">
+                    android:paddingStart="@dimen/spacing_16"
+                    android:paddingEnd="@dimen/spacing_16"
+                    android:paddingTop="@dimen/spacing_10"
+                    android:paddingBottom="@dimen/spacing_10"
+                    app:layout_constraintTop_toBottomOf="@id/switch_expenses">
 
                     <TextView
                         android:id="@+id/tv_quality"
@@ -205,7 +224,7 @@
                         android:fontFamily="@font/roboto_regular"
                         android:text="Quality"
                         android:textColor="@color/black"
-                        android:textSize="@dimen/font_18" />
+                        android:textSize="@dimen/font_16" />
 
 
                     <androidx.appcompat.widget.AppCompatRatingBar
@@ -213,8 +232,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:numStars="5"
-                        android:progressTint="@color/purple_200"
+                        android:scaleX=".9"
                         android:rating="5"
+                        android:isIndicator="false"
+                        android:focusable="false"
+                        android:progressTint="@color/purple_200"
                         android:stepSize="1" />
 
                     <TextView
@@ -248,8 +270,11 @@
                     android:layout_marginEnd="@dimen/spacing_20"
                     android:background="@color/card_blue_bg"
                     android:gravity="center"
-                    android:padding="@dimen/spacing_16"
-                    app:layout_constraintTop_toBottomOf="@id/view_1">
+
+                    android:paddingStart="@dimen/spacing_16"
+                    android:paddingEnd="@dimen/spacing_16"
+                    android:paddingTop="@dimen/spacing_10"
+                    android:paddingBottom="@dimen/spacing_10"                    app:layout_constraintTop_toBottomOf="@id/view_1">
 
                     <TextView
                         android:id="@+id/tv_timeline"
@@ -267,6 +292,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:numStars="5"
+                        android:scaleX=".9"
+                        android:isIndicator="false"
                         android:progressTint="@color/purple_200"
                         android:rating="4"
                         android:stepSize="1" />
@@ -276,6 +303,7 @@
                         android:layout_width="@dimen/spacing_0"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+
                         android:fontFamily="@font/roboto_medium"
                         android:gravity="end"
                         android:text="Good"
@@ -302,8 +330,11 @@
                     android:layout_marginEnd="@dimen/spacing_20"
                     android:background="@color/card_blue_bg"
                     android:gravity="center"
-                    android:padding="@dimen/spacing_16"
-                    app:layout_constraintTop_toBottomOf="@id/view_2">
+
+                    android:paddingStart="@dimen/spacing_16"
+                    android:paddingEnd="@dimen/spacing_16"
+                    android:paddingTop="@dimen/spacing_10"
+                    android:paddingBottom="@dimen/spacing_10"                    app:layout_constraintTop_toBottomOf="@id/view_2">
 
                     <TextView
                         android:id="@+id/tv_efficiency"
@@ -321,8 +352,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:numStars="5"
+                        android:isIndicator="false"
                         android:progressTint="@color/purple_200"
                         android:rating="3"
+                        android:scaleX="0.9"
                         android:stepSize="1" />
 
                     <TextView
@@ -356,8 +389,11 @@
                     android:layout_marginEnd="@dimen/spacing_20"
                     android:background="@color/card_blue_bg"
                     android:gravity="center"
-                    android:padding="@dimen/spacing_16"
-                    app:layout_constraintTop_toBottomOf="@id/view_3">
+
+                    android:paddingStart="@dimen/spacing_16"
+                    android:paddingEnd="@dimen/spacing_16"
+                    android:paddingTop="@dimen/spacing_10"
+                    android:paddingBottom="@dimen/spacing_10"                    app:layout_constraintTop_toBottomOf="@id/view_3">
 
                     <TextView
                         android:id="@+id/tv_communication"
@@ -370,13 +406,15 @@
                         android:textSize="@dimen/font_18" />
 
 
-                    <androidx.appcompat.widget.AppCompatRatingBar
+                    <RatingBar
                         style="@style/Widget.AppCompat.RatingBar.Indicator"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:numStars="5"
                         android:progressTint="@color/purple_200"
                         android:rating="2"
+                        android:isIndicator="false"
+                        android:scaleX="0.9"
                         android:stepSize="1" />
 
                     <TextView
@@ -391,6 +429,7 @@
                         android:textSize="@dimen/font_18" />
 
                 </LinearLayout>
+
 
                 <TextView
                     android:id="@+id/tv_sign"
