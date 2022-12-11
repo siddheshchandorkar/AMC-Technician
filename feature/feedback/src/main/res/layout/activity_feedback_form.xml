@@ -11,7 +11,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/white">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cv_back"
@@ -19,6 +20,7 @@
             android:layout_height="@dimen/spacing_48"
             android:layout_margin="@dimen/spacing_16"
             app:cardCornerRadius="@dimen/spacing_5"
+            android:background="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -574,6 +576,8 @@
                         android:id="@+id/signature_pad"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/spacing_200"
+                        android:background="@color/white"
+
                         app:onSignedListener="@{vm.signatureListener}"
                         app:penColor="@android:color/black" />
 

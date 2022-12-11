@@ -4,13 +4,14 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.amc.common.AppNavigationInterface
+import com.amc.common.BaseActivity
 import com.amc.common.CommonInterface
 import com.amc.common.SingleLiveEvent
 import com.amc.login.R
 import com.amc.login.databinding.ActivityLoginBinding
 import com.amc.login.presentation.viewmodels.LoginViewModel
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : BaseActivity() {
     private lateinit var viewModel: LoginViewModel
     private lateinit var binding: ActivityLoginBinding
     private lateinit var appNavigationInterface : AppNavigationInterface

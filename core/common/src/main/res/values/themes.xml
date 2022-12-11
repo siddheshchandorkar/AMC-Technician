@@ -30,6 +30,9 @@
         <item name="colorControlActivated">@color/purple_500</item>
         <item name="colorPrimaryDark">@color/purple_200</item>
 
+        <item name="android:editTextStyle">@style/App_EditTextStyle</item>
+
+
 
     </style>
 
@@ -75,6 +78,13 @@
         <item name="android:textColor">@color/c_btn_red_pressed</item>
         <item name="android:textSize">16sp</item>
         <item name="android:textStyle">bold|italic</item>
+    </style>
+
+
+    <style name="App_EditTextStyle" parent="@android:style/Widget.EditText">
+<!--        <item name="android:background">@drawable/filled_roundededges_box_dark</item>-->
+        <item name="android:textColor">@color/c_black</item>
+        <item name="android:layout_height">45dip</item>
     </style>
 
 </resources>

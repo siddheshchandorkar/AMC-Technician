@@ -60,6 +60,14 @@
                 android:text="31st December, 2022"
                 android:textColor="@color/black"
                 android:textSize="@dimen/font_12"
+                app:layout_constraintEnd_toStartOf="@id/iv_menu"
+                app:layout_constraintTop_toTopOf="@+id/tv_technician_name" />
+
+            <ImageView
+                android:id="@+id/iv_menu"
+                android:layout_width="@dimen/spacing_20"
+                android:layout_height="@dimen/spacing_20"
+                android:src="@drawable/ic_option_menu"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/tv_technician_name" />
 

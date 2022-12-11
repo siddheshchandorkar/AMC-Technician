@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.amc.leaderboard.R
@@ -19,7 +20,7 @@ class LeaderBoardFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_leader_board, container, false)
         viewModel = LeaderBoardViewModel(requireActivity().application)
         binding.vm = viewModel

@@ -5,6 +5,7 @@
     <application
         android:allowBackup="true">
         <activity android:name=".ServiceCallDetailsActivity" />
+        <activity android:name=".AddCallDetailsActivity" />
 
     </application>
 

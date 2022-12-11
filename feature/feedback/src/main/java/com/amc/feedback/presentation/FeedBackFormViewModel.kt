@@ -61,6 +61,9 @@ class FeedBackFormViewModel : ViewModel() {
                         Toast.LENGTH_SHORT
                     ).show()
                 }
+                else -> {
+                    submit.value = true
+                }
 
             }
         } else {

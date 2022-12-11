@@ -5,9 +5,11 @@ import android.app.TimePickerDialog
 import android.content.Context
 import android.content.Intent
 import android.text.TextUtils
+import android.text.format.DateFormat
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TimePicker
 import android.widget.Toast
 import androidx.databinding.ObservableField
 import com.amc.common.BaseRowModel
@@ -25,6 +27,8 @@ class RowServiceCallViewModel(serviceCallModel: ServiceCallModel) :
     var outTime = ObservableField(serviceCallModel.outTime)
     var isVerified = ObservableField(serviceCallModel.verified)
     var feedGiven = ObservableField(isVerified.get())
+    var calInTime = Calendar.getInstance()
+    var calOutTime = Calendar.getInstance()
 
 
     override fun setLayoutID() {
@@ -40,28 +44,53 @@ class RowServiceCallViewModel(serviceCallModel: ServiceCallModel) :
     }
 
     private fun openTimeSelector(isInTime: Boolean, context: Context) {
-        val mcurrentTime: Calendar = Calendar.getInstance()
-        val hour: Int = mcurrentTime.get(Calendar.HOUR_OF_DAY)
-        val minute: Int = mcurrentTime.get(Calendar.MINUTE)
-        val mTimePicker =
-            TimePickerDialog(
-                context,
-                { view, hourOfDay, minute ->
-                    if (isInTime) {
-                        inTime.set("$hourOfDay:$minute")
-                    } else {
-                        outTime.set("$hourOfDay:$minute")
-                    }
-                }, hour, minute, true
-            ) //Yes 24 hour time
-
-        if (isInTime) {
-            mTimePicker.setTitle("Select In Time")
-        } else {
-            mTimePicker.setTitle("Select Out Time")
-
+        var hrs=0
+        var min=0
+        if(isInTime){
+            hrs=calInTime.get(Calendar.HOUR_OF_DAY)
+           min= calInTime.get(Calendar.MINUTE)
+        }else{
+            hrs=calOutTime.get(Calendar.HOUR_OF_DAY)
+            min= calOutTime.get(Calendar.MINUTE)
         }
-        mTimePicker.show()
+        val tpd = TimePickerDialog(context,
+            { view1: TimePicker?, hourOfDay: Int, minute: Int ->
+                if (isInTime) {
+                        inTime.set("${String.format("%02d", hourOfDay)}:${String.format(
+                            "%02d",
+                            minute
+                        )}")
+                    } else {
+                        outTime.set("${String.format("%02d", hourOfDay)}:${String.format(
+                            "%02d",
+                            minute
+                        )}")
+                    }
+            },hrs,min, DateFormat.is24HourFormat(context)
+        )
+        tpd.show()
+//        val mcurrentTime: Calendar = Calendar.getInstance()
+//        val hour: Int = mcurrentTime.get(Calendar.HOUR_OF_DAY)
+//        val minute: Int = mcurrentTime.get(Calendar.MINUTE)
+//        val mTimePicker =
+//            TimePickerDialog(
+//                context,
+//                { view, hourOfDay, minute ->
+//                    if (isInTime) {
+//                        inTime.set("$hourOfDay:$minute")
+//                    } else {
+//                        outTime.set("$hourOfDay:$minute")
+//                    }
+//                }, hour, minute, true
+//            ) //Yes 24 hour time
+//
+//        if (isInTime) {
+//            mTimePicker.setTitle("Select In Time")
+//        } else {
+//            mTimePicker.setTitle("Select Out Time")
+//
+//        }
+//        mTimePicker.show()
     }
 
     fun serviceFeedBack(view: View){

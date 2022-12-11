@@ -5,6 +5,7 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import com.amc.common.BaseActivity
 import com.amc.dashboard.DashBoardFragment
 import com.amc.leaderboard.presentation.ui.LeaderBoardFragment
 import com.amc.notification.presentation.ui.NotificationFragment
@@ -14,7 +15,7 @@ import com.amc.technician.presentation.AppNavigation
 import com.amc.technician.presentation.viewmodel.MainActivityViewModel
 import nl.joery.animatedbottombar.AnimatedBottomBar
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
     private lateinit var viewModel: MainActivityViewModel
     private lateinit var binding: ActivityMainBinding
 

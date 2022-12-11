@@ -2,25 +2,27 @@ package com.amc.dashboard
 
 import android.app.AlertDialog
 import android.os.Bundle
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import com.amc.common.BaseActivity
 import com.amc.dashboard.databinding.ActivityServiceListBinding
 
-class ServiceListActivity : AppCompatActivity() {
+class ServiceListActivity : BaseActivity() {
     private lateinit var viewModel: ServiceListViewModel
     private lateinit var binding: ActivityServiceListBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_service_list)
-        var serviceType=0
+        var serviceType = 0
 
         intent.extras?.let {
-            if(it.containsKey(SERVICE_TYPE)){
-                serviceType=it.getInt(SERVICE_TYPE,0)
+            if (it.containsKey(SERVICE_TYPE)) {
+                serviceType = it.getInt(SERVICE_TYPE, 0)
             }
         }
-        viewModel = ServiceListViewModel(application,serviceType)
+        viewModel = ServiceListViewModel(application, serviceType)
         binding.vm = viewModel
         binding.lifecycleOwner = this
 
@@ -28,24 +30,27 @@ class ServiceListActivity : AppCompatActivity() {
 
         viewModel.showFiler.observe(this) {
 
-            if(it){
+            if (it) {
 
                 val builder = AlertDialog.Builder(this)
                     .create()
                 val view = layoutInflater.inflate(R.layout.dialog_task_filter, null)
-//            val  button = view.findViewById<Button>(R.id.dialogDismiss_button)
+                val buttonCancel = view.findViewById<TextView>(R.id.tv_cancel)
+                val buttonFilter = view.findViewById<TextView>(R.id.tv_filter)
                 builder.setView(view)
-//            button.setOnClickListener {
-//                builder.dismiss()
-//            }
-//            builder.setCanceledOnTouchOutside(false)
+                buttonCancel.setOnClickListener {
+                    builder.dismiss()
+                }
+                buttonFilter.setOnClickListener {
+                    builder.dismiss()
+                }
                 builder.show()
             }
         }
     }
 
-    companion object{
-        const val SERVICE_TYPE="service_type"
+    companion object {
+        const val SERVICE_TYPE = "service_type"
     }
 
 }
