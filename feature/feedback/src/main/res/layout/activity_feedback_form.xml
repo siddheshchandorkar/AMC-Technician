@@ -99,8 +99,8 @@
                     android:id="@+id/tv_experience"
                     android:layout_width="@dimen/spacing_0"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/spacing_5"
                     android:layout_marginStart="@dimen/spacing_20"
+                    android:layout_marginTop="@dimen/spacing_5"
                     android:fontFamily="@font/roboto_regular"
                     android:text="5 years"
                     android:textColor="@color/black"
@@ -191,17 +191,124 @@
                     android:id="@+id/tv_use_material"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintStart_toStartOf="parent"
-                    android:text="Is Extra Material Used?"
                     android:layout_margin="@dimen/spacing_20"
-                    app:layout_constraintTop_toBottomOf="@id/tv_total_services"/>
+                    android:text="Is Extra Material Used?"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_total_services" />
 
                 <Switch
                     android:id="@+id/switch_expenses"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_4"
+                    android:checked="@={vm.isExpenses}"
                     app:layout_constraintStart_toStartOf="@+id/tv_use_material"
                     app:layout_constraintTop_toBottomOf="@id/tv_use_material" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_expenses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/spacing_20"
+                    android:visibility="@{vm.isExpenses}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/switch_expenses">
+
+                    <LinearLayout
+                        android:id="@+id/ll_material_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="Material 1"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_14"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.165"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/iv_profile_pic" />
+
+                        <EditText
+                            android:layout_width="@dimen/spacing_70"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:inputType="number"
+                            android:text="@={vm.material1}"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="gm"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_14"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.165"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/iv_profile_pic" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/divider_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/spacing_1"
+                        android:layout_marginTop="@dimen/spacing_5"
+                        android:alpha="0.5"
+                        android:background="@color/light_grey"
+                        app:layout_constraintTop_toBottomOf="@id/ll_material_1" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_material_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/divider_1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="Material 2"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_14"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.165"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/iv_profile_pic" />
+
+                        <EditText
+                            android:layout_width="@dimen/spacing_70"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+
+                            android:text="@={vm.material2}"
+                            android:inputType="number" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="litre"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_14"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.165"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/iv_profile_pic" />
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <LinearLayout
                     android:id="@+id/ll_quality"
@@ -211,10 +318,10 @@
                     android:background="@color/card_blue_bg"
                     android:gravity="center"
                     android:paddingStart="@dimen/spacing_16"
-                    android:paddingEnd="@dimen/spacing_16"
                     android:paddingTop="@dimen/spacing_10"
+                    android:paddingEnd="@dimen/spacing_16"
                     android:paddingBottom="@dimen/spacing_10"
-                    app:layout_constraintTop_toBottomOf="@id/switch_expenses">
+                    app:layout_constraintTop_toBottomOf="@id/cl_expenses">
 
                     <TextView
                         android:id="@+id/tv_quality"
@@ -231,12 +338,12 @@
                         style="@style/Widget.AppCompat.RatingBar.Indicator"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:numStars="5"
-                        android:scaleX=".9"
-                        android:rating="5"
-                        android:isIndicator="false"
                         android:focusable="false"
+                        android:isIndicator="false"
+                        android:numStars="5"
                         android:progressTint="@color/purple_200"
+                        android:rating="5"
+                        android:scaleX=".9"
                         android:stepSize="1" />
 
                     <TextView
@@ -272,9 +379,10 @@
                     android:gravity="center"
 
                     android:paddingStart="@dimen/spacing_16"
-                    android:paddingEnd="@dimen/spacing_16"
                     android:paddingTop="@dimen/spacing_10"
-                    android:paddingBottom="@dimen/spacing_10"                    app:layout_constraintTop_toBottomOf="@id/view_1">
+                    android:paddingEnd="@dimen/spacing_16"
+                    android:paddingBottom="@dimen/spacing_10"
+                    app:layout_constraintTop_toBottomOf="@id/view_1">
 
                     <TextView
                         android:id="@+id/tv_timeline"
@@ -291,11 +399,11 @@
                         style="@style/Widget.AppCompat.RatingBar.Indicator"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:numStars="5"
-                        android:scaleX=".9"
                         android:isIndicator="false"
+                        android:numStars="5"
                         android:progressTint="@color/purple_200"
                         android:rating="4"
+                        android:scaleX=".9"
                         android:stepSize="1" />
 
                     <TextView
@@ -332,9 +440,10 @@
                     android:gravity="center"
 
                     android:paddingStart="@dimen/spacing_16"
-                    android:paddingEnd="@dimen/spacing_16"
                     android:paddingTop="@dimen/spacing_10"
-                    android:paddingBottom="@dimen/spacing_10"                    app:layout_constraintTop_toBottomOf="@id/view_2">
+                    android:paddingEnd="@dimen/spacing_16"
+                    android:paddingBottom="@dimen/spacing_10"
+                    app:layout_constraintTop_toBottomOf="@id/view_2">
 
                     <TextView
                         android:id="@+id/tv_efficiency"
@@ -351,8 +460,8 @@
                         style="@style/Widget.AppCompat.RatingBar.Indicator"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:numStars="5"
                         android:isIndicator="false"
+                        android:numStars="5"
                         android:progressTint="@color/purple_200"
                         android:rating="3"
                         android:scaleX="0.9"
@@ -391,9 +500,10 @@
                     android:gravity="center"
 
                     android:paddingStart="@dimen/spacing_16"
-                    android:paddingEnd="@dimen/spacing_16"
                     android:paddingTop="@dimen/spacing_10"
-                    android:paddingBottom="@dimen/spacing_10"                    app:layout_constraintTop_toBottomOf="@id/view_3">
+                    android:paddingEnd="@dimen/spacing_16"
+                    android:paddingBottom="@dimen/spacing_10"
+                    app:layout_constraintTop_toBottomOf="@id/view_3">
 
                     <TextView
                         android:id="@+id/tv_communication"
@@ -410,10 +520,10 @@
                         style="@style/Widget.AppCompat.RatingBar.Indicator"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:isIndicator="false"
                         android:numStars="5"
                         android:progressTint="@color/purple_200"
                         android:rating="2"
-                        android:isIndicator="false"
                         android:scaleX="0.9"
                         android:stepSize="1" />
 
@@ -450,8 +560,8 @@
                     android:id="@+id/cv_sign"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/spacing_10"
                     android:layout_marginStart="@dimen/spacing_20"
+                    android:layout_marginTop="@dimen/spacing_10"
                     android:layout_marginEnd="@dimen/spacing_20"
                     android:padding="@dimen/spacing_10"
                     app:cardCornerRadius="@dimen/spacing_5"
@@ -464,6 +574,7 @@
                         android:id="@+id/signature_pad"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/spacing_200"
+                        app:onSignedListener="@{vm.signatureListener}"
                         app:penColor="@android:color/black" />
 
                 </androidx.cardview.widget.CardView>
@@ -475,6 +586,7 @@
                     android:layout_margin="@dimen/spacing_20"
                     android:padding="@dimen/spacing_10"
                     android:text="Clear Signature"
+                    android:onClick="@{vm.onClearSignature}"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/cv_sign" />
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -487,6 +599,7 @@
             android:layout_margin="@dimen/spacing_30"
             android:background="@drawable/bg_round_purple"
             android:text="Submit"
+            android:onClick="@{vm.submitFeedback}"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent" />
 

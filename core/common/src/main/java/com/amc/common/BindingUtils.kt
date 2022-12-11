@@ -3,12 +3,14 @@ package com.amc.common
 import android.view.View
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.github.gcacace.signaturepad.views.SignaturePad
 
 class BindingUtils {
 
     companion object {
         private const val ROW_DATA = "setRowData"
         private const val VISIBILITY = "android:visibility"
+        private const val SIGNATURE_LISTENER = "onSignedListener"
 
         @JvmStatic
         @BindingAdapter(ROW_DATA)
@@ -33,6 +35,12 @@ class BindingUtils {
                 view.visibility = View.GONE
             }
 
+        }
+
+        @JvmStatic
+        @BindingAdapter(SIGNATURE_LISTENER)
+        fun setVisibility(view: SignaturePad, listener: SignaturePad.OnSignedListener) {
+            view.setOnSignedListener(listener)
         }
     }
 }
