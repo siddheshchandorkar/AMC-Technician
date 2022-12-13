@@ -4,17 +4,20 @@
 
     <data>
 
-        <import type="android.view.View"/>
+        <import type="android.view.View" />
+
         <variable
             name="vm"
             type="com.amc.login.presentation.viewmodels.LoginViewModel" />
     </data>
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/default_white">
+        android:background="@color/default_white"
+        android:gravity="center"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/tv_login_title"
@@ -28,26 +31,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/iv_logo" />
 
-        <ImageView
-            android:id="@+id/iv_logo"
-            android:layout_width="@dimen/spacing_130"
-            android:layout_height="@dimen/spacing_130"
-            android:layout_margin="@dimen/spacing_50"
-            android:scaleType="fitCenter"
-            android:src="@drawable/netra_amc_logo"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
 
         <EditText
             android:id="@+id/et_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/spacing_30"
-            android:layout_marginTop="@dimen/spacing_100"
-            android:layout_marginEnd="@dimen/spacing_30"
-            android:hint="@string/txt_email_id"
+            android:layout_margin="@dimen/spacing_20"
             android:drawableStart="@drawable/ic_email"
+            android:hint="@string/txt_email_id"
             android:inputType="textEmailAddress"
             android:padding="@dimen/spacing_10"
             android:textSize="@dimen/font_16"
@@ -58,13 +49,13 @@
             android:id="@+id/et_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/spacing_30"
-            android:layout_marginTop="@dimen/spacing_16"
-            android:layout_marginEnd="@dimen/spacing_30"
+            android:layout_marginTop="@dimen/spacing_20"
+            android:layout_marginStart="@dimen/spacing_20"
+            android:layout_marginEnd="@dimen/spacing_20"
             android:drawableStart="@drawable/ic_password_lock"
+            android:hint="@string/txt_password"
             android:inputType="textPassword"
             android:maxLength="6"
-            android:hint="@string/txt_password"
             android:padding="@dimen/spacing_10"
             android:textSize="@dimen/font_16"
             app:layout_constraintTop_toBottomOf="@id/et_email" />
@@ -75,10 +66,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_5"
             android:layout_marginEnd="@dimen/spacing_30"
-            android:text="@string/txt_forgot_password"
             android:onClick="@{() -> vm.forgotPassword()}"
-            android:visibility="@{vm.isSignUp?View.GONE:View.VISIBLE}"
+            android:text="@string/txt_forgot_password"
+            android:layout_gravity="end"
             android:textColor="@color/c_5B67CA"
+            android:visibility="@{vm.isSignUp?View.GONE:View.VISIBLE}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/et_password" />
 
@@ -86,44 +78,13 @@
             android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/spacing_30"
-            android:layout_marginTop="@dimen/spacing_30"
-            android:layout_marginEnd="@dimen/spacing_30"
+            android:layout_margin="@dimen/spacing_20"
             android:background="@drawable/bg_round_purple"
             android:text="@{vm.isSignUp?@string/sign_up:@string/txt_login}"
             android:textColor="@color/white"
             app:layout_constraintTop_toBottomOf="@id/tv_forgot_password" />
 
-        <TextView
-            android:id="@+id/tv_or_with"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_20"
-            android:text="@string/or_with"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_login" />
 
-        <ImageView
-            android:id="@+id/iv_google_logo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_10"
-            android:src="@drawable/ic_google"
-            app:layout_constraintHorizontal_bias="0.43"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_or_with" />
-
-        <ImageView
-            android:id="@+id/iv_facebook_logo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/spacing_10"
-            android:layout_marginTop="@dimen/spacing_10"
-            android:src="@drawable/ic_facebook"
-            app:layout_constraintStart_toEndOf="@id/iv_google_logo"
-            app:layout_constraintTop_toBottomOf="@id/tv_or_with" />
 
         <TextView
             android:id="@+id/tv_dont_have_acc"
@@ -135,24 +96,37 @@
             android:textColor="@color/c_2C406E"
             android:textSize="@dimen/font_14"
             android:visibility="@{vm.isSignUp?View.GONE:View.VISIBLE}"
-            app:layout_constraintHorizontal_bias="0.4"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.4"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/tv_sing_up"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_5"
             android:layout_marginBottom="@dimen/spacing_20"
+            android:fontFamily="@font/roboto_bold"
             android:text="@string/sign_up"
+            android:textColor="@color/c_2C406E"
             android:textSize="@dimen/font_16"
             android:visibility="@{vm.isSignUp?View.GONE:View.VISIBLE}"
-            android:layout_marginStart="@dimen/spacing_5"
-            android:fontFamily="@font/roboto_bold"
-            android:textColor="@color/c_2C406E"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tv_dont_have_acc" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+         <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="@dimen/spacing_130"
+            android:layout_height="@dimen/spacing_130"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/spacing_20"
+            android:layout_marginBottom="@dimen/spacing_20"
+            android:scaleType="fitCenter"
+            android:src="@drawable/netra_amc_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </LinearLayout>
 </layout>
