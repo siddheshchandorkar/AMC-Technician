@@ -40,6 +40,7 @@
         <entry key="feature/dashboard/src/main/res/layout/row_yesterday_task.xml" value="0.2953125" />
         <entry key="feature/enquiry/src/main/res/layout/activity_add_enquiry.xml" value="0.27245508982035926" />
         <entry key="feature/feedback/src/main/res/layout/activity_feedback_form.xml" value="0.27245508982035926" />
+        <entry key="feature/feedback/src/main/res/layout/row_expenses.xml" value="0.3098958333333333" />
         <entry key="feature/leaderboard/src/main/res/layout/fragment_leader_board.xml" value="0.2953125" />
         <entry key="feature/login/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="feature/login/src/main/res/layout/activity_login.xml" value="0.25" />
@@ -65,11 +66,4 @@
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.27245508982035926" />
-      </ProjectState>
-    </option>
-  </component>
 </project>
