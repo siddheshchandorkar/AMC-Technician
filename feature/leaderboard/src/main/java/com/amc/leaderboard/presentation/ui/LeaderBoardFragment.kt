@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.DividerItemDecoration
 import com.amc.leaderboard.R
 import com.amc.leaderboard.databinding.FragmentLeaderBoardBinding
 import com.amc.leaderboard.presentation.viewmodel.LeaderBoardViewModel
@@ -25,6 +26,12 @@ class LeaderBoardFragment : Fragment() {
         viewModel = LeaderBoardViewModel(requireActivity().application)
         binding.vm = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
+        binding.rcvLeaderBoard.addItemDecoration(
+            DividerItemDecoration(
+                context,
+                DividerItemDecoration.VERTICAL
+            )
+        )
 
         return binding.root
     }

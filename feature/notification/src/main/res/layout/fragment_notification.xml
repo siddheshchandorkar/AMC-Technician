@@ -8,151 +8,34 @@
             type="com.amc.notification.presentation.viewmodel.NotificationViewModel" />
     </data>
 
-    <LinearLayout
-
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:orientation="vertical"
+        android:layout_height="match_parent"
         android:background="@color/white"
-        android:layout_height="match_parent">
-        <TextView
-            android:background="@color/purple_500"
-            android:id="@+id/tv_title"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:padding="@dimen/spacing_10"
+        android:orientation="vertical">
 
-            android:paddingStart="@dimen/spacing_16"
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/purple_700"
             android:paddingTop="@dimen/spacing_10"
-            android:text="Notifications"
+            android:paddingBottom="@dimen/spacing_10"
+            android:paddingStart="@dimen/spacing_20"
+            android:text="@string/notifications"
             android:textColor="@color/white"
-            android:textSize="@dimen/font_16"
-            android:textStyle="bold"
+            android:textSize="@dimen/font_20"
+            android:fontFamily="@font/roboto_regular"
             app:layout_constraintTop_toTopOf="parent" />
 
-    <ScrollView
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent">
 
-
-        <LinearLayout
-            android:layout_height="match_parent"
+        <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:setRowData="@{vm.notificationListLiveData}"/>
+    </LinearLayout>
 
-
-            <androidx.cardview.widget.CardView
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/spacing_10"
-                android:layout_width="match_parent"
-                app:cardCornerRadius="@dimen/spacing_5"
-                app:cardElevation="@dimen/spacing_5">
-
-                <LinearLayout
-                    android:background="@color/default_white"
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    android:orientation="vertical"
-                    android:padding="@dimen/spacing_10">
-
-                    <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/spacing_5"
-                        android:layout_width="wrap_content"
-                        android:text="Amar Singh for AC Repairing On 22-Nov-2022 at 11:00AM"
-                        android:textColor="@color/black"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/spacing_5"
-                        android:layout_width="wrap_content"
-                        android:textColor="@color/black"
-                        android:text="505-Unity Heights, Kalyan West"
-                        app:layout_constraintStart_toStartOf="parent" />
-
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/spacing_10"
-                android:layout_width="match_parent"
-                app:cardCornerRadius="@dimen/spacing_5"
-                app:cardElevation="@dimen/spacing_5">
-
-                <LinearLayout
-                    android:background="@color/default_white"
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    android:orientation="vertical"
-                    android:padding="@dimen/spacing_10">
-
-                    <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/spacing_5"
-                        android:layout_width="wrap_content"
-                        android:text="Amar Singh for AC Repairing On 22-Nov-2022 at 11:00AM"
-                        android:textColor="@color/black"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/spacing_5"
-                        android:layout_width="wrap_content"
-                        android:textColor="@color/black"
-                        android:text="505-Unity Heights, Kalyan West"
-                        app:layout_constraintStart_toStartOf="parent" />
-
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/spacing_10"
-                android:layout_width="match_parent"
-                app:cardCornerRadius="@dimen/spacing_5"
-                app:cardElevation="@dimen/spacing_5">
-
-                <LinearLayout
-                    android:background="@color/default_white"
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    android:orientation="vertical"
-                    android:padding="@dimen/spacing_10">
-
-                    <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/spacing_5"
-                        android:layout_width="wrap_content"
-                        android:text="Amar Singh for AC Repairing On 22-Nov-2022 at 11:00AM"
-                        android:textColor="@color/black"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/spacing_5"
-                        android:layout_width="wrap_content"
-                        android:textColor="@color/black"
-                        android:text="505-Unity Heights, Kalyan West"
-                        app:layout_constraintStart_toStartOf="parent" />
-
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-
-        </LinearLayout>
-    </ScrollView>
-</LinearLayout>
-
-    </layout>
+</layout>

@@ -15,16 +15,17 @@
         android:background="@color/white">
 
         <TextView
+            android:id="@+id/tv_title_leader_board"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/purple_500"
-            android:padding="@dimen/spacing_10"
-            android:paddingStart="@dimen/spacing_16"
+            android:background="@color/purple_700"
+            android:fontFamily="@font/roboto_regular"
+            android:paddingStart="@dimen/spacing_20"
             android:paddingTop="@dimen/spacing_10"
+            android:paddingBottom="@dimen/spacing_10"
             android:text="@string/leader_board"
             android:textColor="@color/white"
-            android:textSize="@dimen/font_16"
-            android:textStyle="bold"
+            android:textSize="@dimen/font_20"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.Guideline
@@ -39,7 +40,7 @@
             android:layout_width="@dimen/spacing_100"
             android:layout_height="0dp"
             android:layout_marginEnd="@dimen/spacing_1"
-            android:background="@drawable/background_top_curve_gray"
+            android:background="@drawable/background_top_curve_blue"
             android:gravity="center"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="@id/guideline"
@@ -49,16 +50,18 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
                 android:text="2"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="40sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Kamlesh"
-                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@{vm.second}"
+                android:textColor="@color/white"
                 android:textSize="@dimen/font_20" />
         </LinearLayout>
 
@@ -73,7 +76,7 @@
             android:id="@+id/ll_first"
             android:layout_width="@dimen/spacing_100"
             android:layout_height="0dp"
-            android:background="@drawable/background_top_curve_gray"
+            android:background="@drawable/background_top_curve_blue"
             android:gravity="center"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="@id/guideline"
@@ -84,16 +87,18 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
                 android:text="1"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="40sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ramesh"
-                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@{vm.first}"
+                android:textColor="@color/white"
                 android:textSize="@dimen/font_20" />
 
         </LinearLayout>
@@ -110,7 +115,7 @@
             android:layout_width="@dimen/spacing_100"
             android:layout_height="@dimen/spacing_0"
             android:layout_marginStart="@dimen/spacing_1"
-            android:background="@drawable/background_top_curve_gray"
+            android:background="@drawable/background_top_curve_blue"
             android:gravity="center"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="@id/guideline"
@@ -120,16 +125,18 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
                 android:text="3"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="40sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Suresh"
-                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@{vm.third}"
+                android:textColor="@color/white"
                 android:textSize="@dimen/font_20" />
         </LinearLayout>
 
@@ -152,11 +159,15 @@
                 android:id="@+id/tv_rank"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background="@android:color/darker_gray"
+                android:layout_marginTop="@dimen/spacing_1"
+                android:background="@color/purple_700"
+                android:fontFamily="@font/roboto_regular"
                 android:gravity="center"
                 android:paddingTop="@dimen/spacing_10"
                 android:paddingBottom="@dimen/spacing_10"
                 android:text="@string/rank"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_14"
                 app:layout_constraintEnd_toStartOf="@id/gl_one"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -173,11 +184,15 @@
                 android:layout_width="@dimen/spacing_0"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/spacing_1"
-                android:background="@android:color/darker_gray"
+                android:layout_marginTop="@dimen/spacing_1"
+                android:background="@color/purple_700"
+                android:fontFamily="@font/roboto_regular"
                 android:gravity="center"
                 android:paddingTop="@dimen/spacing_10"
                 android:paddingBottom="@dimen/spacing_10"
                 android:text="@string/technician_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_14"
                 app:layout_constraintEnd_toStartOf="@id/gl_two"
                 app:layout_constraintStart_toEndOf="@id/gl_one"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -194,188 +209,30 @@
                 android:layout_width="@dimen/spacing_0"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="1dp"
-                android:background="@android:color/darker_gray"
+                android:layout_marginTop="@dimen/spacing_1"
+                android:background="@color/purple_700"
+                android:fontFamily="@font/roboto_regular"
                 android:gravity="center"
                 android:paddingTop="@dimen/spacing_10"
                 android:paddingBottom="@dimen/spacing_10"
                 android:text="@string/points"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_14"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/gl_two"
                 app:layout_constraintTop_toTopOf="parent" />
-            <ScrollView
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_leader_board"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:fillViewport="true"
+                android:layout_height="@dimen/spacing_0"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/tv_points"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_name">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                app:setRowData="@{vm.technicianListLiveData}"/>
 
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:layout_weight=".2"
-                            android:paddingTop="@dimen/spacing_5"
-                            android:paddingBottom="@dimen/spacing_5"
-                            android:text="4"
-                            android:textColor="@color/black"
-                            app:layout_constraintEnd_toStartOf="@id/gl_one"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:layout_width="@dimen/spacing_0"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/spacing_1"
-                            android:gravity="center_vertical|start"
-                            android:paddingStart="@dimen/spacing_16"
-                            android:layout_weight=".6"
-                            android:paddingTop="@dimen/spacing_5"
-                            android:paddingBottom="@dimen/spacing_5"
-                            android:text="Rahul Sharma"
-                            android:textColor="@color/black"
-                            app:layout_constraintEnd_toStartOf="@id/gl_two"
-                            app:layout_constraintStart_toEndOf="@id/gl_one"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:layout_width="@dimen/spacing_0"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="1dp"
-                            android:gravity="center"
-                            android:layout_weight="0.2"
-                            android:paddingTop="@dimen/spacing_5"
-                            android:paddingBottom="@dimen/spacing_5"
-                            android:text="20"
-                            android:textColor="@color/black"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@id/gl_two"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                    </LinearLayout>
-                    <View
-                        android:background="@color/c_days_disabled"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/spacing_1"/>
-
-<LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:layout_weight=".2"
-                            android:paddingTop="@dimen/spacing_5"
-                            android:paddingBottom="@dimen/spacing_5"
-                            android:text="4"
-                            android:textColor="@color/black"
-                            app:layout_constraintEnd_toStartOf="@id/gl_one"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:layout_width="@dimen/spacing_0"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/spacing_1"
-                            android:gravity="center_vertical|start"
-                            android:paddingStart="@dimen/spacing_16"
-                            android:layout_weight=".6"
-                            android:paddingTop="@dimen/spacing_5"
-                            android:paddingBottom="@dimen/spacing_5"
-                            android:text="Rahul Sharma"
-                            android:textColor="@color/black"
-                            app:layout_constraintEnd_toStartOf="@id/gl_two"
-                            app:layout_constraintStart_toEndOf="@id/gl_one"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:layout_width="@dimen/spacing_0"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="1dp"
-                            android:gravity="center"
-                            android:layout_weight="0.2"
-                            android:paddingTop="@dimen/spacing_5"
-                            android:paddingBottom="@dimen/spacing_5"
-                            android:text="20"
-                            android:textColor="@color/black"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@id/gl_two"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                    </LinearLayout>
-                    <View
-                        android:background="@color/c_days_disabled"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/spacing_1"/>
-
-<LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:layout_weight=".2"
-                            android:paddingTop="@dimen/spacing_5"
-                            android:paddingBottom="@dimen/spacing_5"
-                            android:text="4"
-                            android:textColor="@color/black"
-                            app:layout_constraintEnd_toStartOf="@id/gl_one"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:layout_width="@dimen/spacing_0"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/spacing_1"
-                            android:gravity="center_vertical|start"
-                            android:paddingStart="@dimen/spacing_16"
-                            android:layout_weight=".6"
-                            android:paddingTop="@dimen/spacing_5"
-                            android:paddingBottom="@dimen/spacing_5"
-                            android:text="Rahul Sharma"
-                            android:textColor="@color/black"
-                            app:layout_constraintEnd_toStartOf="@id/gl_two"
-                            app:layout_constraintStart_toEndOf="@id/gl_one"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:layout_width="@dimen/spacing_0"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="1dp"
-                            android:gravity="center"
-                            android:layout_weight="0.2"
-                            android:paddingTop="@dimen/spacing_5"
-                            android:paddingBottom="@dimen/spacing_5"
-                            android:text="20"
-                            android:textColor="@color/black"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@id/gl_two"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                    </LinearLayout>
-                    <View
-                        android:background="@color/c_days_disabled"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/spacing_1"/>
-
-
-
-                </LinearLayout>
-            </ScrollView>
-             </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
