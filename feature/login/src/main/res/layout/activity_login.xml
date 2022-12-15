@@ -11,122 +11,141 @@
             type="com.amc.login.presentation.viewmodels.LoginViewModel" />
     </data>
 
-
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/default_white"
-        android:gravity="center"
-        android:orientation="vertical">
+        >
 
-        <TextView
-            android:id="@+id/tv_login_title"
-            style="@style/bold_large_text"
-            android:layout_margin="@dimen/spacing_30"
-            android:fontFamily="@font/roboto_bold"
-            android:text="@{vm.isSignUp?@string/sign_up:@string/txt_login}"
-            android:textColor="@color/c_5B67CA"
-            android:textSize="@dimen/font_36"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_logo"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/iv_logo" />
-
-
-        <EditText
-            android:id="@+id/et_email"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/spacing_20"
-            android:drawableStart="@drawable/ic_email"
-            android:hint="@string/txt_email_id"
-            android:inputType="textEmailAddress"
-            android:padding="@dimen/spacing_10"
-            android:textSize="@dimen/font_16"
-            app:layout_constraintTop_toBottomOf="@id/iv_logo" />
-
-
-        <EditText
-            android:id="@+id/et_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_20"
-            android:layout_marginStart="@dimen/spacing_20"
-            android:layout_marginEnd="@dimen/spacing_20"
-            android:drawableStart="@drawable/ic_password_lock"
-            android:hint="@string/txt_password"
-            android:inputType="textPassword"
-            android:maxLength="6"
-            android:padding="@dimen/spacing_10"
-            android:textSize="@dimen/font_16"
-            app:layout_constraintTop_toBottomOf="@id/et_email" />
-
-        <TextView
-            android:id="@+id/tv_forgot_password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_5"
-            android:layout_marginEnd="@dimen/spacing_30"
-            android:onClick="@{() -> vm.forgotPassword()}"
-            android:text="@string/txt_forgot_password"
-            android:layout_gravity="end"
-            android:textColor="@color/c_5B67CA"
-            android:visibility="@{vm.isSignUp?View.GONE:View.VISIBLE}"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/et_password" />
-
-        <Button
-            android:id="@+id/btn_login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/spacing_20"
-            android:background="@drawable/bg_round_purple"
-            android:text="@{vm.isSignUp?@string/sign_up:@string/txt_login}"
-            android:textColor="@color/white"
-            app:layout_constraintTop_toBottomOf="@id/tv_forgot_password" />
-
-
-
-        <TextView
-            android:id="@+id/tv_dont_have_acc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/spacing_20"
-            android:fontFamily="@font/roboto_regular"
-            android:text="@string/don_t_have_an_account"
-            android:textColor="@color/c_2C406E"
-            android:textSize="@dimen/font_14"
-            android:visibility="@{vm.isSignUp?View.GONE:View.VISIBLE}"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.4"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tv_sing_up"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/spacing_5"
-            android:layout_marginBottom="@dimen/spacing_20"
-            android:fontFamily="@font/roboto_bold"
-            android:text="@string/sign_up"
-            android:textColor="@color/c_2C406E"
-            android:textSize="@dimen/font_16"
-            android:visibility="@{vm.isSignUp?View.GONE:View.VISIBLE}"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/tv_dont_have_acc" />
+            <TextView
+                android:id="@+id/tv_login_title"
+                style="@style/bold_large_text"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@{vm.isSignUp?@string/sign_up:@string/txt_login}"
+                android:textColor="@color/c_5B67CA"
+                android:textSize="@dimen/font_36"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iv_logo" />
 
-         <ImageView
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_email"
+                android:hint="@string/txt_email_id"
+                android:drawablePadding="@dimen/spacing_10"
+                android:paddingBottom="@dimen/spacing_16"
+                android:layout_margin="@dimen/spacing_20"
+                android:inputType="textEmailAddress"
+                android:textSize="@dimen/font_16"
+                app:layout_constraintTop_toBottomOf="@id/iv_logo" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_16"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_marginTop="@dimen/spacing_20"
+                android:layout_marginStart="@dimen/spacing_16"
+                android:textColor="@color/c_black_020305"
+                android:text="Enter OTP Send To Your Mobile Number"/>
+            <com.amc.common.ui.PinEntryEditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_10"
+                android:layout_marginStart="@dimen/spacing_20"
+                android:layout_marginEnd="@dimen/spacing_20"
+                android:drawableStart="@drawable/ic_password_lock"
+                android:hint="@string/txt_password"
+                android:inputType="number"
+                android:digits="0123456789"
+                android:maxLength="6"
+                android:padding="@dimen/spacing_10"
+                android:textSize="@dimen/font_16"
+                app:layout_constraintTop_toBottomOf="@id/et_email" />
+
+            <TextView
+                android:id="@+id/tv_forgot_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_5"
+                android:layout_marginEnd="@dimen/spacing_30"
+                android:visibility="gone"
+                android:onClick="@{() -> vm.forgotPassword()}"
+                android:text="@string/txt_forgot_password"
+                android:layout_gravity="end"
+                android:textColor="@color/c_5B67CA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_password" />
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spacing_20"
+                android:background="@drawable/bg_round_purple"
+                android:text="@{vm.isSignUp?@string/sign_up:@string/txt_login}"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/tv_forgot_password" />
+
+
+
+            <TextView
+                android:id="@+id/tv_dont_have_acc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/don_t_have_an_account"
+                android:textColor="@color/c_2C406E"
+                android:textSize="@dimen/font_14"
+                android:visibility="@{vm.isSignUp?View.GONE:View.VISIBLE}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_sing_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_5"
+                android:layout_marginTop="@dimen/spacing_10"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/sign_up"
+                android:textColor="@color/c_2C406E"
+                android:textSize="@dimen/font_16"
+                android:visibility="@{vm.isSignUp?View.GONE:View.VISIBLE}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_dont_have_acc" />
+
+
+        </LinearLayout>
+
+        <ImageView
             android:id="@+id/iv_logo"
             android:layout_width="@dimen/spacing_130"
             android:layout_height="@dimen/spacing_130"
-            android:layout_gravity="center"
+            android:layout_gravity="bottom|center_horizontal"
             android:layout_marginTop="@dimen/spacing_20"
             android:layout_marginBottom="@dimen/spacing_20"
-            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintStart_toStartOf="parent"
             android:src="@drawable/netra_amc_logo"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>

@@ -3,7 +3,6 @@ package com.amc.dashboard
 import android.app.AlertDialog
 import android.os.Bundle
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.amc.common.BaseActivity
 import com.amc.dashboard.databinding.ActivityServiceListBinding
@@ -37,6 +36,8 @@ class ServiceListActivity : BaseActivity() {
                 val view = layoutInflater.inflate(R.layout.dialog_task_filter, null)
                 val buttonCancel = view.findViewById<TextView>(R.id.tv_cancel)
                 val buttonFilter = view.findViewById<TextView>(R.id.tv_filter)
+                builder.window?.setBackgroundDrawableResource(android.R.color.transparent)
+
                 builder.setView(view)
                 buttonCancel.setOnClickListener {
                     builder.dismiss()

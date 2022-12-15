@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout>
 
-    <androidx.cardview.widget.CardView
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/cv_main"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/white"
         app:cardCornerRadius="@dimen/spacing_10"
         app:cardElevation="@dimen/spacing_5"
-        android:background="@color/white"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:padding="@dimen/spacing_20">
@@ -21,8 +21,8 @@
                 android:id="@+id/tv_sort_by"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/sort_by"
                 android:fontFamily="@font/roboto_regular"
+                android:text="@string/sort_by"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,12 +32,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_16"
                 android:background="@drawable/bg_filter_round_light_green"
+                android:fontFamily="@font/roboto_medium"
                 android:paddingStart="@dimen/spacing_10"
                 android:paddingTop="@dimen/spacing_5"
                 android:paddingEnd="@dimen/spacing_10"
                 android:paddingBottom="@dimen/spacing_5"
                 android:text="Urgent"
-                android:fontFamily="@font/roboto_medium"
                 android:textColor="#27bb5e"
                 android:textSize="@dimen/font_12"
                 app:layout_constraintStart_toStartOf="parent"
@@ -50,12 +50,12 @@
                 android:layout_marginStart="@dimen/spacing_10"
                 android:layout_marginTop="@dimen/spacing_16"
                 android:background="@drawable/bg_filter_round_light_green_border"
+                android:fontFamily="@font/roboto_medium"
                 android:paddingStart="@dimen/spacing_10"
                 android:paddingTop="@dimen/spacing_5"
                 android:paddingEnd="@dimen/spacing_10"
                 android:paddingBottom="@dimen/spacing_5"
                 android:text="Office"
-                android:fontFamily="@font/roboto_medium"
                 android:textColor="#27bb5e"
                 android:textSize="@dimen/font_12"
                 app:layout_constraintStart_toEndOf="@id/tv_sort_1"
@@ -66,9 +66,9 @@
                 android:id="@+id/tv_filter_by"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/filter_by"
-                android:fontFamily="@font/roboto_regular"
                 android:layout_marginTop="@dimen/spacing_16"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/filter_by"
                 app:layout_constraintTop_toBottomOf="@id/tv_sort_2" />
 
 
@@ -78,12 +78,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_16"
                 android:background="@drawable/bg_filter_round_light_green"
+                android:fontFamily="@font/roboto_medium"
                 android:paddingStart="@dimen/spacing_10"
                 android:paddingTop="@dimen/spacing_5"
                 android:paddingEnd="@dimen/spacing_10"
                 android:paddingBottom="@dimen/spacing_5"
                 android:text="Urgent"
-                android:fontFamily="@font/roboto_medium"
                 android:textColor="#27bb5e"
                 android:textSize="@dimen/font_12"
                 app:layout_constraintStart_toStartOf="parent"
@@ -96,12 +96,12 @@
                 android:layout_marginStart="@dimen/spacing_10"
                 android:layout_marginTop="@dimen/spacing_16"
                 android:background="@drawable/bg_filter_round_light_green_border"
+                android:fontFamily="@font/roboto_medium"
                 android:paddingStart="@dimen/spacing_10"
                 android:paddingTop="@dimen/spacing_5"
                 android:paddingEnd="@dimen/spacing_10"
                 android:paddingBottom="@dimen/spacing_5"
                 android:text="Office"
-                android:fontFamily="@font/roboto_medium"
                 android:textColor="#27bb5e"
                 android:textSize="@dimen/font_12"
                 app:layout_constraintStart_toEndOf="@id/tv_sort_1"
@@ -146,7 +146,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_filter_2" />
-
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
