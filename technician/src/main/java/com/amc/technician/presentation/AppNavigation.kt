@@ -1,25 +1,30 @@
 package com.amc.technician.presentation
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import com.amc.enquiry.AddEnquiryActivity
 import com.amc.feedback.FeedbackFormActivity
+import com.amc.login.LoginInterface
 import com.amc.login.presentation.ui.LoginActivity
 import com.amc.servicecall.AddCallDetailsActivity
 import com.amc.servicecall.ServiceCallDetailsActivity
 import com.amc.technician.presentation.ui.MainActivity
 
-class AppNavigation {
+class AppNavigation  {
 
     companion object {
         fun navigateToLogin(activity: Activity, isSignUp: Boolean) {
             val intent = Intent(activity, LoginActivity::class.java)
             intent.putExtra(LoginActivity.LOGIN_OR_SIGNUP, isSignUp)
-            activity.startActivityForResult(intent, LoginActivity.LOGIN_CODE)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            activity.startActivity(intent)
+            activity.finish()
         }
 
         fun navigateToMainActivity(activity: Activity) {
             val intent = Intent(activity, MainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             activity.startActivity(intent)
             activity.finish()
         }
@@ -44,6 +49,7 @@ class AppNavigation {
             activity.startActivity(intent)
         }
     }
+
 
 
 }

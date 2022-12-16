@@ -3,12 +3,14 @@ package com.amc.technician
 import android.app.Application
 import com.amc.common.AppNavigationInterface
 import com.amc.common.CommonInterface
+import com.amc.common.SingleLiveEvent
 import com.amc.technician.presentation.AppNavigation
 
 class AppController : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        CommonInterface.getInstance()?.setAppNavigation(SingleLiveEvent<AppNavigationInterface>())
 
         CommonInterface.getInstance()?.let {
             it.getAppNavigation()?.let { event ->
