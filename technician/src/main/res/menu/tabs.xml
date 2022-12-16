@@ -20,8 +20,8 @@
         app:showAsAction="always"
         android:title="" />
     <item
-        android:id="@+id/tab_today"
-        android:icon="@drawable/ic_today_call"
+        android:id="@+id/tab_about_us"
+        android:icon="@drawable/ic_about_us"
         app:showAsAction="always"
         android:title="" />
 </menu>

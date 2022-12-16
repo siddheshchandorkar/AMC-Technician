@@ -27,6 +27,7 @@ class MainActivity : BaseActivity() {
         addFragment(binding.container.id, DashBoardFragment.getInstance(Bundle()))
 
         binding.bottomNavigationView.background = null
+        binding.bottomNavigationView.menu.getItem(2).isEnabled = false
 
         binding.fab.setOnClickListener {
             AppNavigation.navigateToEnquiryActivity(this@MainActivity)
@@ -55,7 +56,7 @@ class MainActivity : BaseActivity() {
                         selectedTab = NOTIFICATION
                     }
                 }
-                R.id.tab_today -> {
+                R.id.tab_about_us -> {
                     if (selectedTab != ADD_ENQUIRY) {
                         replaceFragment(
                             binding.container.id,

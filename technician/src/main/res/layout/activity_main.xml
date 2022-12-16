@@ -18,24 +18,8 @@
             android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingBottom="@dimen/spacing_100"
-            android:orientation="vertical"/>
-
-
-        <!--        <nl.joery.animatedbottombar.AnimatedBottomBar-->
-        <!--            android:id="@+id/bottom_bar"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:background="#FFF"-->
-        <!--            app:abb_indicatorAppearance="round"-->
-        <!--            app:abb_indicatorHeight="4dp"-->
-        <!--            app:abb_indicatorMargin="16dp"-->
-        <!--            app:abb_selectedIndex="0"-->
-        <!--            app:abb_selectedTabType="text"-->
-        <!--            app:abb_tabColor="@color/black"-->
-        <!--            app:abb_tabColorDisabled="@color/black"-->
-        <!--            app:abb_tabs="@menu/tabs"-->
-        <!--            app:layout_constraintBottom_toBottomOf="parent" />-->
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/spacing_100" />
 
         <com.google.android.material.bottomappbar.BottomAppBar
             android:id="@+id/bottom_app_bar"
@@ -45,19 +29,19 @@
             android:layout_margin="@dimen/spacing_20"
             android:shadowRadius="0.5"
             app:fabAlignmentMode="center"
+            app:fabAlignmentModeEndMargin="@dimen/spacing_8"
             app:fabAnchorMode="cradle"
-
-
-            app:fabAnimationMode="scale"
+            app:fabAnimationMode="slide"
             app:fabCradleMargin="@dimen/spacing_8"
-            app:fabCradleRoundedCornerRadius="@dimen/spacing_8">
+            app:fabCradleRoundedCornerRadius="@dimen/spacing_8"
+            app:fabCradleVerticalOffset="@dimen/spacing_4">
 
             <com.google.android.material.bottomnavigation.BottomNavigationView
                 android:id="@+id/bottomNavigationView"
-                android:theme="@style/Widget.MaterialComponents.BottomNavigationView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginEnd="16dp"
+                android:background="@android:color/transparent"
                 app:elevation="@dimen/spacing_0"
                 app:menu="@menu/tabs" />
 
@@ -68,8 +52,9 @@
             android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_white_plus"
+            android:src="@drawable/ic_baseline_add_24"
             app:fabCustomSize="@dimen/spacing_50"
-            app:layout_anchor="@id/bottom_app_bar" />
+            app:layout_anchor="@id/bottom_app_bar"
+            app:tint="@color/white" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>
