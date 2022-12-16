@@ -8,35 +8,68 @@
             type="com.amc.technician.presentation.viewmodel.MainActivityViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/default_white"
-        tools:context=".presentation.ui.MainActivity">
+        android:background="@color/default_white">
 
         <LinearLayout
             android:id="@+id/container"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toTopOf="@id/bottom_bar"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/spacing_100"
+            android:orientation="vertical"/>
 
-        <nl.joery.animatedbottombar.AnimatedBottomBar
-            android:id="@+id/bottom_bar"
+
+        <!--        <nl.joery.animatedbottombar.AnimatedBottomBar-->
+        <!--            android:id="@+id/bottom_bar"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:background="#FFF"-->
+        <!--            app:abb_indicatorAppearance="round"-->
+        <!--            app:abb_indicatorHeight="4dp"-->
+        <!--            app:abb_indicatorMargin="16dp"-->
+        <!--            app:abb_selectedIndex="0"-->
+        <!--            app:abb_selectedTabType="text"-->
+        <!--            app:abb_tabColor="@color/black"-->
+        <!--            app:abb_tabColorDisabled="@color/black"-->
+        <!--            app:abb_tabs="@menu/tabs"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent" />-->
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottom_app_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#FFF"
-            app:abb_indicatorAppearance="round"
-            app:abb_indicatorHeight="4dp"
-            app:abb_indicatorMargin="16dp"
-            app:abb_selectedIndex="0"
-            app:abb_selectedTabType="text"
-            app:abb_tabColor="@color/black"
-            app:abb_tabColorDisabled="@color/black"
-            app:abb_tabs="@menu/tabs"
-            app:layout_constraintBottom_toBottomOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_gravity="bottom"
+            android:layout_margin="@dimen/spacing_20"
+            android:shadowRadius="0.5"
+            app:fabAlignmentMode="center"
+            app:fabAnchorMode="cradle"
+
+
+            app:fabAnimationMode="scale"
+            app:fabCradleMargin="@dimen/spacing_8"
+            app:fabCradleRoundedCornerRadius="@dimen/spacing_8">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavigationView"
+                android:theme="@style/Widget.MaterialComponents.BottomNavigationView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="16dp"
+                app:elevation="@dimen/spacing_0"
+                app:menu="@menu/tabs" />
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_white_plus"
+            app:fabCustomSize="@dimen/spacing_50"
+            app:layout_anchor="@id/bottom_app_bar" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

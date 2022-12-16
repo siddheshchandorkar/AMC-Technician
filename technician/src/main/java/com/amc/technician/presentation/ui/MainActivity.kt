@@ -1,7 +1,6 @@
 package com.amc.technician.presentation.ui
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
@@ -13,11 +12,11 @@ import com.amc.technician.R
 import com.amc.technician.databinding.ActivityMainBinding
 import com.amc.technician.presentation.AppNavigation
 import com.amc.technician.presentation.viewmodel.MainActivityViewModel
-import nl.joery.animatedbottombar.AnimatedBottomBar
 
 class MainActivity : BaseActivity() {
     private lateinit var viewModel: MainActivityViewModel
     private lateinit var binding: ActivityMainBinding
+    private var selectedTab = DASHBOARD
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,41 +26,48 @@ class MainActivity : BaseActivity() {
         binding.lifecycleOwner = this
         addFragment(binding.container.id, DashBoardFragment.getInstance(Bundle()))
 
-        binding.bottomBar.setOnTabSelectListener(object : AnimatedBottomBar.OnTabSelectListener {
-            override fun onTabSelected(
-                lastIndex: Int,
-                lastTab: AnimatedBottomBar.Tab?,
-                newIndex: Int,
-                newTab: AnimatedBottomBar.Tab
-            ) {
-                if (lastIndex != newIndex) {
-                    when (newIndex) {
-                        DASHBOARD -> {
-                            replaceFragment(
-                                binding.container.id,
-                                DashBoardFragment.getInstance(Bundle())
-                            )
-                        }
-                        LEADERBOARD -> {
-                            replaceFragment(binding.container.id, LeaderBoardFragment())
-                        }
-                        NOTIFICATION -> {
-                            replaceFragment(binding.container.id, NotificationFragment())
-                        }
-                        ADD_ENQUIRY -> {
-                            AppNavigation.navigateToEnquiryActivity(this@MainActivity)
-                        }
+        binding.bottomNavigationView.background = null
+
+        binding.fab.setOnClickListener {
+            AppNavigation.navigateToEnquiryActivity(this@MainActivity)
+        }
+
+        binding.bottomNavigationView.setOnItemSelectedListener { menu ->
+            when (menu.itemId) {
+                R.id.tab_dashboard -> {
+                    if (selectedTab != DASHBOARD) {
+                        replaceFragment(
+                            binding.container.id,
+                            DashBoardFragment.getInstance(Bundle())
+                        )
+                        selectedTab = DASHBOARD
                     }
                 }
-
-                Log.d("bottom_bar", "Selected index: $newIndex, title: ${newTab.title}")
+                R.id.tab_leader_board -> {
+                    if (selectedTab != LEADERBOARD) {
+                        replaceFragment(binding.container.id, LeaderBoardFragment())
+                        selectedTab = LEADERBOARD
+                    }
+                }
+                R.id.tab_notification -> {
+                    if (selectedTab != NOTIFICATION) {
+                        replaceFragment(binding.container.id, NotificationFragment())
+                        selectedTab = NOTIFICATION
+                    }
+                }
+                R.id.tab_today -> {
+                    if (selectedTab != ADD_ENQUIRY) {
+                        replaceFragment(
+                            binding.container.id,
+                            DashBoardFragment.getInstance(Bundle())
+                        )
+                        selectedTab = ADD_ENQUIRY
+                    }
+                }
             }
+            return@setOnItemSelectedListener true
 
-            // An optional method that will be fired whenever an already selected tab has been selected again.
-            override fun onTabReselected(index: Int, tab: AnimatedBottomBar.Tab) {
-                Log.d("bottom_bar", "Reselected index: $index, title: ${tab.title}")
-            }
-        })
+        }
 
     }
 

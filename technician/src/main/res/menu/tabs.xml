@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/tab_dashboard"
         android:icon="@drawable/ic_dashboard"
-        android:title="DashBoard" />
+        app:showAsAction="always"
+        android:title="" />
     <item
         android:id="@+id/tab_leader_board"
         android:icon="@drawable/ic_leader_board"
-        android:title="LeaderBoard" />
+        app:showAsAction="always"
+        android:title="" />
+    <item
+        app:showAsAction="always"
+        android:title="" />
     <item
         android:id="@+id/tab_notification"
         android:icon="@drawable/ic_notification"
-        android:title="Notifications" />
+        app:showAsAction="always"
+        android:title="" />
     <item
         android:id="@+id/tab_today"
         android:icon="@drawable/ic_today_call"
-        android:title="Today's Call" />
+        app:showAsAction="always"
+        android:title="" />
 </menu>
