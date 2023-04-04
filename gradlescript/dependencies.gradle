@@ -7,6 +7,7 @@ ext {
     coroutinesVersion = '1.6.4'
     constraintlayoutVersion = '2.1.4'
     appcompatVersion = '1.5.1'
+//    appcompatVersion = '1.7.1'
     materialVersion = '1.7.0'
     coreKtxVersion = '1.7.0'
     cardViewVersion = '1.0.0'
